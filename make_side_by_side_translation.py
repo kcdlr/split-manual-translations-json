@@ -229,6 +229,17 @@ def draw_wrapped_text(
     return y
 
 
+def measure_wrapped_text_end(
+    font: fitz.Font,
+    rect: fitz.Rect,
+    text: str,
+    fontsize: float,
+    line_advance: float,
+) -> float:
+    lines = wrap_text(font, text, fontsize, max(1, rect.width))
+    return rect.y0 + fontsize + (len(lines) * line_advance)
+
+
 def is_side_label(rect: fitz.Rect) -> bool:
     return rect.x0 > 520
 
@@ -360,6 +371,7 @@ def layout_translated_blocks(
 ) -> None:
     font = fitz.Font(fontfile=font_path)
     flow_blocks: list[tuple[dict[str, Any], fitz.Rect]] = []
+    fixed_anchors: list[fitz.Rect] = []
     toc_page = is_toc_page(blocks)
 
     for block in blocks:
@@ -376,10 +388,13 @@ def layout_translated_blocks(
             bbox.y1,
         )
 
+        if block_type in {"chapter_title", "section_heading", "toc_entry"} and bbox.x0 < page_width - 80:
+            fixed_anchors.append(bbox)
+
         if block_type == "chapter_title":
-            title_font_size = 30 if bbox.height > 80 else 22
+            title_font_size = 28 if bbox.height > 80 else 22
             title_target = fitz.Rect(target)
-            title_target.x1 = max(title_target.x1, page_width + 500)
+            title_target.x1 = min(page.rect.x1 - 50, max(title_target.x1, page_width + 540))
             draw_wrapped_text(
                 page,
                 title_target,
@@ -454,26 +469,42 @@ def layout_translated_blocks(
 
     flow_blocks.sort(key=lambda item: (round(item[1].x0 / 20) * 20, item[1].y0))
     cursors: dict[int, float] = {}
-    body_line_factor = body_line_advance / body_font_size
     for block, bbox in flow_blocks:
         translated = translations[block["id"]]
         column_key = round(bbox.x0 / 20) * 20
         x0 = bbox.x0 + page_width
         x1 = bbox.x1 + page_width
         y0 = max(bbox.y0, cursors.get(column_key, bbox.y0))
-        y1 = min(page.rect.y1 - 44, max(y0 + 40, bbox.y1 + 80))
+        next_fixed_y = min(
+            (
+                anchor.y0
+                for anchor in fixed_anchors
+                if abs(anchor.x0 - bbox.x0) < 40 and anchor.y0 > bbox.y0 + 10
+            ),
+            default=page.rect.y1 - 44,
+        )
+        flow_limit = min(page.rect.y1 - 44, next_fixed_y - 6)
+        y1 = max(y0 + 1, min(flow_limit, max(y0 + 40, bbox.y1 + 80)))
         target = fitz.Rect(x0, y0, x1, y1)
+        fontsize = body_font_size
+        line_advance = body_line_advance
+        while fontsize > 8.0:
+            measured_end = measure_wrapped_text_end(font, target, translated, fontsize, line_advance)
+            if measured_end <= flow_limit:
+                break
+            fontsize = round(fontsize - 0.25, 2)
+            line_advance = body_line_advance * (fontsize / body_font_size)
         next_y = draw_wrapped_text(
             page,
             target,
             translated,
             font_path,
             font,
-            fontsize=body_font_size,
+            fontsize=fontsize,
             color=translated_color(bbox, "body"),
-            line_factor=body_line_factor,
+            line_factor=line_advance / fontsize,
         )
-        cursors[column_key] = next_y + paragraph_spacing - body_font_size
+        cursors[column_key] = next_y + paragraph_spacing - fontsize
 
 
 def make_page_copy_without_text(src: fitz.Document, page_index: int, blocks: list[dict[str, Any]]) -> fitz.Document:

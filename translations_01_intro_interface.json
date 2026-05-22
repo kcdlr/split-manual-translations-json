@@ -1,0 +1,175 @@
+{
+  "source": "01_Intro_Interface.pdf",
+  "notes": "Translations are keyed by PyMuPDF text block ids. Only PDF text objects are translated; image-baked text is intentionally out of scope.",
+  "pages": [
+    {
+      "page": 1,
+      "blocks": [
+        {
+          "id": "p001_b000",
+          "source": "Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "第1章\nDaVinci Resolve入門"
+        },
+        {
+          "id": "p001_b001",
+          "source": "DaVinci Resolve integrates editing, compositing and motion graphics, color correction, audio recording and mixing, and finishing within a single, easy to learn application. The editing, compositing, grading, and audio tools found in DaVinci Resolve should be immediately familiar to experienced artists who’ve used other applications, but they’re also approachable to folks who are new to post-production.",
+          "translation": "DaVinci Resolveは、編集、コンポジットとモーショングラフィックス、カラー補正、音声の録音とミキシング、フィニッシングを、習得しやすい1つのアプリケーションに統合しています。DaVinci Resolveに用意されている編集、コンポジット、グレーディング、オーディオの各ツールは、他のアプリケーションを使ってきた経験豊富なアーティストにはすぐになじむはずですが、ポストプロダクションが初めての人にも取り組みやすいものです。"
+        },
+        {
+          "id": "p001_b002",
+          "source": "Additionally, dedicated tools available for on-set workflows integrate tasks such as media duplication, shot and metadata organization, and on-location look management into a complete toolset that lets you smoothly segue from the camera original media being acquired in the field to the organization and use of that media in a wide variety of post‑production workflows with DaVinci Resolve at their heart. In particular, the tight integration in DaVinci Resolve means that you can freely move from one task to the next of your project’s workflow without skipping a beat, making it easy to back up and organize a shoot’s media before immediately diving into editing, while switching over to add a quick composite or to color-correct clips in the middle of your editing spree, and then getting right back to cutting, with a bit of mixing to make sure things sound right, all without needing to export projects or launch other applications.",
+          "translation": "さらに、撮影現場のワークフローで利用できる専用ツールにより、メディアの複製、ショットとメタデータの整理、ロケーションでのルック管理といった作業が、完全なツールセットとして統合されています。これにより、現場で取得したカメラオリジナルのメディアを、DaVinci Resolveを中心にしたさまざまなポストプロダクションワークフローの中で整理し、利用していく工程へ滑らかに移行できます。特にDaVinci Resolveでは統合が緊密であるため、プロジェクトのワークフロー内で1つの作業から次の作業へ途切れずに自由に移動できます。撮影メディアをバックアップして整理したら、すぐに編集へ入り、編集作業の途中で簡単な合成を追加したりクリップをカラー補正したりし、その後すぐにカット編集へ戻ることができます。さらに、音が適切に聞こえるよう少しミキシングを行うこともでき、プロジェクトを書き出したり他のアプリケーションを起動したりする必要はありません。"
+        },
+        {
+          "id": "p001_b003",
+          "source": "And you can go further, using the collaborative features of DaVinci Resolve to enable multiple artists, for example an editor, a colorist, and assistants, to work together on the same timeline simultaneously, for the ultimate integrated workflow.",
+          "translation": "さらに一歩進んで、DaVinci Resolveのコラボレーション機能を使えば、たとえば編集者、カラリスト、アシスタントなど複数のアーティストが、同じタイムライン上で同時に作業でき、究極の統合ワークフローを実現できます。"
+        },
+        {
+          "id": "p001_b004",
+          "source": "Of course, no post-production professional works in a vacuum, and DaVinci Resolve makes it easy to work with other facilities by importing projects and exporting project exchange formats and rendered or managed media among applications such as Apple’s Final Cut Pro X, Adobe’s Premiere Pro, Avid’s Media Composer and Pro Tools, Autodesk’s Flame Premium, and many other applications via robust support of XML, AAF, and EDL import and export workflows.",
+          "translation": "もちろん、ポストプロダクションのプロフェッショナルが外部と切り離された環境で作業することはありません。DaVinci Resolveでは、AppleのFinal Cut Pro X、AdobeのPremiere Pro、AvidのMedia ComposerとPro Tools、AutodeskのFlame Premium、その他多くのアプリケーションとの間で、プロジェクトの読み込み、プロジェクト交換フォーマットの書き出し、レンダリング済みまたは管理済みメディアのやり取りを行えます。XML、AAF、EDLの読み込みと書き出しワークフローが堅牢にサポートされているため、他の施設とも簡単に連携できます。"
+        },
+        {
+          "id": "p001_b005",
+          "source": "This chapter introduces the DaVinci Resolve user interface (UI), explaining where to find each group of features, and how the highly focused and tightly integrated Media, Edit, Fusion, Color, Fairlight, and Deliver pages work together to let you pursue nearly any post‑production workflow you can imagine. After this brief tour, the rest of Part 1 of this manual provides much more in‑depth information about project management, preferences, project settings, and other topics of general interest for getting started.",
+          "translation": "この章ではDaVinci Resolveのユーザーインターフェイス（UI）を紹介し、各機能グループがどこにあるか、そして高度に専門化され緊密に統合されたMedia、Edit、Fusion、Color、Fairlight、Deliverの各ページがどのように連携して、想像できるほぼあらゆるポストプロダクションワークフローを進められるようにしているかを説明します。この短い案内のあと、本マニュアルの第1部の残りでは、プロジェクト管理、環境設定、プロジェクト設定、その他作業を始めるうえで一般的に重要な項目について、さらに詳しい情報を提供します。"
+        },
+        {
+          "id": "p001_b006",
+          "source": "14 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "14 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p001_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "blocks": [
+        {"id": "p002_b000", "translation": "目次"},
+        {"id": "p002_b001", "translation": "プロジェクトマネージャー ..................................................... 16"},
+        {"id": "p002_b002", "translation": "環境設定とプロジェクト設定 ........................... 17"},
+        {"id": "p002_b003", "translation": "ログインに基づく個別の環境設定と設定 ..................................... 17"},
+        {"id": "p002_b004", "translation": "環境設定 ......................................................................... 17"},
+        {"id": "p002_b005", "translation": "システム環境設定 ........................................................ 18"},
+        {"id": "p002_b006", "translation": "ユーザー環境設定 ............................................................. 19"},
+        {"id": "p002_b007", "translation": "プロジェクト設定 .............................................................. 20"},
+        {"id": "p002_b008", "translation": "ページ間の切り替え .............................................. 21"},
+        {"id": "p002_b009", "translation": "Resolveページバーを最小化する ............................. 21"},
+        {"id": "p002_b010", "translation": "キーボードショートカットでページを切り替える ...... 21"},
+        {"id": "p002_b011", "translation": "使わないページを非表示にする .......................................... 21"},
+        {"id": "p002_b012", "translation": "ページナビゲーションを完全に非表示にする .......................... 22"},
+        {"id": "p002_b013", "translation": "Mediaページ ............................................................. 22"},
+        {"id": "p002_b014", "translation": "メディアストレージブラウザ ...................................... 23"},
+        {"id": "p002_b015", "translation": "ビューア .................................................................................. 23"},
+        {"id": "p002_b016", "translation": "メディアプール ......................................................................... 24"},
+        {"id": "p002_b017", "translation": "メタデータエディタ ............................................................... 25"},
+        {"id": "p002_b018", "translation": "オーディオパネル ........................................................................ 25"},
+        {"id": "p002_b019", "translation": "Cutページ .................................................................... 26"},
+        {"id": "p002_b020", "translation": "メディアプール ................................................................ 26"},
+        {"id": "p002_b021", "translation": "ビューア ......................................................................... 27"},
+        {"id": "p002_b022", "translation": "オーディオメーター ....................................................................... 28"},
+        {"id": "p002_b023", "translation": "タイムライン ...................................................................... 28"},
+        {"id": "p002_b024", "translation": "Editページ .................................................................. 29"},
+        {"id": "p002_b025", "translation": "メディアプール ............................................................... 30"},
+        {"id": "p002_b026", "translation": "エフェクトライブラリのブラウズ .............................................. 31"},
+        {"id": "p002_b027", "translation": "編集インデックス ............................................................................. 31"},
+        {"id": "p002_b028", "translation": "ソース/オフラインビューアとタイムラインビューア ................... 32"},
+        {"id": "p002_b029", "translation": "インスペクタ ............................................................................. 33"},
+        {"id": "p002_b030", "translation": "ツールバー ................................................................................. 33"},
+        {"id": "p002_b031", "translation": "タイムライン ............................................................................... 33"},
+        {"id": "p002_b032", "translation": "フローティングタイムコードウィンドウ ....................................... 34"},
+        {"id": "p002_b033", "translation": "DaVinci Resolveのモーショングラフィックスとビジュアルエフェクト .......................... 34"},
+        {"id": "p002_b034", "translation": "VFX Connect ..................................................................... 35"},
+        {"id": "p002_b035", "translation": "Fusionページ ............................................................. 36"},
+        {"id": "p002_b036", "translation": "作業エリア .................................................................. 36"},
+        {"id": "p002_b037", "translation": "ビューア ................................................................................ 37"},
+        {"id": "p002_b038", "translation": "ツールバー ................................................................................. 37"},
+        {"id": "p002_b039", "translation": "エフェクトライブラリ ................................................................... 38"},
+        {"id": "p002_b040", "translation": "ノードエディタ ........................................................................ 38"},
+        {"id": "p002_b041", "translation": "インスペクタ ............................................................................. 39"},
+        {"id": "p002_b042", "translation": "サムネイルタイムライン ...................................................... 40"},
+        {"id": "p002_b043", "translation": "メディアプール ........................................................................ 40"},
+        {"id": "p002_b044", "translation": "ステータスバー ............................................................................. 41"},
+        {"id": "p002_b045", "translation": "コンソール ....................................................................... 41"},
+        {"id": "p002_b046", "translation": "Colorページ ................................................................ 42"},
+        {"id": "p002_b047", "translation": "ビューア .................................................................................. 42"},
+        {"id": "p002_b048", "translation": "ギャラリー .................................................................................. 43"},
+        {"id": "p002_b049", "translation": "ノードエディタ ........................................................................ 44"},
+        {"id": "p002_b050", "translation": "タイムライン ............................................................................... 44"},
+        {"id": "p002_b051", "translation": "左側パレット ....................................................................... 45"},
+        {"id": "p002_b052", "translation": "中央パレット ................................................................ 45"},
+        {"id": "p002_b053", "translation": "キーフレームエディタ ............................................................... 46"},
+        {"id": "p002_b054", "translation": "Fairlightページ .......................................................... 47"},
+        {"id": "p002_b055", "translation": "オーディオタイムライン ........................................................ 47"},
+        {"id": "p002_b056", "translation": "ツールバー ................................................................................. 49"},
+        {"id": "p002_b057", "translation": "ミキサー ..................................................................................... 49"},
+        {"id": "p002_b058", "translation": "専用チャンネルストリップコントロール .......................... 49"},
+        {"id": "p002_b059", "translation": "モニタリングパネル .................................................... 51"},
+        {"id": "p002_b060", "translation": "フローティングタイムコードウィンドウ ....................................... 52"},
+        {"id": "p002_b061", "translation": "Deliverページ ............................................................ 52"},
+        {"id": "p002_b062", "translation": "レンダー設定リスト ............................................. 53"},
+        {"id": "p002_b063", "translation": "Deliverページのタイムライン ......................................... 53"},
+        {"id": "p002_b064", "translation": "ビューア ......................................................................... 54"},
+        {"id": "p002_b065", "translation": "レンダーキュー ........................................................ 55"},
+        {"id": "p002_b066", "translation": "15 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
+        {"id": "p002_b067", "translation": "概要"}
+      ]
+    },
+    {
+      "page": 3,
+      "blocks": [
+        {"id": "p003_b000", "translation": "プロジェクトマネージャー"},
+        {"id": "p003_b001", "translation": "ほとんどのユーザーにとって、プロジェクトマネージャーはDaVinci Resolveを開いたときに最初に目にするウィンドウです。プロジェクトマネージャーは、現在ログインしているユーザーに属するすべてのプロジェクトを管理するための中心的なインターフェイスで、そのユーザー名はプロジェクトタイトルバーの右上に表示されます。プロジェクトマネージャーは、ユーザー間でプロジェクトを移動する場合でも、あるDaVinci Resolveワークステーションから別のワークステーションへプロジェクトを移動する場合でも、DaVinci Resolveにプロジェクトを読み込んだり、DaVinci Resolveからプロジェクトを書き出したりする場所でもあります。最後に、プロジェクトマネージャーでは、プロジェクトライブラリサイドバーを使って、DaVinci Resolve内のすべてを管理するために使用されるプロジェクトライブラリを整理することもできます。"},
+        {"id": "p003_b002", "translation": "任意のプロジェクトを開くには、そのプロジェクトをダブルクリックします。新しいプロジェクトを作成するには、Untitled Projectアイコンをダブルクリックするか、New Projectボタンをクリックします。"},
+        {"id": "p003_b003", "translation": "プロジェクトマネージャーには、現在のユーザーに属するすべてのプロジェクトが表示されます。"},
+        {"id": "p003_b004", "translation": "プロジェクトマネージャーについて詳しくは、第3章「プロジェクトとプロジェクトライブラリの管理」を参照してください。"},
+        {"id": "p003_b005", "translation": "16 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
+        {"id": "p003_b006", "translation": "概要"}
+      ]
+    },
+    {
+      "page": 4,
+      "blocks": [
+        {"id": "p004_b000", "translation": "環境設定とプロジェクト設定"},
+        {"id": "p004_b001", "translation": "プロジェクトを開いたら、ワークステーション上のDaVinci Resolveのインストール全体を管理するSystem PreferencesとUser Preferences、そして現在開いているプロジェクトを管理するProject Settingsを調整できます。DaVinci Resolveを初めてインストールするとき、これらの設定のうち最も重要なものは、インストーラーのオンボーディング質問を通じて選択されます。ただし、DaVinci Resolveを初めて開く場合は、これらの設定が使用しているシステムに最適になっているか確認しておくとよいでしょう。"},
+        {"id": "p004_b002", "translation": "ログインに基づく個別の環境設定と設定"},
+        {"id": "p004_b003", "translation": "DaVinci Resolve 16以降、特定のコンピューター上の各ログインアカウントごとに、個別の環境設定と設定が用意されています。つまり、複数のアーティストがそれぞれ自分のログインを持つことができ、DaVinci Resolveは、誰がログインしているかに応じて、各アーティストごとに別々のワークスペースレイアウトと環境設定の状態を保持します。"},
+        {"id": "p004_b004", "translation": "環境設定"},
+        {"id": "p004_b005", "translation": "PreferencesウィンドウはSystem preferencesパネルとUser preferencesパネルに分かれており、DaVinciワークステーション全体の環境を設定できます。DaVinci Resolveで使用するハードウェアや、作業中に好みのユーザーインターフェイス設定を選択できます。"},
+        {"id": "p004_b006", "translation": "DaVinci Resolveの環境設定では、作業環境を設定できます"},
+        {"id": "p004_b007", "translation": "17 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
+        {"id": "p004_b008", "translation": "概要"}
+      ]
+    },
+    {
+      "page": 5,
+      "blocks": [
+        {"id": "p005_b000", "translation": "最も重要なSystem preferencesとUser preferencesの概要を以下に示します。ワークステーションにDaVinci Resolveを初めて設定するときに、最初に調整すべき設定についての案内も含まれています。ただし、包括的な概要と詳しい情報については、第4章「System and User Preferences」を参照してください。"},
+        {"id": "p005_b001", "translation": "システム環境設定"},
+        {"id": "p005_b002", "translation": "System preferencesでは、DaVinci Resolveが使用するハードウェアを設定できます。構成があまり頻繁に変わらないシステムを使っている場合、Preferencesウィンドウを使う機会はまれかもしれません。一方、ビデオインターフェイス、コントロールパネル、スクラッチボリュームが変わるモバイルシステムで作業している場合は、このウィンドウをより頻繁に使うことがあります。"},
+        {"id": "p005_b003", "translation": "注意: Preferencesで特定の中核的なSystem Settingsを変更した場合、その変更を有効にするにはDaVinci Resolveを終了して再起動する必要があることがあります。"},
+        {"id": "p005_b004", "translation": "メモリとGPU"},
+        {"id": "p005_b005", "translation": "コンピューターに接続されているGPUをどのように使用するか、また各ページのビューアをどのように設定するかを管理するさまざまなオプションを選択できます。このパネルには、DaVinci Resolveが円滑に動作するうえで関連するすべてのハードウェアとコンピューターの特性について、参照用の概要も表示されます。インストール済みGPUの一覧も含まれます。"},
+        {"id": "p005_b006", "translation": "メディアストレージ"},
+        {"id": "p005_b007", "translation": "これは、システムで使用するスクラッチディスクを定義するリストです。このリストの最初のボリュームにはGallery stillsとキャッシュファイルが保存されるため、接続されているストレージボリュームの中で最も高速なものを選ぶようにしてください。"},
+        {"id": "p005_b008", "translation": "デコードオプション"},
+        {"id": "p005_b009", "translation": "これらの設定では、RAWファイルとH.264/H.265をデコードするための各種ハードウェアオプションを選択できます。また、easy DCPデコーダーの使用や、Media Pool内で成長中のファイル（書き込み中のファイル）を更新する機能を選択できます。"},
+        {"id": "p005_b010", "translation": "ビデオとオーディオI/O"},
+        {"id": "p005_b011", "translation": "このパネルの環境設定では、ワークステーション上でDaVinci Resolveに使用させるビデオおよびオーディオのCaptureインターフェイスとMonitorインターフェイスを選択できます。複数のBlackmagic Design I/Oインターフェイスがコンピューターに接続されている場合は、それらの中から選択できます。"},
+        {"id": "p005_b012", "translation": "ビデオプラグイン"},
+        {"id": "p005_b013", "translation": "サードパーティ製Open FXプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"},
+        {"id": "p005_b014", "translation": "オーディオプラグイン"},
+        {"id": "p005_b015", "translation": "サードパーティ製VSTプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"},
+        {"id": "p005_b016", "translation": "コントロールパネル"},
+        {"id": "p005_b017", "translation": "DaVinci Resolveでグレーディング中に使用するために接続されているコントロールパネルを選択し、必要に応じて設定できます。"},
+        {"id": "p005_b018", "translation": "18 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
+        {"id": "p005_b019", "translation": "概要"}
+      ]
+    }
+  ]
+}

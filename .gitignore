@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+# Source and generated manuals are large local artifacts.
+*.pdf
+*.png
+
+# Generated missing-translation reports.
+*.missing.json

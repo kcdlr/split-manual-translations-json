@@ -486,17 +486,22 @@ def insert_toc_line(
 ) -> None:
     asset = font_asset(font_assets, "regular")
     target = fitz.Rect(rect.x0, rect.y0 - 1, rect.x1, rect.y1 + 4)
-    page.insert_textbox(
-        target,
-        text,
-        fontname=asset["name"],
-        fontfile=asset["path"],
-        fontsize=fontsize,
-        color=color,
-        fill=color,
-        align=fitz.TEXT_ALIGN_LEFT,
-        overlay=True,
-    )
+    size = min(fontsize, 7.2)
+    while size >= 6.0:
+        result = page.insert_textbox(
+            target,
+            text,
+            fontname=asset["name"],
+            fontfile=asset["path"],
+            fontsize=size,
+            color=color,
+            fill=color,
+            align=fitz.TEXT_ALIGN_LEFT,
+            overlay=True,
+        )
+        if result >= 0:
+            return
+        size = round(size - 0.2, 2)
 
 
 def draw_one_line_label(

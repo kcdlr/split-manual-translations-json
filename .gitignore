@@ -7,3 +7,6 @@ __pycache__/
 
 # Generated missing-translation reports.
 *.missing.json
+
+# Generated static font instances.
+generated_fonts/

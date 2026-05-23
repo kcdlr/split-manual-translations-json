@@ -3,30 +3,104 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
 import fitz
+from fontTools.ttLib import TTFont
+from fontTools.varLib.instancer import instantiateVariableFont
 
 
 SOURCE_PDF = "01_Intro_Interface.pdf"
 TRANSLATIONS_JSON = "translations_01_intro_interface.json"
 OUTPUT_PDF = "01_Intro_Interface_ja_side_by_side.pdf"
 MISSING_JSON = "translations_01_intro_interface.missing.json"
+GENERATED_FONT_DIR = "generated_fonts"
+FONT_WEIGHTS = {
+    "regular": 400,
+    "semibold": 600,
+    "bold": 700,
+}
+FONT_STYLE_NAMES = {
+    "regular": "Regular",
+    "semibold": "SemiBold",
+    "bold": "Bold",
+}
+FONT_NAMES = {
+    "regular": "NotoSansJPRegular",
+    "semibold": "NotoSansJPSemiBold",
+    "bold": "NotoSansJPBold",
+}
 
 
 def default_japanese_font() -> str:
     windir = os.environ.get("WINDIR", r"C:\Windows")
     candidates = [
         Path(windir) / "Fonts" / "NotoSansJP-VF.ttf",
-        Path(windir) / "Fonts" / "YuGothR.ttc",
-        Path(windir) / "Fonts" / "meiryo.ttc",
-        Path(windir) / "Fonts" / "msgothic.ttc",
     ]
     for path in candidates:
         if path.exists():
             return str(path)
-    raise FileNotFoundError("No Japanese font found in Windows Fonts.")
+    raise FileNotFoundError("No NotoSansJP variable font found in Windows Fonts.")
+
+
+def ensure_static_font_instances(source_font: Path, output_dir: Path) -> dict[str, str]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    font_paths: dict[str, str] = {}
+    for weight_name, weight_value in FONT_WEIGHTS.items():
+        output_path = output_dir / f"NotoSansJP-{weight_name}-{weight_value}.ttf"
+        style_name = FONT_STYLE_NAMES[weight_name]
+        needs_write = True
+        if output_path.exists():
+            existing = TTFont(str(output_path))
+            full_name = existing["name"].getDebugName(4)
+            typographic_subfamily = existing["name"].getDebugName(17)
+            needs_write = (
+                existing["OS/2"].usWeightClass != weight_value
+                or full_name != f"Noto Sans JP {style_name}"
+                or typographic_subfamily != style_name
+            )
+        if needs_write:
+            font = TTFont(str(source_font))
+            static_font = instantiateVariableFont(font, {"wght": weight_value}, inplace=False)
+            static_font["OS/2"].usWeightClass = weight_value
+            set_font_names(static_font, style_name)
+            static_font.save(str(output_path))
+        font_paths[weight_name] = str(output_path)
+    return font_paths
+
+
+def set_font_names(font: TTFont, style_name: str) -> None:
+    names = font["name"]
+    values = {
+        1: "Noto Sans JP",
+        2: style_name,
+        3: f"2.004;ADBO;NotoSansJP-{style_name};ADOBE",
+        4: f"Noto Sans JP {style_name}",
+        6: f"NotoSansJP-{style_name}",
+        16: "Noto Sans JP",
+        17: style_name,
+    }
+    for name_id, value in values.items():
+        for platform_id, encoding_id, language_id in (
+            (1, 0, 0),
+            (3, 1, 0x409),
+            (3, 1, 0x411),
+        ):
+            names.setName(value, name_id, platform_id, encoding_id, language_id)
+
+
+def make_font_assets(source_font: Path, output_dir: Path) -> dict[str, dict[str, Any]]:
+    font_paths = ensure_static_font_instances(source_font, output_dir)
+    return {
+        weight_name: {
+            "path": font_path,
+            "name": FONT_NAMES[weight_name],
+            "font": fitz.Font(fontfile=font_path),
+        }
+        for weight_name, font_path in font_paths.items()
+    }
 
 
 def block_id(page_index: int, block_index: int) -> str:
@@ -108,6 +182,16 @@ def extract_block_features(page: fitz.Page, page_index: int) -> dict[str, dict[s
             "fonts": {span["font"] for span in spans},
             "sizes": {round(span["size"], 1) for span in spans},
             "colors": {span.get("color") for span in spans},
+            "spans": [
+                {
+                    "text": span.get("text", ""),
+                    "font": span["font"],
+                    "size": round(span["size"], 1),
+                    "color": span.get("color"),
+                    "bbox": list(span["bbox"]),
+                }
+                for span in spans
+            ],
             "line_count": len(line_origins),
             "line_gaps": [
                 round(line_origins[index + 1] - line_origins[index], 2)
@@ -172,14 +256,45 @@ def translated_color(rect: fitz.Rect, block_type: str = "") -> tuple[float, floa
     return (0.12, 0.12, 0.12)
 
 
+def int_color_to_rgb(color: int | None) -> tuple[float, float, float]:
+    if color is None:
+        return (0.12, 0.12, 0.12)
+    return (
+        ((color >> 16) & 255) / 255,
+        ((color >> 8) & 255) / 255,
+        (color & 255) / 255,
+    )
+
+
+def source_font_size(features: dict[str, Any], fallback: float = 9.5) -> float:
+    sizes = sorted(features.get("sizes", []), reverse=True)
+    return float(sizes[0]) if sizes else fallback
+
+
+def source_font_weight(features: dict[str, Any], block_type: str = "") -> str:
+    fonts = features.get("fonts", set())
+    if block_type in {"section_heading", "subheading"} or any("Semibold" in font for font in fonts):
+        return "semibold"
+    if block_type == "side_label" or any(("Bold" in font or "Black" in font) for font in fonts):
+        return "bold"
+    return "regular"
+
+
+def font_asset(font_assets: dict[str, dict[str, Any]], weight: str) -> dict[str, Any]:
+    return font_assets.get(weight, font_assets["regular"])
+
+
 def insert_fitted_text(
     page: fitz.Page,
     rect: fitz.Rect,
     text: str,
-    font_path: str,
+    font_assets: dict[str, dict[str, Any]],
     color: tuple[float, float, float],
+    weight: str = "regular",
+    base_size: float | None = None,
 ) -> None:
-    base_size = choose_font_size(rect, text)
+    asset = font_asset(font_assets, weight)
+    base_size = base_size or choose_font_size(rect, text)
     min_size = 4.2
     inset = min(2, max(0, rect.width * 0.01))
     target = fitz.Rect(rect.x0 + inset, rect.y0 + 1, rect.x1 - inset, rect.y1 - 1)
@@ -189,14 +304,12 @@ def insert_fitted_text(
         result = page.insert_textbox(
             target,
             text,
-            fontname="NotoSansJP",
-            fontfile=font_path,
+            fontname=asset["name"],
+            fontfile=asset["path"],
             fontsize=size,
             color=color,
             fill=color,
             align=fitz.TEXT_ALIGN_LEFT,
-            render_mode=2,
-            border_width=0.025,
             overlay=True,
         )
         if result >= 0:
@@ -206,14 +319,12 @@ def insert_fitted_text(
     page.insert_textbox(
         target,
         text,
-        fontname="NotoSansJP",
-        fontfile=font_path,
+        fontname=asset["name"],
+        fontfile=asset["path"],
         fontsize=min_size,
         color=color,
         fill=color,
         align=fitz.TEXT_ALIGN_LEFT,
-        render_mode=2,
-        border_width=0.025,
         overlay=True,
     )
 
@@ -238,12 +349,14 @@ def draw_wrapped_text(
     page: fitz.Page,
     rect: fitz.Rect,
     text: str,
-    font_path: str,
-    font: fitz.Font,
+    font_assets: dict[str, dict[str, Any]],
     fontsize: float,
     color: tuple[float, float, float],
+    weight: str = "regular",
     line_factor: float = 1.32,
 ) -> float:
+    asset = font_asset(font_assets, weight)
+    font = asset["font"]
     line_height = fontsize * line_factor
     max_width = max(1, rect.width)
     lines = wrap_text(font, text, fontsize, max_width)
@@ -252,13 +365,11 @@ def draw_wrapped_text(
         page.insert_text(
             fitz.Point(rect.x0, y),
             line,
-            fontname="NotoSansJP",
-            fontfile=font_path,
+            fontname=asset["name"],
+            fontfile=asset["path"],
             fontsize=fontsize,
             color=color,
             fill=color,
-            render_mode=2,
-            border_width=0.025,
             overlay=True,
         )
         y += line_height
@@ -324,6 +435,13 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         return "minor_heading"
     if min(sizes or {99}) <= 8.5 and 7303022 in colors and rect.y0 < 760 and rect.x0 < 520:
         return "caption"
+    if (
+        "ProximaNova-Bold" in fonts
+        and "ProximaNova-Light" in fonts
+        and 16099584 in colors
+        and re.match(r"^\d+\s+", text)
+    ):
+        return "numbered_step"
     if text.startswith(("NOTE:", "TIP:")) or (
         rect.x0 >= 100
         and rect.width > 300
@@ -362,20 +480,20 @@ def insert_toc_line(
     page: fitz.Page,
     rect: fitz.Rect,
     text: str,
-    font_path: str,
+    font_assets: dict[str, dict[str, Any]],
     color: tuple[float, float, float],
+    fontsize: float,
 ) -> None:
+    asset = font_asset(font_assets, "regular")
     target = fitz.Rect(rect.x0, rect.y0 - 1, rect.x1, rect.y1 + 4)
     page.insert_textbox(
         target,
         text,
-        fontname="NotoSansJP",
-        fontfile=font_path,
-        fontsize=7.2,
+        fontname=asset["name"],
+        fontfile=asset["path"],
+        fontsize=fontsize,
         color=color,
         fill=color,
-        render_mode=2,
-        border_width=0.025,
         align=fitz.TEXT_ALIGN_LEFT,
         overlay=True,
     )
@@ -385,27 +503,83 @@ def draw_one_line_label(
     page: fitz.Page,
     rect: fitz.Rect,
     text: str,
-    font_path: str,
-    font: fitz.Font,
+    font_assets: dict[str, dict[str, Any]],
     fontsize: float,
     color: tuple[float, float, float],
+    weight: str,
     page_width: float,
 ) -> None:
+    asset = font_asset(font_assets, weight)
+    font = asset["font"]
     width = font.text_length(text, fontsize=fontsize)
     target = fitz.Rect(rect)
     target.x1 = min(page_width * 2 - 34, max(target.x1, target.x0 + width + 8))
     page.insert_text(
         fitz.Point(target.x0, target.y0 + fontsize),
         text,
-        fontname="NotoSansJP",
-        fontfile=font_path,
+        fontname=asset["name"],
+        fontfile=asset["path"],
         fontsize=fontsize,
         color=color,
         fill=color,
-        render_mode=2,
-        border_width=0.025,
         overlay=True,
     )
+
+
+def draw_numbered_step(
+    page: fitz.Page,
+    rect: fitz.Rect,
+    text: str,
+    font_assets: dict[str, dict[str, Any]],
+    fontsize: float,
+    line_advance: float,
+) -> float:
+    match = re.match(r"^(\d+)\s+(.*)$", text)
+    if not match:
+        return draw_wrapped_text(
+            page,
+            rect,
+            text,
+            font_assets,
+            fontsize=fontsize,
+            color=(0.12, 0.12, 0.12),
+            weight="regular",
+            line_factor=line_advance / fontsize,
+        )
+
+    number, body = match.groups()
+    number_asset = font_asset(font_assets, "bold")
+    body_asset = font_asset(font_assets, "regular")
+    y = rect.y0 + fontsize
+    number_color = int_color_to_rgb(16099584)
+    page.insert_text(
+        fitz.Point(rect.x0, y),
+        number,
+        fontname=number_asset["name"],
+        fontfile=number_asset["path"],
+        fontsize=fontsize,
+        color=number_color,
+        fill=number_color,
+        overlay=True,
+    )
+
+    body_x0 = min(rect.x1 - 20, rect.x0 + 17)
+    body_rect = fitz.Rect(body_x0, rect.y0, rect.x1, rect.y1)
+    lines = wrap_text(body_asset["font"], body, fontsize, max(1, body_rect.width))
+    body_y = y
+    for line in lines:
+        page.insert_text(
+            fitz.Point(body_rect.x0, body_y),
+            line,
+            fontname=body_asset["name"],
+            fontfile=body_asset["path"],
+            fontsize=fontsize,
+            color=(0.12, 0.12, 0.12),
+            fill=(0.12, 0.12, 0.12),
+            overlay=True,
+        )
+        body_y += line_advance
+    return max(y + line_advance, body_y)
 
 
 def layout_translated_blocks(
@@ -415,13 +589,12 @@ def layout_translated_blocks(
     image_rects: list[fitz.Rect],
     translations: dict[str, str],
     page_width: float,
-    font_path: str,
+    font_assets: dict[str, dict[str, Any]],
     body_font_size: float,
     body_line_advance: float,
     paragraph_spacing: float,
 ) -> None:
-    font = fitz.Font(fontfile=font_path)
-    flow_blocks: list[tuple[dict[str, Any], fitz.Rect]] = []
+    flow_blocks: list[tuple[dict[str, Any], fitz.Rect, str]] = []
     fixed_anchors: list[fitz.Rect] = [rect for rect in image_rects if rect.x0 < page_width - 80]
     toc_page = is_toc_page(blocks)
 
@@ -431,7 +604,8 @@ def layout_translated_blocks(
             continue
 
         bbox = fitz.Rect(block["bbox"])
-        block_type = classify_block(block, block_features.get(block["id"], {}), toc_page)
+        features = block_features.get(block["id"], {})
+        block_type = classify_block(block, features, toc_page)
         target = fitz.Rect(
             bbox.x0 + page_width,
             bbox.y0,
@@ -454,10 +628,10 @@ def layout_translated_blocks(
                 page,
                 title_target,
                 translated,
-                font_path,
-                font,
+                font_assets,
                 fontsize=title_font_size,
                 color=translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
                 line_factor=1.15,
             )
         elif block_type == "toc_entry":
@@ -465,18 +639,19 @@ def layout_translated_blocks(
                 page,
                 target,
                 translated,
-                font_path,
+                font_assets,
                 translated_color(bbox, block_type),
+                fontsize=source_font_size(features, 9.0),
             )
         elif block_type == "section_heading":
             draw_one_line_label(
                 page,
                 target,
                 translated,
-                font_path,
-                font,
-                fontsize=15.0,
+                font_assets,
+                fontsize=source_font_size(features, 15.0),
                 color=translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
         elif block_type == "minor_heading":
@@ -484,10 +659,10 @@ def layout_translated_blocks(
                 page,
                 target,
                 translated,
-                font_path,
-                font,
-                fontsize=11.5,
+                font_assets,
+                fontsize=source_font_size(features, 11.5),
                 color=translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
         elif block_type == "subheading":
@@ -495,10 +670,10 @@ def layout_translated_blocks(
                 page,
                 target,
                 translated,
-                font_path,
-                font,
-                fontsize=body_font_size,
+                font_assets,
+                fontsize=source_font_size(features, body_font_size),
                 color=translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
         elif block_type == "caption":
@@ -508,10 +683,10 @@ def layout_translated_blocks(
                 page,
                 caption_target,
                 translated,
-                font_path,
-                font,
-                fontsize=8.0,
+                font_assets,
+                fontsize=source_font_size(features, 8.0),
                 color=translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
                 line_factor=1.22,
             )
         elif block_type == "note":
@@ -519,24 +694,30 @@ def layout_translated_blocks(
                 page,
                 target,
                 translated,
-                font_path,
+                font_assets,
                 translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
+                base_size=source_font_size(features, 9.5),
             )
         elif block_type in {"side_label", "footer"}:
             insert_fitted_text(
                 page,
                 target,
                 translated,
-                font_path,
+                font_assets,
                 translated_color(bbox, block_type),
+                weight=source_font_weight(features, block_type),
+                base_size=source_font_size(features, 8.5),
             )
         else:
-            flow_blocks.append((block, bbox))
+            flow_blocks.append((block, bbox, block_type))
 
     flow_blocks.sort(key=lambda item: (round(item[1].x0 / 20) * 20, item[1].y0))
     cursors: dict[int, float] = {}
-    for block, bbox in flow_blocks:
+    base_line_ratio = body_line_advance / body_font_size
+    for block, bbox, block_type in flow_blocks:
         translated = translations[block["id"]]
+        features = block_features.get(block["id"], {})
         column_key = round(bbox.x0 / 20) * 20
         x0 = bbox.x0 + page_width
         x1 = bbox.x1 + page_width
@@ -552,24 +733,36 @@ def layout_translated_blocks(
         flow_limit = min(page.rect.y1 - 44, next_fixed_y - 6)
         y1 = max(y0 + 1, min(flow_limit, max(y0 + 40, bbox.y1 + 80)))
         target = fitz.Rect(x0, y0, x1, y1)
-        fontsize = body_font_size
-        line_advance = body_line_advance
-        while fontsize > 8.0:
-            measured_end = measure_wrapped_text_end(font, target, translated, fontsize, line_advance)
+        fontsize = source_font_size(features, body_font_size)
+        line_advance = fontsize * base_line_ratio
+        weight = source_font_weight(features, block_type)
+        measuring_font = font_asset(font_assets, "regular")["font"]
+        while fontsize > 7.0:
+            measured_end = measure_wrapped_text_end(measuring_font, target, translated, fontsize, line_advance)
             if measured_end <= flow_limit:
                 break
             fontsize = round(fontsize - 0.25, 2)
-            line_advance = body_line_advance * (fontsize / body_font_size)
-        next_y = draw_wrapped_text(
-            page,
-            target,
-            translated,
-            font_path,
-            font,
-            fontsize=fontsize,
-            color=translated_color(bbox, "body"),
-            line_factor=line_advance / fontsize,
-        )
+            line_advance = fontsize * base_line_ratio
+        if block_type == "numbered_step":
+            next_y = draw_numbered_step(
+                page,
+                target,
+                translated,
+                font_assets,
+                fontsize=fontsize,
+                line_advance=line_advance,
+            )
+        else:
+            next_y = draw_wrapped_text(
+                page,
+                target,
+                translated,
+                font_assets,
+                fontsize=fontsize,
+                color=translated_color(bbox, "body"),
+                weight=weight,
+                line_factor=line_advance / fontsize,
+            )
         cursors[column_key] = next_y + paragraph_spacing - fontsize
 
 
@@ -609,7 +802,7 @@ def build_pdf(
     translations_json: Path,
     output_pdf: Path,
     missing_json: Path,
-    font_path: str,
+    font_assets: dict[str, dict[str, Any]],
     body_font_size: float,
     body_line_advance: float,
     paragraph_spacing: float,
@@ -648,7 +841,7 @@ def build_pdf(
             image_rects,
             translations,
             first.width,
-            font_path,
+            font_assets,
             body_font_size,
             body_line_advance,
             paragraph_spacing,
@@ -668,17 +861,19 @@ def main() -> None:
     parser.add_argument("--output", default=OUTPUT_PDF)
     parser.add_argument("--missing", default=MISSING_JSON)
     parser.add_argument("--font", default=default_japanese_font())
+    parser.add_argument("--generated-font-dir", default=GENERATED_FONT_DIR)
     parser.add_argument("--body-font-size", type=float, default=9.5)
     parser.add_argument("--body-line-advance", type=float, default=11.59)
     parser.add_argument("--paragraph-spacing", type=float, default=5.67)
     args = parser.parse_args()
 
+    font_assets = make_font_assets(Path(args.font), Path(args.generated_font_dir))
     build_pdf(
         Path(args.input),
         Path(args.translations),
         Path(args.output),
         Path(args.missing),
-        args.font,
+        font_assets,
         args.body_font_size,
         args.body_line_advance,
         args.paragraph_spacing,

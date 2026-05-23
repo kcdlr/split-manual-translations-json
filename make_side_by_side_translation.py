@@ -56,7 +56,7 @@ def extract_text_blocks(page: fitz.Page, page_index: int) -> list[dict[str, Any]
 
 def extract_block_features(page: fitz.Page, page_index: int) -> dict[str, dict[str, Any]]:
     features: dict[str, dict[str, Any]] = {}
-    text_block_index = 0
+    dict_blocks: list[dict[str, Any]] = []
     for raw in page.get_text("dict")["blocks"]:
         lines = raw.get("lines", [])
         spans = [
@@ -70,12 +70,41 @@ def extract_block_features(page: fitz.Page, page_index: int) -> dict[str, dict[s
         text = clean_text(" ".join(span["text"] for span in spans))
         if not text:
             continue
-        line_origins = []
+        line_origins: list[float] = []
         for line in lines:
             line_spans = [span for span in line.get("spans", []) if span.get("text", "").strip()]
             if line_spans:
                 line_origins.append(line_spans[0]["origin"][1])
-        features[block_id(page_index, text_block_index)] = {
+        dict_blocks.append(
+            {
+                "rect": fitz.Rect(raw["bbox"]),
+                "spans": spans,
+                "line_origins": line_origins,
+                "text": text,
+            }
+        )
+
+    for block in extract_text_blocks(page, page_index):
+        block_rect = fitz.Rect(block["bbox"]) + (-0.75, -0.75, 0.75, 0.75)
+        matched = []
+        for entry in dict_blocks:
+            entry_rect = entry["rect"]
+            area = max(1.0, entry_rect.get_area())
+            overlap = block_rect & entry_rect
+            if overlap.get_area() / area > 0.75:
+                matched.append(entry)
+        spans = [span for entry in matched for span in entry["spans"]]
+        if not spans:
+            continue
+        line_origins = sorted(
+            {
+                round(origin, 2)
+                for entry in matched
+                for origin in entry["line_origins"]
+            }
+        )
+        text = clean_text(" ".join(entry["text"] for entry in matched)) or block["source"]
+        features[block["id"]] = {
             "fonts": {span["font"] for span in spans},
             "sizes": {round(span["size"], 1) for span in spans},
             "colors": {span.get("color") for span in spans},
@@ -86,8 +115,15 @@ def extract_block_features(page: fitz.Page, page_index: int) -> dict[str, dict[s
             ],
             "text": text,
         }
-        text_block_index += 1
     return features
+
+
+def extract_image_rects(page: fitz.Page) -> list[fitz.Rect]:
+    return [
+        fitz.Rect(block["bbox"])
+        for block in page.get_text("dict")["blocks"]
+        if block.get("type") == 1
+    ]
 
 
 def load_translations(path: Path) -> dict[str, str]:
@@ -129,7 +165,7 @@ def choose_font_size(rect: fitz.Rect, text: str) -> float:
 
 def translated_color(rect: fitz.Rect, block_type: str = "") -> tuple[float, float, float]:
     # Keep heading-like blocks close to the source manual's orange accent.
-    if block_type in {"chapter_title", "section_heading"} or is_title(rect):
+    if block_type in {"chapter_title", "section_heading"}:
         return (0.82, 0.22, 0.04)
     if block_type == "caption":
         return (0.43, 0.43, 0.43)
@@ -279,11 +315,27 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         return "chapter_title"
     if 15.0 in sizes and "ProximaNova-Semibold" in fonts:
         return "section_heading"
+    if (
+        sizes == {11.5}
+        and "ProximaNova-Regular" in fonts
+        and line_count == 1
+        and colors == {0}
+    ):
+        return "minor_heading"
+    if min(sizes or {99}) <= 8.5 and 7303022 in colors and rect.y0 < 760 and rect.x0 < 520:
+        return "caption"
     if text.startswith(("NOTE:", "TIP:")) or (
         rect.x0 >= 100
         and rect.width > 300
         and rect.height < 55
         and ("For more information" in text or "see Chapter" in text)
+    ) or (
+        rect.x0 > 250
+        and rect.y0 > 630
+        and rect.width < 230
+        and rect.height > 45
+        and sizes == {9.5}
+        and "ProximaNova-Light" in fonts
     ) or (rect.x0 >= 100 and {"ProximaNova-Bold", "ProximaNova-Light"} <= fonts):
         return "note"
     if (
@@ -294,8 +346,6 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         and rect.width < 280
     ):
         return "subheading"
-    if min(sizes or {99}) <= 8.5 and rect.height < 16 and line_count == 1 and rect.y0 > 250:
-        return "caption"
     return "body"
 
 
@@ -362,6 +412,7 @@ def layout_translated_blocks(
     page: fitz.Page,
     blocks: list[dict[str, Any]],
     block_features: dict[str, dict[str, Any]],
+    image_rects: list[fitz.Rect],
     translations: dict[str, str],
     page_width: float,
     font_path: str,
@@ -371,7 +422,7 @@ def layout_translated_blocks(
 ) -> None:
     font = fitz.Font(fontfile=font_path)
     flow_blocks: list[tuple[dict[str, Any], fitz.Rect]] = []
-    fixed_anchors: list[fitz.Rect] = []
+    fixed_anchors: list[fitz.Rect] = [rect for rect in image_rects if rect.x0 < page_width - 80]
     toc_page = is_toc_page(blocks)
 
     for block in blocks:
@@ -388,7 +439,11 @@ def layout_translated_blocks(
             bbox.y1,
         )
 
-        if block_type in {"chapter_title", "section_heading", "toc_entry"} and bbox.x0 < page_width - 80:
+        if (
+            block_type
+            in {"chapter_title", "section_heading", "minor_heading", "subheading", "caption", "toc_entry"}
+            and bbox.x0 < page_width - 80
+        ):
             fixed_anchors.append(bbox)
 
         if block_type == "chapter_title":
@@ -421,6 +476,17 @@ def layout_translated_blocks(
                 font_path,
                 font,
                 fontsize=15.0,
+                color=translated_color(bbox, block_type),
+                page_width=page_width,
+            )
+        elif block_type == "minor_heading":
+            draw_one_line_label(
+                page,
+                target,
+                translated,
+                font_path,
+                font,
+                fontsize=11.5,
                 color=translated_color(bbox, block_type),
                 page_width=page_width,
             )
@@ -574,10 +640,12 @@ def build_pdf(
         redacted.close()
 
         block_features = extract_block_features(src_page, page_index)
+        image_rects = extract_image_rects(src_page)
         layout_translated_blocks(
             out_page,
             blocks,
             block_features,
+            image_rects,
             translations,
             first.width,
             font_path,

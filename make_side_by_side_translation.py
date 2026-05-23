@@ -247,15 +247,6 @@ def choose_font_size(rect: fitz.Rect, text: str) -> float:
     return 7
 
 
-def translated_color(rect: fitz.Rect, block_type: str = "") -> tuple[float, float, float]:
-    # Keep heading-like blocks close to the source manual's orange accent.
-    if block_type in {"chapter_title", "section_heading"}:
-        return (0.82, 0.22, 0.04)
-    if block_type == "caption":
-        return (0.43, 0.43, 0.43)
-    return (0.12, 0.12, 0.12)
-
-
 def int_color_to_rgb(color: int | None) -> tuple[float, float, float]:
     if color is None:
         return (0.12, 0.12, 0.12)
@@ -264,6 +255,23 @@ def int_color_to_rgb(color: int | None) -> tuple[float, float, float]:
         ((color >> 8) & 255) / 255,
         (color & 255) / 255,
     )
+
+
+def source_color(features: dict[str, Any], fallback: tuple[float, float, float] = (0.12, 0.12, 0.12)) -> tuple[float, float, float]:
+    weighted_colors: dict[int, int] = {}
+    color_order: list[int] = []
+    for span in features.get("spans", []):
+        color = span.get("color")
+        if color is None:
+            continue
+        if color not in weighted_colors:
+            weighted_colors[color] = 0
+            color_order.append(color)
+        weighted_colors[color] += max(1, len(span.get("text", "")))
+    if not weighted_colors:
+        return fallback
+    color = max(color_order, key=lambda item: weighted_colors[item])
+    return int_color_to_rgb(color)
 
 
 def source_font_size(features: dict[str, Any], fallback: float = 9.5) -> float:
@@ -635,7 +643,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=title_font_size,
-                color=translated_color(bbox, block_type),
+                color=source_color(features),
                 weight=source_font_weight(features, block_type),
                 line_factor=1.15,
             )
@@ -645,7 +653,7 @@ def layout_translated_blocks(
                 target,
                 translated,
                 font_assets,
-                translated_color(bbox, block_type),
+                source_color(features),
                 fontsize=source_font_size(features, 9.0),
             )
         elif block_type == "section_heading":
@@ -655,7 +663,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=source_font_size(features, 15.0),
-                color=translated_color(bbox, block_type),
+                color=source_color(features),
                 weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
@@ -666,7 +674,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=source_font_size(features, 11.5),
-                color=translated_color(bbox, block_type),
+                color=source_color(features),
                 weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
@@ -677,7 +685,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=source_font_size(features, body_font_size),
-                color=translated_color(bbox, block_type),
+                color=source_color(features),
                 weight=source_font_weight(features, block_type),
                 page_width=page_width,
             )
@@ -690,7 +698,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=source_font_size(features, 8.0),
-                color=translated_color(bbox, block_type),
+                color=source_color(features),
                 weight=source_font_weight(features, block_type),
                 line_factor=1.22,
             )
@@ -700,7 +708,7 @@ def layout_translated_blocks(
                 target,
                 translated,
                 font_assets,
-                translated_color(bbox, block_type),
+                source_color(features),
                 weight=source_font_weight(features, block_type),
                 base_size=source_font_size(features, 9.5),
             )
@@ -710,7 +718,7 @@ def layout_translated_blocks(
                 target,
                 translated,
                 font_assets,
-                translated_color(bbox, block_type),
+                source_color(features),
                 weight=source_font_weight(features, block_type),
                 base_size=source_font_size(features, 8.5),
             )
@@ -764,7 +772,7 @@ def layout_translated_blocks(
                 translated,
                 font_assets,
                 fontsize=fontsize,
-                color=translated_color(bbox, "body"),
+                color=source_color(features),
                 weight=weight,
                 line_factor=line_advance / fontsize,
             )

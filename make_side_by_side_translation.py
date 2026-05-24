@@ -348,7 +348,7 @@ def measure_wrapped_text_end(
     return rect.y0 + fontsize + (len(lines) * line_advance)
 
 
-def overlaps_vertically(a: fitz.Rect, b: fitz.Rect, padding: float = 20) -> bool:
+def overlaps_vertically(a: fitz.Rect, b: fitz.Rect, padding: float = 0) -> bool:
     return (a.y0 - padding) < b.y1 and (b.y0 - padding) < a.y1
 
 
@@ -548,7 +548,7 @@ def layout_translated_blocks(
         column_key = round(bbox.x0 / 20) * 20
         column_rights[column_key] = max(column_rights.get(column_key, bbox.x1), bbox.x1)
 
-    cursors: dict[int, float] = {}
+    cursors: dict[int, list[tuple[float, float]]] = {}
     base_line_ratio = body_line_advance / body_font_size
     for block, bbox, block_type in flow_blocks:
         translated = translations[block["id"]]
@@ -556,17 +556,17 @@ def layout_translated_blocks(
         column_key = round(bbox.x0 / 20) * 20
         x0 = bbox.x0 + page_width
         source_x1 = max(bbox.x1, column_rights.get(column_key, bbox.x1))
-        has_right_neighbor = False
         for _, other_bbox, _ in flow_blocks:
-            if other_bbox.x0 > bbox.x0 + 40 and overlaps_vertically(bbox, other_bbox, padding=40):
+            if other_bbox.x0 > bbox.x0 + 40 and overlaps_vertically(bbox, other_bbox):
                 source_x1 = min(source_x1, other_bbox.x0 - 12)
-                has_right_neighbor = True
-        if has_right_neighbor:
-            source_x1 = max(source_x1, bbox.x0 + 80)
-        else:
-            source_x1 = max(source_x1, bbox.x1)
+        source_x1 = max(source_x1, bbox.x1)
         x1 = source_x1 + page_width
-        y0 = max(bbox.y0, cursors.get(column_key, bbox.y0))
+        y_constraints = [
+            cursor_y
+            for source_y, cursor_y in cursors.get(column_key, [])
+            if source_y < bbox.y0
+        ]
+        y0 = max([bbox.y0, *y_constraints])
         next_fixed_y = min(
             (
                 anchor.y0
@@ -608,7 +608,10 @@ def layout_translated_blocks(
                 weight=weight,
                 line_factor=line_advance / fontsize,
             )
-        cursors[column_key] = next_y + paragraph_spacing - fontsize
+        next_cursor = next_y + paragraph_spacing - fontsize
+        for covered_key in column_rights:
+            if bbox.x0 - 1 <= covered_key <= source_x1:
+                cursors.setdefault(covered_key, []).append((bbox.y0, next_cursor))
 
 
 def make_page_copy_without_text(src: fitz.Document, page_index: int, blocks: list[dict[str, Any]]) -> fitz.Document:

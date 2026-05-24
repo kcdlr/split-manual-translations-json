@@ -391,10 +391,10 @@ def should_widen_flow_block(block_type: str, features: dict[str, Any]) -> bool:
         return False
 
     sizes = features.get("sizes", set())
-    if min(sizes or {99}) <= 9.5:
-        return False
-
-    return True
+    return (
+        source_font_weight(features) == "semibold"
+        or max(sizes or {0}) > 9.5
+    )
 
 
 def is_toc_page(blocks: list[dict[str, Any]]) -> bool:
@@ -528,6 +528,7 @@ def layout_translated_blocks(
             fixed_anchors.append(bbox)
 
         if block_type == "chapter_title":
+            title_font_size = 28 if bbox.height > 80 else 22
             title_target = fitz.Rect(target)
             title_target.x1 = min(page.rect.x1 - 50, max(title_target.x1, page_width + 540))
             draw_wrapped_text(
@@ -535,7 +536,7 @@ def layout_translated_blocks(
                 title_target,
                 translated,
                 font_assets,
-                fontsize=source_font_size(features, body_font_size),
+                fontsize=title_font_size,
                 color=source_color(features),
                 weight=source_font_weight(features),
                 line_factor=1.15,

@@ -50,209 +50,2183 @@
     {
       "page": 2,
       "blocks": [
-        {"id": "p002_b000", "translation": "目次"},
-        {"id": "p002_b001", "translation": "プロジェクトマネージャー ..................................................... 16"},
-        {"id": "p002_b002", "translation": "環境設定とプロジェクト設定 ........................... 17"},
-        {"id": "p002_b003", "translation": "ログインに基づく個別の環境設定と設定 ..................................... 17"},
-        {"id": "p002_b004", "translation": "環境設定 ......................................................................... 17"},
-        {"id": "p002_b005", "translation": "システム環境設定 ........................................................ 18"},
-        {"id": "p002_b006", "translation": "ユーザー環境設定 ............................................................. 19"},
-        {"id": "p002_b007", "translation": "プロジェクト設定 .............................................................. 20"},
-        {"id": "p002_b008", "translation": "ページ間の切り替え .............................................. 21"},
-        {"id": "p002_b009", "translation": "Resolveページバーを最小化する ............................. 21"},
-        {"id": "p002_b010", "translation": "キーボードショートカットでページを切り替える ...... 21"},
-        {"id": "p002_b011", "translation": "使わないページを非表示にする .......................................... 21"},
-        {"id": "p002_b012", "translation": "ページナビゲーションを完全に非表示にする .......................... 22"},
-        {"id": "p002_b013", "translation": "Mediaページ ............................................................. 22"},
-        {"id": "p002_b014", "translation": "メディアストレージブラウザ ...................................... 23"},
-        {"id": "p002_b015", "translation": "ビューア .................................................................................. 23"},
-        {"id": "p002_b016", "translation": "メディアプール ......................................................................... 24"},
-        {"id": "p002_b017", "translation": "メタデータエディタ ............................................................... 25"},
-        {"id": "p002_b018", "translation": "オーディオパネル ........................................................................ 25"},
-        {"id": "p002_b019", "translation": "Cutページ .................................................................... 26"},
-        {"id": "p002_b020", "translation": "メディアプール ................................................................ 26"},
-        {"id": "p002_b021", "translation": "ビューア ......................................................................... 27"},
-        {"id": "p002_b022", "translation": "オーディオメーター ....................................................................... 28"},
-        {"id": "p002_b023", "translation": "タイムライン ...................................................................... 28"},
-        {"id": "p002_b024", "translation": "Editページ .................................................................. 29"},
-        {"id": "p002_b025", "translation": "メディアプール ............................................................... 30"},
-        {"id": "p002_b026", "translation": "エフェクトライブラリのブラウズ .............................................. 31"},
-        {"id": "p002_b027", "translation": "編集インデックス ............................................................................. 31"},
-        {"id": "p002_b028", "translation": "ソース/オフラインビューアとタイムラインビューア ................... 32"},
-        {"id": "p002_b029", "translation": "インスペクタ ............................................................................. 33"},
-        {"id": "p002_b030", "translation": "ツールバー ................................................................................. 33"},
-        {"id": "p002_b031", "translation": "タイムライン ............................................................................... 33"},
-        {"id": "p002_b032", "translation": "フローティングタイムコードウィンドウ ....................................... 34"},
-        {"id": "p002_b033", "translation": "DaVinci Resolveのモーショングラフィックスとビジュアルエフェクト .......................... 34"},
-        {"id": "p002_b034", "translation": "VFX Connect ..................................................................... 35"},
-        {"id": "p002_b035", "translation": "Fusionページ ............................................................. 36"},
-        {"id": "p002_b036", "translation": "作業エリア .................................................................. 36"},
-        {"id": "p002_b037", "translation": "ビューア ................................................................................ 37"},
-        {"id": "p002_b038", "translation": "ツールバー ................................................................................. 37"},
-        {"id": "p002_b039", "translation": "エフェクトライブラリ ................................................................... 38"},
-        {"id": "p002_b040", "translation": "ノードエディタ ........................................................................ 38"},
-        {"id": "p002_b041", "translation": "インスペクタ ............................................................................. 39"},
-        {"id": "p002_b042", "translation": "サムネイルタイムライン ...................................................... 40"},
-        {"id": "p002_b043", "translation": "メディアプール ........................................................................ 40"},
-        {"id": "p002_b044", "translation": "ステータスバー ............................................................................. 41"},
-        {"id": "p002_b045", "translation": "コンソール ....................................................................... 41"},
-        {"id": "p002_b046", "translation": "Colorページ ................................................................ 42"},
-        {"id": "p002_b047", "translation": "ビューア .................................................................................. 42"},
-        {"id": "p002_b048", "translation": "ギャラリー .................................................................................. 43"},
-        {"id": "p002_b049", "translation": "ノードエディタ ........................................................................ 44"},
-        {"id": "p002_b050", "translation": "タイムライン ............................................................................... 44"},
-        {"id": "p002_b051", "translation": "左側パレット ....................................................................... 45"},
-        {"id": "p002_b052", "translation": "中央パレット ................................................................ 45"},
-        {"id": "p002_b053", "translation": "キーフレームエディタ ............................................................... 46"},
-        {"id": "p002_b054", "translation": "Fairlightページ .......................................................... 47"},
-        {"id": "p002_b055", "translation": "オーディオタイムライン ........................................................ 47"},
-        {"id": "p002_b056", "translation": "ツールバー ................................................................................. 49"},
-        {"id": "p002_b057", "translation": "ミキサー ..................................................................................... 49"},
-        {"id": "p002_b058", "translation": "専用チャンネルストリップコントロール .......................... 49"},
-        {"id": "p002_b059", "translation": "モニタリングパネル .................................................... 51"},
-        {"id": "p002_b060", "translation": "フローティングタイムコードウィンドウ ....................................... 52"},
-        {"id": "p002_b061", "translation": "Deliverページ ............................................................ 52"},
-        {"id": "p002_b062", "translation": "レンダー設定リスト ............................................. 53"},
-        {"id": "p002_b063", "translation": "Deliverページのタイムライン ......................................... 53"},
-        {"id": "p002_b064", "translation": "ビューア ......................................................................... 54"},
-        {"id": "p002_b065", "translation": "レンダーキュー ........................................................ 55"},
-        {"id": "p002_b066", "translation": "15 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
-        {"id": "p002_b067", "translation": "概要"}
+        {
+          "id": "p002_b000",
+          "translation": "目次"
+        },
+        {
+          "id": "p002_b001",
+          "translation": "プロジェクトマネージャー ..................................................... 16"
+        },
+        {
+          "id": "p002_b002",
+          "translation": "環境設定とプロジェクト設定 ........................... 17"
+        },
+        {
+          "id": "p002_b003",
+          "translation": "ログインに基づく個別の環境設定と設定 ..................................... 17"
+        },
+        {
+          "id": "p002_b004",
+          "translation": "環境設定 ......................................................................... 17"
+        },
+        {
+          "id": "p002_b005",
+          "translation": "システム環境設定 ........................................................ 18"
+        },
+        {
+          "id": "p002_b006",
+          "translation": "ユーザー環境設定 ............................................................. 19"
+        },
+        {
+          "id": "p002_b007",
+          "translation": "プロジェクト設定 .............................................................. 20"
+        },
+        {
+          "id": "p002_b008",
+          "translation": "ページ間の切り替え .............................................. 21"
+        },
+        {
+          "id": "p002_b009",
+          "translation": "Resolveページバーを最小化する ............................. 21"
+        },
+        {
+          "id": "p002_b010",
+          "translation": "キーボードショートカットでページを切り替える ...... 21"
+        },
+        {
+          "id": "p002_b011",
+          "translation": "使わないページを非表示にする .......................................... 21"
+        },
+        {
+          "id": "p002_b012",
+          "translation": "ページナビゲーションを完全に非表示にする .......................... 22"
+        },
+        {
+          "id": "p002_b013",
+          "translation": "Mediaページ ............................................................. 22"
+        },
+        {
+          "id": "p002_b014",
+          "translation": "メディアストレージブラウザ ...................................... 23"
+        },
+        {
+          "id": "p002_b015",
+          "translation": "ビューア .................................................................................. 23"
+        },
+        {
+          "id": "p002_b016",
+          "translation": "メディアプール ......................................................................... 24"
+        },
+        {
+          "id": "p002_b017",
+          "translation": "メタデータエディタ ............................................................... 25"
+        },
+        {
+          "id": "p002_b018",
+          "translation": "オーディオパネル ........................................................................ 25"
+        },
+        {
+          "id": "p002_b019",
+          "translation": "Cutページ .................................................................... 26"
+        },
+        {
+          "id": "p002_b020",
+          "translation": "メディアプール ................................................................ 26"
+        },
+        {
+          "id": "p002_b021",
+          "translation": "ビューア ......................................................................... 27"
+        },
+        {
+          "id": "p002_b022",
+          "translation": "オーディオメーター ....................................................................... 28"
+        },
+        {
+          "id": "p002_b023",
+          "translation": "タイムライン ...................................................................... 28"
+        },
+        {
+          "id": "p002_b024",
+          "translation": "Editページ .................................................................. 29"
+        },
+        {
+          "id": "p002_b025",
+          "translation": "メディアプール ............................................................... 30"
+        },
+        {
+          "id": "p002_b026",
+          "translation": "エフェクトライブラリのブラウズ .............................................. 31"
+        },
+        {
+          "id": "p002_b027",
+          "translation": "編集インデックス ............................................................................. 31"
+        },
+        {
+          "id": "p002_b028",
+          "translation": "ソース/オフラインビューアとタイムラインビューア ................... 32"
+        },
+        {
+          "id": "p002_b029",
+          "translation": "インスペクタ ............................................................................. 33"
+        },
+        {
+          "id": "p002_b030",
+          "translation": "ツールバー ................................................................................. 33"
+        },
+        {
+          "id": "p002_b031",
+          "translation": "タイムライン ............................................................................... 33"
+        },
+        {
+          "id": "p002_b032",
+          "translation": "フローティングタイムコードウィンドウ ....................................... 34"
+        },
+        {
+          "id": "p002_b033",
+          "translation": "DaVinci Resolveのモーショングラフィックスとビジュアルエフェクト .......................... 34"
+        },
+        {
+          "id": "p002_b034",
+          "translation": "VFX Connect ..................................................................... 35"
+        },
+        {
+          "id": "p002_b035",
+          "translation": "Fusionページ ............................................................. 36"
+        },
+        {
+          "id": "p002_b036",
+          "translation": "作業エリア .................................................................. 36"
+        },
+        {
+          "id": "p002_b037",
+          "translation": "ビューア ................................................................................ 37"
+        },
+        {
+          "id": "p002_b038",
+          "translation": "ツールバー ................................................................................. 37"
+        },
+        {
+          "id": "p002_b039",
+          "translation": "エフェクトライブラリ ................................................................... 38"
+        },
+        {
+          "id": "p002_b040",
+          "translation": "ノードエディタ ........................................................................ 38"
+        },
+        {
+          "id": "p002_b041",
+          "translation": "インスペクタ ............................................................................. 39"
+        },
+        {
+          "id": "p002_b042",
+          "translation": "サムネイルタイムライン ...................................................... 40"
+        },
+        {
+          "id": "p002_b043",
+          "translation": "メディアプール ........................................................................ 40"
+        },
+        {
+          "id": "p002_b044",
+          "translation": "ステータスバー ............................................................................. 41"
+        },
+        {
+          "id": "p002_b045",
+          "translation": "コンソール ....................................................................... 41"
+        },
+        {
+          "id": "p002_b046",
+          "translation": "Colorページ ................................................................ 42"
+        },
+        {
+          "id": "p002_b047",
+          "translation": "ビューア .................................................................................. 42"
+        },
+        {
+          "id": "p002_b048",
+          "translation": "ギャラリー .................................................................................. 43"
+        },
+        {
+          "id": "p002_b049",
+          "translation": "ノードエディタ ........................................................................ 44"
+        },
+        {
+          "id": "p002_b050",
+          "translation": "タイムライン ............................................................................... 44"
+        },
+        {
+          "id": "p002_b051",
+          "translation": "左側パレット ....................................................................... 45"
+        },
+        {
+          "id": "p002_b052",
+          "translation": "中央パレット ................................................................ 45"
+        },
+        {
+          "id": "p002_b053",
+          "translation": "キーフレームエディタ ............................................................... 46"
+        },
+        {
+          "id": "p002_b054",
+          "translation": "Fairlightページ .......................................................... 47"
+        },
+        {
+          "id": "p002_b055",
+          "translation": "オーディオタイムライン ........................................................ 47"
+        },
+        {
+          "id": "p002_b056",
+          "translation": "ツールバー ................................................................................. 49"
+        },
+        {
+          "id": "p002_b057",
+          "translation": "ミキサー ..................................................................................... 49"
+        },
+        {
+          "id": "p002_b058",
+          "translation": "専用チャンネルストリップコントロール .......................... 49"
+        },
+        {
+          "id": "p002_b059",
+          "translation": "モニタリングパネル .................................................... 51"
+        },
+        {
+          "id": "p002_b060",
+          "translation": "フローティングタイムコードウィンドウ ....................................... 52"
+        },
+        {
+          "id": "p002_b061",
+          "translation": "Deliverページ ............................................................ 52"
+        },
+        {
+          "id": "p002_b062",
+          "translation": "レンダー設定リスト ............................................. 53"
+        },
+        {
+          "id": "p002_b063",
+          "translation": "Deliverページのタイムライン ......................................... 53"
+        },
+        {
+          "id": "p002_b064",
+          "translation": "ビューア ......................................................................... 54"
+        },
+        {
+          "id": "p002_b065",
+          "translation": "レンダーキュー ........................................................ 55"
+        },
+        {
+          "id": "p002_b066",
+          "translation": "15 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p002_b067",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 3,
       "blocks": [
-        {"id": "p003_b000", "translation": "プロジェクトマネージャー"},
-        {"id": "p003_b001", "translation": "ほとんどのユーザーにとって、プロジェクトマネージャーはDaVinci Resolveを開いたときに最初に目にするウィンドウです。プロジェクトマネージャーは、現在ログインしているユーザーに属するすべてのプロジェクトを管理するための中心的なインターフェイスで、そのユーザー名はプロジェクトタイトルバーの右上に表示されます。プロジェクトマネージャーは、ユーザー間でプロジェクトを移動する場合でも、あるDaVinci Resolveワークステーションから別のワークステーションへプロジェクトを移動する場合でも、DaVinci Resolveにプロジェクトを読み込んだり、DaVinci Resolveからプロジェクトを書き出したりする場所でもあります。最後に、プロジェクトマネージャーでは、プロジェクトライブラリサイドバーを使って、DaVinci Resolve内のすべてを管理するために使用されるプロジェクトライブラリを整理することもできます。"},
-        {"id": "p003_b002", "translation": "任意のプロジェクトを開くには、そのプロジェクトをダブルクリックします。新しいプロジェクトを作成するには、Untitled Projectアイコンをダブルクリックするか、New Projectボタンをクリックします。"},
-        {"id": "p003_b003", "translation": "プロジェクトマネージャーには、現在のユーザーに属するすべてのプロジェクトが表示されます。"},
-        {"id": "p003_b004", "translation": "プロジェクトマネージャーについて詳しくは、第3章「プロジェクトとプロジェクトライブラリの管理」を参照してください。"},
-        {"id": "p003_b005", "translation": "16 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
-        {"id": "p003_b006", "translation": "概要"}
+        {
+          "id": "p003_b000",
+          "translation": "プロジェクトマネージャー"
+        },
+        {
+          "id": "p003_b001",
+          "translation": "ほとんどのユーザーにとって、プロジェクトマネージャーはDaVinci Resolveを開いたときに最初に目にするウィンドウです。プロジェクトマネージャーは、現在ログインしているユーザーに属するすべてのプロジェクトを管理するための中心的なインターフェイスで、そのユーザー名はプロジェクトタイトルバーの右上に表示されます。プロジェクトマネージャーは、ユーザー間でプロジェクトを移動する場合でも、あるDaVinci Resolveワークステーションから別のワークステーションへプロジェクトを移動する場合でも、DaVinci Resolveにプロジェクトを読み込んだり、DaVinci Resolveからプロジェクトを書き出したりする場所でもあります。最後に、プロジェクトマネージャーでは、プロジェクトライブラリサイドバーを使って、DaVinci Resolve内のすべてを管理するために使用されるプロジェクトライブラリを整理することもできます。"
+        },
+        {
+          "id": "p003_b002",
+          "translation": "任意のプロジェクトを開くには、そのプロジェクトをダブルクリックします。新しいプロジェクトを作成するには、Untitled Projectアイコンをダブルクリックするか、New Projectボタンをクリックします。"
+        },
+        {
+          "id": "p003_b003",
+          "translation": "プロジェクトマネージャーには、現在のユーザーに属するすべてのプロジェクトが表示されます。"
+        },
+        {
+          "id": "p003_b004",
+          "translation": "プロジェクトマネージャーについて詳しくは、第3章「プロジェクトとプロジェクトライブラリの管理」を参照してください。"
+        },
+        {
+          "id": "p003_b005",
+          "translation": "16 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p003_b006",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 4,
       "blocks": [
-        {"id": "p004_b000", "translation": "環境設定とプロジェクト設定"},
-        {"id": "p004_b001", "translation": "プロジェクトを開いたら、ワークステーション上のDaVinci Resolveのインストール全体を管理するSystem PreferencesとUser Preferences、そして現在開いているプロジェクトを管理するProject Settingsを調整できます。DaVinci Resolveを初めてインストールするとき、これらの設定のうち最も重要なものは、インストーラーのオンボーディング質問を通じて選択されます。ただし、DaVinci Resolveを初めて開く場合は、これらの設定が使用しているシステムに最適になっているか確認しておくとよいでしょう。"},
-        {"id": "p004_b002", "translation": "ログインに基づく個別の環境設定と設定"},
-        {"id": "p004_b003", "translation": "DaVinci Resolve 16以降、特定のコンピューター上の各ログインアカウントごとに、個別の環境設定と設定が用意されています。つまり、複数のアーティストがそれぞれ自分のログインを持つことができ、DaVinci Resolveは、誰がログインしているかに応じて、各アーティストごとに別々のワークスペースレイアウトと環境設定の状態を保持します。"},
-        {"id": "p004_b004", "translation": "環境設定"},
-        {"id": "p004_b005", "translation": "PreferencesウィンドウはSystem preferencesパネルとUser preferencesパネルに分かれており、DaVinciワークステーション全体の環境を設定できます。DaVinci Resolveで使用するハードウェアや、作業中に好みのユーザーインターフェイス設定を選択できます。"},
-        {"id": "p004_b006", "translation": "DaVinci Resolveの環境設定では、作業環境を設定できます"},
-        {"id": "p004_b007", "translation": "17 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
-        {"id": "p004_b008", "translation": "概要"}
+        {
+          "id": "p004_b000",
+          "translation": "環境設定とプロジェクト設定"
+        },
+        {
+          "id": "p004_b001",
+          "translation": "プロジェクトを開いたら、ワークステーション上のDaVinci Resolveのインストール全体を管理するSystem PreferencesとUser Preferences、そして現在開いているプロジェクトを管理するProject Settingsを調整できます。DaVinci Resolveを初めてインストールするとき、これらの設定のうち最も重要なものは、インストーラーのオンボーディング質問を通じて選択されます。ただし、DaVinci Resolveを初めて開く場合は、これらの設定が使用しているシステムに最適になっているか確認しておくとよいでしょう。"
+        },
+        {
+          "id": "p004_b002",
+          "translation": "ログインに基づく個別の環境設定と設定"
+        },
+        {
+          "id": "p004_b003",
+          "translation": "DaVinci Resolve 16以降、特定のコンピューター上の各ログインアカウントごとに、個別の環境設定と設定が用意されています。つまり、複数のアーティストがそれぞれ自分のログインを持つことができ、DaVinci Resolveは、誰がログインしているかに応じて、各アーティストごとに別々のワークスペースレイアウトと環境設定の状態を保持します。"
+        },
+        {
+          "id": "p004_b004",
+          "translation": "環境設定"
+        },
+        {
+          "id": "p004_b005",
+          "translation": "PreferencesウィンドウはSystem preferencesパネルとUser preferencesパネルに分かれており、DaVinciワークステーション全体の環境を設定できます。DaVinci Resolveで使用するハードウェアや、作業中に好みのユーザーインターフェイス設定を選択できます。"
+        },
+        {
+          "id": "p004_b006",
+          "translation": "DaVinci Resolveの環境設定では、作業環境を設定できます"
+        },
+        {
+          "id": "p004_b007",
+          "translation": "17 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p004_b008",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 5,
       "blocks": [
-        {"id": "p005_b000", "translation": "最も重要なSystem preferencesとUser preferencesの概要を以下に示します。ワークステーションにDaVinci Resolveを初めて設定するときに、最初に調整すべき設定についての案内も含まれています。ただし、包括的な概要と詳しい情報については、第4章「System and User Preferences」を参照してください。"},
-        {"id": "p005_b001", "translation": "システム環境設定"},
-        {"id": "p005_b002", "translation": "System preferencesでは、DaVinci Resolveが使用するハードウェアを設定できます。構成があまり頻繁に変わらないシステムを使っている場合、Preferencesウィンドウを使う機会はまれかもしれません。一方、ビデオインターフェイス、コントロールパネル、スクラッチボリュームが変わるモバイルシステムで作業している場合は、このウィンドウをより頻繁に使うことがあります。"},
-        {"id": "p005_b003", "translation": "注意: Preferencesで特定の中核的なSystem Settingsを変更した場合、その変更を有効にするにはDaVinci Resolveを終了して再起動する必要があることがあります。"},
-        {"id": "p005_b004", "translation": "メモリとGPU"},
-        {"id": "p005_b005", "translation": "コンピューターに接続されているGPUをどのように使用するか、また各ページのビューアをどのように設定するかを管理するさまざまなオプションを選択できます。このパネルには、DaVinci Resolveが円滑に動作するうえで関連するすべてのハードウェアとコンピューターの特性について、参照用の概要も表示されます。インストール済みGPUの一覧も含まれます。"},
-        {"id": "p005_b006", "translation": "メディアストレージ"},
-        {"id": "p005_b007", "translation": "これは、システムで使用するスクラッチディスクを定義するリストです。このリストの最初のボリュームにはGallery stillsとキャッシュファイルが保存されるため、接続されているストレージボリュームの中で最も高速なものを選ぶようにしてください。"},
-        {"id": "p005_b008", "translation": "デコードオプション"},
-        {"id": "p005_b009", "translation": "これらの設定では、RAWファイルとH.264/H.265をデコードするための各種ハードウェアオプションを選択できます。また、easy DCPデコーダーの使用や、Media Pool内で成長中のファイル（書き込み中のファイル）を更新する機能を選択できます。"},
-        {"id": "p005_b010", "translation": "ビデオとオーディオI/O"},
-        {"id": "p005_b011", "translation": "このパネルの環境設定では、ワークステーション上でDaVinci Resolveに使用させるビデオおよびオーディオのCaptureインターフェイスとMonitorインターフェイスを選択できます。複数のBlackmagic Design I/Oインターフェイスがコンピューターに接続されている場合は、それらの中から選択できます。"},
-        {"id": "p005_b012", "translation": "ビデオプラグイン"},
-        {"id": "p005_b013", "translation": "サードパーティ製Open FXプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"},
-        {"id": "p005_b014", "translation": "オーディオプラグイン"},
-        {"id": "p005_b015", "translation": "サードパーティ製VSTプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"},
-        {"id": "p005_b016", "translation": "コントロールパネル"},
-        {"id": "p005_b017", "translation": "DaVinci Resolveでグレーディング中に使用するために接続されているコントロールパネルを選択し、必要に応じて設定できます。"},
-        {"id": "p005_b018", "translation": "18 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"},
-        {"id": "p005_b019", "translation": "概要"}
+        {
+          "id": "p005_b000",
+          "translation": "最も重要なSystem preferencesとUser preferencesの概要を以下に示します。ワークステーションにDaVinci Resolveを初めて設定するときに、最初に調整すべき設定についての案内も含まれています。ただし、包括的な概要と詳しい情報については、第4章「System and User Preferences」を参照してください。"
+        },
+        {
+          "id": "p005_b001",
+          "translation": "システム環境設定"
+        },
+        {
+          "id": "p005_b002",
+          "translation": "System preferencesでは、DaVinci Resolveが使用するハードウェアを設定できます。構成があまり頻繁に変わらないシステムを使っている場合、Preferencesウィンドウを使う機会はまれかもしれません。一方、ビデオインターフェイス、コントロールパネル、スクラッチボリュームが変わるモバイルシステムで作業している場合は、このウィンドウをより頻繁に使うことがあります。"
+        },
+        {
+          "id": "p005_b003",
+          "translation": "注意: Preferencesで特定の中核的なSystem Settingsを変更した場合、その変更を有効にするにはDaVinci Resolveを終了して再起動する必要があることがあります。"
+        },
+        {
+          "id": "p005_b004",
+          "translation": "メモリとGPU"
+        },
+        {
+          "id": "p005_b005",
+          "translation": "コンピューターに接続されているGPUをどのように使用するか、また各ページのビューアをどのように設定するかを管理するさまざまなオプションを選択できます。このパネルには、DaVinci Resolveが円滑に動作するうえで関連するすべてのハードウェアとコンピューターの特性について、参照用の概要も表示されます。インストール済みGPUの一覧も含まれます。"
+        },
+        {
+          "id": "p005_b006",
+          "translation": "メディアストレージ"
+        },
+        {
+          "id": "p005_b007",
+          "translation": "これは、システムで使用するスクラッチディスクを定義するリストです。このリストの最初のボリュームにはGallery stillsとキャッシュファイルが保存されるため、接続されているストレージボリュームの中で最も高速なものを選ぶようにしてください。"
+        },
+        {
+          "id": "p005_b008",
+          "translation": "デコードオプション"
+        },
+        {
+          "id": "p005_b009",
+          "translation": "これらの設定では、RAWファイルとH.264/H.265をデコードするための各種ハードウェアオプションを選択できます。また、easy DCPデコーダーの使用や、Media Pool内で成長中のファイル（書き込み中のファイル）を更新する機能を選択できます。"
+        },
+        {
+          "id": "p005_b010",
+          "translation": "ビデオとオーディオI/O"
+        },
+        {
+          "id": "p005_b011",
+          "translation": "このパネルの環境設定では、ワークステーション上でDaVinci Resolveに使用させるビデオおよびオーディオのCaptureインターフェイスとMonitorインターフェイスを選択できます。複数のBlackmagic Design I/Oインターフェイスがコンピューターに接続されている場合は、それらの中から選択できます。"
+        },
+        {
+          "id": "p005_b012",
+          "translation": "ビデオプラグイン"
+        },
+        {
+          "id": "p005_b013",
+          "translation": "サードパーティ製Open FXプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"
+        },
+        {
+          "id": "p005_b014",
+          "translation": "オーディオプラグイン"
+        },
+        {
+          "id": "p005_b015",
+          "translation": "サードパーティ製VSTプラグインがインストールされている場合、ここで表示し、有効化または無効化できます。"
+        },
+        {
+          "id": "p005_b016",
+          "translation": "コントロールパネル"
+        },
+        {
+          "id": "p005_b017",
+          "translation": "DaVinci Resolveでグレーディング中に使用するために接続されているコントロールパネルを選択し、必要に応じて設定できます。"
+        },
+        {
+          "id": "p005_b018",
+          "translation": "18 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p005_b019",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "blocks": [
+        {
+          "id": "p006_b000",
+          "source": "General",
+          "translation": "一般"
+        },
+        {
+          "id": "p006_b001",
+          "source": "Lets you choose from a variety of settings that modify DaVinci Resolve’s behavior. The LUT Locations section lets you point DaVinci Resolve to any external folders containing LUTs for use in your project.",
+          "translation": "DaVinci Resolveの動作を変更するさまざまな設定を選択できます。LUT Locationsセクションでは、プロジェクトで使用するLUTが含まれる外部フォルダーをDaVinci Resolveに指定できます。"
+        },
+        {
+          "id": "p006_b002",
+          "source": "Internet Accounts",
+          "translation": "インターネットアカウント"
+        },
+        {
+          "id": "p006_b003",
+          "source": "The Internet Accounts panel serves as a login manager for the Blackmagic Cloud and other social media sites.",
+          "translation": "Internet Accountsパネルは、Blackmagic Cloudやその他のソーシャルメディアサイト用のログインマネージャーとして機能します。"
+        },
+        {
+          "id": "p006_b004",
+          "source": "Advanced",
+          "translation": "詳細"
+        },
+        {
+          "id": "p006_b005",
+          "source": "This tab is used for special DaVinci Resolve configurations and SAN parameters that are applicable to older file systems.",
+          "translation": "このタブは、古いファイルシステムに適用される特殊なDaVinci Resolve設定やSANパラメーターに使用します。"
+        },
+        {
+          "id": "p006_b006",
+          "source": "User Preferences",
+          "translation": "ユーザー環境設定"
+        },
+        {
+          "id": "p006_b007",
+          "source": "User preferences govern the setup of the user interface in DaVinci Resolve, letting you customize it to work the way you like.",
+          "translation": "User PreferencesではDaVinci Resolveのユーザーインターフェイス設定を管理し、自分の好みに合う作業環境へカスタマイズできます。"
+        },
+        {
+          "id": "p006_b008",
+          "source": "UI Settings",
+          "translation": "UI設定"
+        },
+        {
+          "id": "p006_b009",
+          "source": "A Language drop-down menu at the top lets you specify which language the DaVinci Resolve user interface displays. DaVinci Resolve currently supports English, Chinese, Japanese, and Spanish, Portuguese, French, Russian, Thai, Vietnamese, and Korean. Additional checkboxes let you choose options for which project to open during startup, and how to configure the Viewers that appear in every page of DaVinci Resolve.",
+          "translation": "上部のLanguageドロップダウンメニューでは、DaVinci Resolveのユーザーインターフェイスに表示する言語を指定できます。DaVinci Resolveは現在、英語、中国語、日本語、スペイン語、ポルトガル語、フランス語、ロシア語、タイ語、ベトナム語、韓国語に対応しています。追加のチェックボックスでは、起動時に開くプロジェクトや、DaVinci Resolveの各ページに表示されるビューアの設定方法を選択できます。"
+        },
+        {
+          "id": "p006_b010",
+          "source": "Project Save and Load",
+          "translation": "プロジェクトの保存と読み込み"
+        },
+        {
+          "id": "p006_b011",
+          "source": "This panel contains the all-important auto-save controls, including the Live Save option that enables Resolve to incrementally save your changes as you work.",
+          "translation": "このパネルには重要な自動保存コントロールがあり、作業中の変更をResolveが段階的に保存できるLive Saveオプションも含まれています。"
+        },
+        {
+          "id": "p006_b012",
+          "source": "Editing",
+          "translation": "編集"
+        },
+        {
+          "id": "p006_b013",
+          "source": "Numerous controls in this panel let you customize the editing experience in the Edit page, including default settings to use when making new timelines, and general settings that govern standard effects durations and trim behaviors.",
+          "translation": "このパネルの多数のコントロールでは、Editページでの編集体験をカスタマイズできます。新しいタイムラインを作成するときに使用するデフォルト設定や、標準エフェクトの継続時間、トリム動作を管理する一般設定などが含まれます。"
+        },
+        {
+          "id": "p006_b014",
+          "source": "Color",
+          "translation": "カラー"
+        },
+        {
+          "id": "p006_b015",
+          "source": "These controls let you customize the grading experience in the Color page, with options controlling video scope display, the look of UI overlays, and other color-specific functions.",
+          "translation": "これらのコントロールでは、Colorページでのグレーディング体験をカスタマイズできます。ビデオスコープ表示、UIオーバーレイの見た目、その他カラー固有の機能を制御するオプションがあります。"
+        },
+        {
+          "id": "p006_b016",
+          "source": "Fairlight",
+          "translation": "Fairlight"
+        },
+        {
+          "id": "p006_b017",
+          "source": "These controls let you customize the editing experience in the Fairlight page with options controlling video offset, automation, and general settings.",
+          "translation": "これらのコントロールでは、Fairlightページでの編集体験をカスタマイズできます。ビデオオフセット、オートメーション、一般設定を制御するオプションがあります。"
+        },
+        {
+          "id": "p006_b018",
+          "source": "Playback Settings",
+          "translation": "再生設定"
+        },
+        {
+          "id": "p006_b019",
+          "source": "These controls let you customize how DaVinci Resolves handles video playback. If your playback is too slow, adjusting these settings may help.",
+          "translation": "これらのコントロールでは、DaVinci Resolveがビデオ再生をどのように処理するかをカスタマイズできます。再生が遅すぎる場合は、これらの設定を調整すると役立つことがあります。"
+        },
+        {
+          "id": "p006_b020",
+          "source": "Control Panels",
+          "translation": "コントロールパネル"
+        },
+        {
+          "id": "p006_b021",
+          "source": "These controls let you customize the settings of your connected control surface.",
+          "translation": "これらのコントロールでは、接続されているコントロールサーフェスの設定をカスタマイズできます。"
+        },
+        {
+          "id": "p006_b022",
+          "source": "Metadata",
+          "translation": "メタデータ"
+        },
+        {
+          "id": "p006_b023",
+          "source": "These controls let you customize the Metadata Presets.",
+          "translation": "これらのコントロールでは、メタデータプリセットをカスタマイズできます。"
+        },
+        {
+          "id": "p006_b024",
+          "source": "19 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "19 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p006_b025",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "blocks": [
+        {
+          "id": "p007_b000",
+          "source": "Project Settings",
+          "translation": "プロジェクト設定"
+        },
+        {
+          "id": "p007_b001",
+          "source": "Once you’ve created a project, all project-specific settings are found in the Project Settings window. To open the Project Settings window, just click the gear button at the bottom right on any page.",
+          "translation": "プロジェクトを作成すると、プロジェクト固有の設定はすべてProject Settingsウィンドウにあります。Project Settingsウィンドウを開くには、どのページでも右下にある歯車ボタンをクリックします。"
+        },
+        {
+          "id": "p007_b002",
+          "source": "Project Manager and Project Settings buttons",
+          "translation": "Project ManagerボタンとProject Settingsボタン"
+        },
+        {
+          "id": "p007_b003",
+          "source": "The Project Settings open in the middle of the screen, divided into a series of panels which can be selected from a sidebar to the left. Each panel contains a collection of related settings that affects some category of DaVinci Resolve functionality. To open a panel of settings, simply click its name in the sidebar at the left.",
+          "translation": "Project Settingsは画面中央に開き、左側のサイドバーから選択できる一連のパネルに分かれています。各パネルには、DaVinci Resolveの機能カテゴリに影響する関連設定がまとまっています。設定パネルを開くには、左側のサイドバーでその名前をクリックします。"
+        },
+        {
+          "id": "p007_b004",
+          "source": "The Project Settings show all project-specific settings and attributes.",
+          "translation": "Project Settingsには、プロジェクト固有のすべての設定と属性が表示されます。"
+        },
+        {
+          "id": "p007_b005",
+          "source": "20 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "20 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p007_b006",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "blocks": [
+        {
+          "id": "p008_b000",
+          "source": "The Master Settings define the principal attributes of a project, such as the timeline resolution, timeline frame rate, color science, and bit depth. Image Scaling settings define how clips that don’t match the timeline resolution are scaled to fit. There are other panels for Color Management, Camera Raw, Capture and Playback, etc.",
+          "translation": "Master Settingsでは、タイムライン解像度、タイムラインフレームレート、カラーサイエンス、ビット深度など、プロジェクトの主要な属性を定義します。Image Scaling設定では、タイムライン解像度と一致しないクリップをどのように拡大縮小して合わせるかを定義します。その他にも、Color Management、Camera Raw、Capture and Playbackなどのパネルがあります。"
+        },
+        {
+          "id": "p008_b001",
+          "source": "For more information about Project Settings, see Chapter 4, “System and User Preferences.”",
+          "translation": "Project Settingsの詳細については、第4章「System and User Preferences」を参照してください。"
+        },
+        {
+          "id": "p008_b002",
+          "source": "Switching Among Pages",
+          "translation": "ページ間の切り替え"
+        },
+        {
+          "id": "p008_b003",
+          "source": "Buttons for switching pages appear at the bottom of the UI.",
+          "translation": "ページを切り替えるボタンはUIの下部に表示されます。"
+        },
+        {
+          "id": "p008_b004",
+          "source": "DaVinci Resolve is divided into seven main pages of functionality, each of which facilitates a different specialization of a typical post production workflow, and each of which can be accessed using buttons at the very bottom of the DaVinci Resolve interface. These buttons are organized in order of workflow, and they’re always available, letting you quickly switch between importing media, fast editing, detailed editing, compositing, grading, audio mixing, and outputting your project in a structured manner.",
+          "translation": "DaVinci Resolveは7つの主要な機能ページに分かれており、それぞれが一般的なポストプロダクションワークフローの異なる専門作業を支援します。各ページにはDaVinci Resolveインターフェイスの最下部にあるボタンからアクセスできます。これらのボタンはワークフローの順に並んでおり、常に利用できるため、メディアの読み込み、高速編集、詳細な編集、コンポジット、グレーディング、オーディオミキシング、プロジェクトの出力を構造的にすばやく切り替えられます。"
+        },
+        {
+          "id": "p008_b005",
+          "source": "Minimizing the Resolve Page Bar",
+          "translation": "Resolveページバーを最小化する"
+        },
+        {
+          "id": "p008_b006",
+          "source": "If you right-click anywhere within the Resolve Page bar at the bottom of the DaVinci Resolve UI, two options appear in a contextual menu: “Show Icons and Labels” and “ Show Icons Only.” If you show icons only, the Resolve Page bar at the bottom takes less room.",
+          "translation": "DaVinci Resolve UI下部のResolveページバー内を右クリックすると、コンテキストメニューに「Show Icons and Labels」と「Show Icons Only」の2つのオプションが表示されます。アイコンのみを表示すると、下部のResolveページバーが占めるスペースを小さくできます。"
+        },
+        {
+          "id": "p008_b007",
+          "source": "The Page bar showing icons only, to save space",
+          "translation": "スペースを節約するためアイコンのみを表示したページバー"
+        },
+        {
+          "id": "p008_b008",
+          "source": "Switching Pages Using Keyboard Shortcuts",
+          "translation": "キーボードショートカットでページを切り替える"
+        },
+        {
+          "id": "p008_b009",
+          "source": "You can also switch pages using the following keyboard shortcuts, which can be referenced from the Workspace > Switch to Page submenu.",
+          "translation": "Workspace > Switch to Pageサブメニューで確認できる次のキーボードショートカットを使って、ページを切り替えることもできます。"
+        },
+        {
+          "id": "p008_b010",
+          "source": "Hide Pages You Don’t Use",
+          "translation": "使わないページを非表示にする"
+        },
+        {
+          "id": "p008_b011",
+          "source": "You can leave the page navigation bar showing and just hide the buttons of specific pages. For example:",
+          "translation": "ページナビゲーションバーは表示したまま、特定のページのボタンだけを非表示にできます。たとえば:"
+        },
+        {
+          "id": "p008_b012",
+          "source": " If you like the quick navigation of this bar but there are pages you simply don’t want to use",
+          "translation": "• このバーのすばやいナビゲーションは使いたいが、使う予定のないページがある場合"
+        },
+        {
+          "id": "p008_b013",
+          "source": " If you’re setting up a DaVinci Resolve workstation for an artist making specific contributions to a project, and you want to hide easy access to pages of functionality they won’t (or shouldn’t) be using; this can be especially useful in collaborative workflow projects",
+          "translation": "• プロジェクトで特定の作業を担当するアーティスト向けにDaVinci Resolveワークステーションを設定していて、その人が使わない、または使うべきでない機能ページへ簡単にアクセスできないようにしたい場合。これはコラボレーションワークフローのプロジェクトで特に便利です"
+        },
+        {
+          "id": "p008_b014",
+          "source": "You can disable/re-enable each page’s buttons using the Workspace > Show Page submenu. Effects and adjustments that have been applied on hidden pages continue to affect the current project, they’re only hidden, and you can still navigate to them using the Workspace > Switch to Page submenu commands or keyboard shortcuts.",
+          "translation": "Workspace > Show Pageサブメニューを使って、各ページのボタンを無効化または再有効化できます。非表示にしたページで適用済みのエフェクトや調整は現在のプロジェクトに影響し続けます。非表示になっているだけで、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使えば、引き続きそのページへ移動できます。"
+        },
+        {
+          "id": "p008_b015",
+          "source": "21 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "21 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p008_b016",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "blocks": [
+        {
+          "id": "p009_b000",
+          "source": "Hide Page Navigation Altogether",
+          "translation": "ページナビゲーションを完全に非表示にする"
+        },
+        {
+          "id": "p009_b001",
+          "source": "If you’re an artist that only uses a single page of the DaVinci Resolve experience, or if you want more screen real estate to work with given your existing computer display’s limited resolution, you can choose Workspace > Show Page Navigation to hide the page navigation bar at the bottom of the DaVinci Resolve user interface. While this bar is closed, you can still navigate to other pages using the Workspace > Switch to Page submenu commands or keyboard shortcuts.",
+          "translation": "DaVinci Resolveの1つのページだけを使うアーティストの場合や、使用しているコンピュータディスプレイの解像度が限られていて作業領域を広げたい場合は、Workspace > Show Page Navigationを選択して、DaVinci Resolveユーザーインターフェイス下部のページナビゲーションバーを非表示にできます。このバーを閉じていても、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使って、他のページへ移動できます。"
+        },
+        {
+          "id": "p009_b002",
+          "source": "To toggle the Show Page Navigation function:",
+          "translation": "Show Page Navigation機能のオン/オフを切り替えるには:"
+        },
+        {
+          "id": "p009_b003",
+          "source": "Check Workspace > Show Page Navigation.",
+          "translation": "Workspace > Show Page Navigationにチェックを入れます。"
+        },
+        {
+          "id": "p009_b004",
+          "source": "With this interface element hidden, you can use keyboard shortcuts to access the individual pages (Shift - 2 through 8), Project manager (Shift - 1), and Project settings (Shift - 9). You can also access these functions from DaVinci Resolve’s main menu bar.",
+          "translation": "このインターフェイス要素を非表示にしている場合でも、キーボードショートカットで各ページ（Shift-2〜8）、Project Manager（Shift-1）、Project Settings（Shift-9）にアクセスできます。これらの機能にはDaVinci Resolveのメインメニューバーからもアクセスできます。"
+        },
+        {
+          "id": "p009_b005",
+          "source": "The Media Page",
+          "translation": "Mediaページ"
+        },
+        {
+          "id": "p009_b006",
+          "source": "The Media page is the primary interface for clip import, media management, and clip organization in DaVinci Resolve. It’s central to the way DaVinci Resolve works that the source media used by a project is organized separately from the project data that you import and manage in the Edit page. In this way, you can manage and update the clips used by timelines in the current project with ease, switching between offline and online media, reorganizing clips, and troubleshooting any problems that occur.",
+          "translation": "Mediaページは、DaVinci Resolveでクリップの読み込み、メディア管理、クリップ整理を行うための主要なインターフェイスです。プロジェクトで使用するソースメディアを、Editページで読み込み管理するプロジェクトデータとは別に整理することは、DaVinci Resolveの動作の中心です。これにより、現在のプロジェクトのタイムラインで使われているクリップを簡単に管理・更新し、オフラインメディアとオンラインメディアを切り替えたり、クリップを再整理したり、発生した問題をトラブルシュートしたりできます。"
+        },
+        {
+          "id": "p009_b007",
+          "source": "Media page",
+          "translation": "Mediaページ"
+        },
+        {
+          "id": "p009_b008",
+          "source": "The Media page also contains much of the core functionality that will be used for on-set workflows, and in the ingest, organizational, and sound-syncing steps of digital dailies workflows. This chapter covers most of the functionality found in the Media page, including functions in detail that are referenced throughout this manual.",
+          "translation": "Mediaページには、撮影現場のワークフローや、デジタルデイリーの取り込み、整理、音声同期の工程で使用される中核機能も多く含まれています。この章では、Mediaページにある機能の大部分を扱い、本マニュアル全体で参照される機能についても詳しく説明します。"
+        },
+        {
+          "id": "p009_b009",
+          "source": "22 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "22 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p009_b010",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "blocks": [
+        {
+          "id": "p010_b000",
+          "source": "The Media page is divided into six different areas, designed to make it easy to find, select, and work with media in your project. Much of the functionality and most of the commands are found within the contextual menus that appear when you right-click clips in the Library, File Browser, or Media Pool.",
+          "translation": "Mediaページは6つの異なる領域に分かれており、プロジェクト内のメディアを見つけ、選択し、操作しやすいように設計されています。機能やコマンドの多くは、Library、File Browser、Media Poolでクリップを右クリックしたときに表示されるコンテキストメニュー内にあります。"
+        },
+        {
+          "id": "p010_b001",
+          "source": "For more information on using the Media page, see Chapter 17, “Using the Media Page.”",
+          "translation": "Mediaページの使用方法の詳細については、第17章「Using the Media Page」を参照してください。"
+        },
+        {
+          "id": "p010_b002",
+          "source": "The Media Storage Browser",
+          "translation": "メディアストレージブラウザ"
+        },
+        {
+          "id": "p010_b003",
+          "source": "The Media Storage browser shows a list of all volumes that are currently available to your Resolve workstation. It’s used to locate media that you want to import manually into your project.",
+          "translation": "Media Storageブラウザには、Resolveワークステーションで現在利用可能なすべてのボリュームのリストが表示されます。プロジェクトへ手動で読み込みたいメディアを探すために使用します。"
+        },
+        {
+          "id": "p010_b004",
+          "source": "Media Storage with scrubbable Clip view",
+          "translation": "スクラブ可能なClipビューを表示したMedia Storage"
+        },
+        {
+          "id": "p010_b005",
+          "source": "Viewer",
+          "translation": "ビューア"
+        },
+        {
+          "id": "p010_b006",
+          "source": "Clips that you select in any area of the Media page show their contents in the Viewer. A jog bar appears at the bottom, letting you drag the playhead directly with the pointer, while a jog control between the mode drop-down and transport controls lets you move through a long clip more slowly. The full width of the jog bar represents the full duration of the clip in the Viewer. The current position of the playhead is shown in the timecode field at the upper right-hand corner of the Viewer. Simple transport controls appear underneath the jog bar, letting you Jump to First Frame, Play/Stop, and Jump to Last Frame. Audio levels can be adjusted by right-clicking on the speaker icon and dragging the slider.",
+          "translation": "Mediaページの任意の領域で選択したクリップは、その内容がビューアに表示されます。下部にはジョグバーが表示され、ポインターで再生ヘッドを直接ドラッグできます。また、モードドロップダウンとトランスポートコントロールの間にあるジョグコントロールを使うと、長いクリップ内をゆっくり移動できます。ジョグバー全体の幅は、ビューア内のクリップ全体の長さを表します。再生ヘッドの現在位置は、ビューア右上のタイムコードフィールドに表示されます。ジョグバーの下にはシンプルなトランスポートコントロールがあり、先頭フレームへジャンプ、再生/停止、最終フレームへジャンプを行えます。オーディオレベルは、スピーカーアイコンを右クリックしてスライダーをドラッグすることで調整できます。"
+        },
+        {
+          "id": "p010_b007",
+          "source": "You can also put the Viewer into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), so that it fills the entire screen. This command toggles Cinema Viewer mode on and off.",
+          "translation": "Workspace > Viewer Mode > Cinema Viewer（Command-F）を選択して、ビューアをCinema Viewerモードにし、画面全体に表示することもできます。このコマンドはCinema Viewerモードのオン/オフを切り替えます。"
+        },
+        {
+          "id": "p010_b008",
+          "source": "If you have two monitors connected to your computer, you can make the Viewer fill one entire screen and keep the Resolve UI in the other monitor by choosing Workspace > Full Screen Viewer On, and selecting the display you wish to use for the Viewer.",
+          "translation": "コンピュータに2台のモニターが接続されている場合は、Workspace > Full Screen Viewer Onを選択し、ビューアに使用するディスプレイを選ぶことで、ビューアを1つの画面全体に表示し、もう一方のモニターにResolve UIを表示したままにできます。"
+        },
+        {
+          "id": "p010_b009",
+          "source": "23 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "23 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p010_b010",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "blocks": [
+        {
+          "id": "p011_b000",
+          "source": "Media page Viewer",
+          "translation": "Mediaページビューア"
+        },
+        {
+          "id": "p011_b001",
+          "source": "Media Pool",
+          "translation": "メディアプール"
+        },
+        {
+          "id": "p011_b002",
+          "source": "The Media Pool contains all of the video, audio, and still image media that you import into the current project. It also contains any media that’s automatically imported along with timelines that have been imported into DaVinci Resolve. Ordinarily, all media imported into a project goes into the Master bin, however the Media Pool can be organized into as many user-definable bins as you like, depending on your needs. Media can be freely moved from one bin to another from within the Media Pool. The Media Pool also appears on the Edit, Fusion, Color, and Fairlight pages, making it possible to browse and open clips and timelines everywhere they’re relevant.",
+          "translation": "Media Poolには、現在のプロジェクトで使用するビデオ、オーディオ、静止画メディア、そしてこのページで作成したタイムラインがすべて含まれます。Media Poolの左側にあるMasterビンには、プロジェクトに追加したすべてのメディアファイルとタイムラインが入っています。また、必要な数だけビンを作成して、メディアをさらに細かく整理できます。Media Poolは、Mediaページだけでなく、Edit、Fusion、Color、Fairlightの各ページにも表示されます。"
+        },
+        {
+          "id": "p011_b003",
+          "source": "Media Pool showing the selected bins’ clips",
+          "translation": "選択したビンのクリップを表示しているMedia Pool"
+        },
+        {
+          "id": "p011_b004",
+          "source": "24 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "24 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p011_b005",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "blocks": [
+        {
+          "id": "p012_b000",
+          "source": "Metadata Editor",
+          "translation": "メタデータエディタ"
+        },
+        {
+          "id": "p012_b001",
+          "source": "When you select a clip in any area of the Media page, its metadata is displayed within the Metadata Editor. If you select multiple clips, only the last clip’s information appears. The Metadata Editor’s header contains uneditable information about the selected clip, including the file name, directory, duration, frame rate, resolution, and codec.",
+          "translation": "Media Poolでクリップを選択すると、そのクリップに関連付けられたメタデータがMetadata Editorに表示されます。複数のクリップを選択した場合は、最後に選択したクリップの情報が表示されます。Metadata Editorの上部には、ファイル名、シーン、ショット、テイクなど、選択したクリップについての編集できない情報が表示されます。"
+        },
+        {
+          "id": "p012_b002",
+          "source": "A series of editable fields within the Metadata Editor lets you review and edit the different metadata items that are available. A drop-down menu at the upper right of the Metadata Editor lets you choose from many different sets of metadata fields and checkboxes, each grouped for a specific task or workflow.",
+          "translation": "Metadata Editorの残りの部分には、必要に応じて入力または変更できる編集可能なフィールドがあります。右上のドロップダウンメニューでは、表示するメタデータセットを選択できます。また、各メタデータセットはカテゴリ別にグループ化されており、チェックボックスで表示する項目を切り替えられます。"
+        },
+        {
+          "id": "p012_b003",
+          "source": "Clip Metadata Editor Audio Meters exposed",
+          "translation": "Audio Metersを表示したClip Metadata Editor"
+        },
+        {
+          "id": "p012_b004",
+          "source": "Audio Panel",
+          "translation": "オーディオパネル"
+        },
+        {
+          "id": "p012_b005",
+          "source": "The Audio panel can be put into one of two modes via a pair of buttons above the audio meters. In the default Meters mode, Audio Meters are displayed that show the levels of audio in clips you’re playing. In Waveform mode, you can load audio clips side by side with video clips opened in the Viewer in order to sync them together manually. The Audio panel can also be hidden.",
+          "translation": "Audio Panelでは、選択したクリップのオーディオを確認できます。MetersとWaveformの2つの表示モードがあり、オーディオをビデオと並べて同期させる作業に役立ちます。不要なときはこのパネルを非表示にできます。"
+        },
+        {
+          "id": "p012_b006",
+          "source": "25 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "25 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p012_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "blocks": [
+        {
+          "id": "p013_b000",
+          "source": "The Cut Page",
+          "translation": "Cutページ"
+        },
+        {
+          "id": "p013_b001",
+          "source": "The Cut page is a focused environment for fast editing. It’s useful in situations where you need to quickly cut a news segment, build an episode of web content, edit a straightforward program, experiment with multiple arrangements of a scene, or put together a first assembly edit.",
+          "translation": "Cutページは、ニュース、Webコンテンツ、単純な番組、実験的な編集、アセンブリ編集など、すばやく編集を行うために設計された、焦点を絞った編集環境です。"
+        },
+        {
+          "id": "p013_b002",
+          "source": "The Cut page is also a good introductory editing interface for people who are new to editing, as it presents a streamlined set of tools that are fast to learn and simple to use. Whatever your background, you’ll find the Cut page to be a valuable addition to your editing experience in DaVinci Resolve.",
+          "translation": "Cutページは、編集のための入門的なインターフェイスとしても機能します。多くの編集ツールが合理化されており、できるだけ少ない操作で編集を進められます。"
+        },
+        {
+          "id": "p013_b003",
+          "source": "The default workspace of the Cut page consists of the Media Pool, a single Viewer, and the Timeline area. These three regions let you quickly import and organize clips, edit clips, and even export the result, all from within the Cut page.",
+          "translation": "デフォルトのワークスペースは、Media Pool、単一のViewer、Timeline領域で構成されています。"
+        },
+        {
+          "id": "p013_b004",
+          "source": "The Cut page",
+          "translation": "Cutページ"
+        },
+        {
+          "id": "p013_b005",
+          "source": "For more information on the Cut page, see Chapter 26, “Using the Cut Page.”",
+          "translation": "Cutページの使用方法の詳細については、第26章「Using the Cut Page」を参照してください。"
+        },
+        {
+          "id": "p013_b006",
+          "source": "The Media Pool",
+          "translation": "Media Pool"
+        },
+        {
+          "id": "p013_b007",
+          "source": "The Media Pool appears in the Cut page as well, and contains all video clips, audio clips, graphics, and other media that you import into your project. You can create Bins with which to organize all of this media, to make it easier to find what you need quickly. These bins are opened via the bin drop-down at the upper left-hand corner.",
+          "translation": "Media PoolはCutページにも表示され、プロジェクト内のビデオ、オーディオ、グラフィック、その他のメディアを利用できます。ビンを使ってメディアを整理でき、ビンドロップダウンから表示するビンを選択できます。"
+        },
+        {
+          "id": "p013_b008",
+          "source": "Each piece of media you import, whether it’s video, audio, or graphics, appears as an individual clip, and they can be selected, scrubbed for fast viewing, reorganized into bins, opened into the Viewer for playback, or edited into a timeline using the edit buttons or via drag and drop.",
+          "translation": "メディアはクリップとして表示され、選択、スクラブ、並べ替え、開く、ボタン操作またはドラッグ＆ドロップによる編集ができます。"
+        },
+        {
+          "id": "p013_b009",
+          "source": "Owing to the Cut page’s mission to make editing faster, the Media Pool has different options for viewing (such as the Strip view) and customizing.",
+          "translation": "Cutページの目的は高速な編集であるため、Media Poolにはメディアを表示およびカスタマイズするための専用オプションが用意されています。"
+        },
+        {
+          "id": "p013_b010",
+          "source": "26 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "26 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p013_b011",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "blocks": [
+        {
+          "id": "p014_b000",
+          "source": "The Strip View mode",
+          "translation": "Strip Viewモード"
+        },
+        {
+          "id": "p014_b001",
+          "source": "The Viewer",
+          "translation": "Viewer"
+        },
+        {
+          "id": "p014_b002",
+          "source": "The Viewer lets you see clips from the Media Pool or clips in the Timeline play, and has numerous controls to control what you see and how things play.",
+          "translation": "Viewerでは、クリップやタイムラインを再生して確認でき、再生や編集に関連するコントロールにもアクセスできます。"
+        },
+        {
+          "id": "p014_b003",
+          "source": "The single Viewer in the Cut page",
+          "translation": "Cutページの単一Viewer"
+        },
+        {
+          "id": "p014_b004",
+          "source": "The Viewer has four mode options. Which option is currently in use can be seen, and switched, by four buttons in the upper left-hand corner of the Viewer.",
+          "translation": "Viewerには4つのモードオプションがあり、Viewer左上にある4つのボタンで切り替えます。"
+        },
+        {
+          "id": "p014_b005",
+          "source": "The Viewer modes buttons",
+          "translation": "Viewerモードのボタン"
+        },
+        {
+          "id": "p014_b006",
+          "source": "27 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "27 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p014_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "blocks": [
+        {
+          "id": "p015_b000",
+          "source": "The Different options are entered automatically by various actions (from left to right):",
+          "translation": "さまざまな操作によって、次の各オプションが自動的に表示されます（左から右へ）。"
+        },
+        {
+          "id": "p015_b001",
+          "source": " You can double-click any clip to open it into the Viewer as a Source Clip.",
+          "translation": "Source Clip: 選択したクリップを通常のソースクリップとして表示します。"
+        },
+        {
+          "id": "p015_b002",
+          "source": " You can view an entire bin full of clips in the Source Tape.",
+          "translation": "Source Tape: 現在のビン内のすべてのクリップを、1本の連続したテープのように表示します。"
+        },
+        {
+          "id": "p015_b003",
+          "source": " You can play your edited program in the Timeline.",
+          "translation": "Timeline: 現在のタイムラインを表示します。"
+        },
+        {
+          "id": "p015_b004",
+          "source": " You can see all of your synced material at the same time in the Multi Source Viewer.",
+          "translation": "Multi Source Viewer: 複数のソースを同時に表示して比較できます。"
+        },
+        {
+          "id": "p015_b005",
+          "source": "Clicking the Tools button in the lower left of the Viewer reveals an effects toolbar that you can use to add and edit clip effects, right within the Viewer with no Inspector needed. The Tools button reveals a variety of controls over sizing, cropping, audio, speed effects, stabilization, dynamic zoom, and compositing.",
+          "translation": "Toolsボタンをクリックすると、エフェクト、トランジション、タイトル、その他の編集ツールにアクセスするツールバーが開きます。"
+        },
+        {
+          "id": "p015_b006",
+          "source": "The Tools bar shown opened",
+          "translation": "開いた状態のToolsバー"
+        },
+        {
+          "id": "p015_b007",
+          "source": "Audio Meter",
+          "translation": "オーディオメーター"
+        },
+        {
+          "id": "p015_b008",
+          "source": "An audio meter to the right of the Viewer shows you a graphical representation of the audio levels playing in the current clip or in the Timeline as you play through the Viewer, via animated vertical bars that are tinted to indicate how loud the levels are.",
+          "translation": "Audio MeterはViewerの右側に表示され、再生中のオーディオレベルを確認できます。"
+        },
+        {
+          "id": "p015_b009",
+          "source": "The Timeline",
+          "translation": "Timeline"
+        },
+        {
+          "id": "p015_b010",
+          "source": "The word “timeline” refers both to an edited sequence of clips which constitutes a program that is stored in the Media Pool, and to the area of the Cut page interface where you can open this sequence of clips to see its contents, and for playback and editing.",
+          "translation": "Cutページでは、Timelineという用語は、編集されたシーケンスそのものと、そのシーケンスを操作する画面領域の両方を指します。"
+        },
+        {
+          "id": "p015_b011",
+          "source": "For the Cut page user, the timeline is divided into an Upper Timeline at the top, and a larger and more detailed Timeline Editor showing a zoomed in portion of the timeline around the playhead at the bottom. Working together, these two views of your edited sequence make it possible to navigate your entire project and cut in great detail.",
+          "translation": "TimelineはUpper TimelineとTimeline Editorに分かれており、全体を見渡しながら、細部を拡大してカットや調整を行えます。"
+        },
+        {
+          "id": "p015_b012",
+          "source": "The Timeline of the Cut page, comprising the Upper Timeline and the zoomed in Lower Timeline",
+          "translation": "Upper Timelineと、拡大表示されたLower Timelineで構成されるCutページのTimeline"
+        },
+        {
+          "id": "p015_b013",
+          "source": "Three icons at the upper left-hand corner of the Timeline lets you choose a variety of timeline tasks. They are composed of Timeline Options, Timeline Actions, and Edit Actions.",
+          "translation": "Timeline左上には、Timeline Options、Timeline Actions、Edit Actionsの3つのアイコンがあります。"
+        },
+        {
+          "id": "p015_b014",
+          "source": "The Timeline is divided into multiple tracks, with each track capable of holding a sequence of clips in order to create a program. The main tracks, which are labeled numerically, combine a clip’s video and audio into a single item in the Timeline, for simplicity. Editing the In or Out point of a clip edits the video and audio together.",
+          "translation": "Timelineにはトラックが表示されます。Cutページでは、メイントラックがビデオとオーディオを組み合わせて表示し、イン点とアウト点を使った編集では両方が一緒に編集されます。"
+        },
+        {
+          "id": "p015_b015",
+          "source": "28 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "28 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p015_b016",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "blocks": [
+        {
+          "id": "p016_b000",
+          "source": "The Action icons in the Cut page",
+          "translation": "CutページのActionアイコン"
+        },
+        {
+          "id": "p016_b001",
+          "source": "Video+Audio tracks in the Cut page Timeline",
+          "translation": "CutページTimelineのVideo+Audioトラック"
+        },
+        {
+          "id": "p016_b002",
+          "source": "TIP: In the Edit page, Video+Audio clips are presented as separated Video and Audio items on different tracks. When you open the Fairlight page, audio is presented on tracks with lanes, where each audio channel can be seen. In this way, each page gives you different sets of controls over the contents of the timeline that are appropriate for each page.",
+          "translation": "ヒント: Editページではビデオトラックとオーディオトラックが分かれて表示され、Fairlightページではオーディオトラックがさらにレーンとして表示されます。各ページには、その作業に適した異なるコントロールが用意されています。"
+        },
+        {
+          "id": "p016_b003",
+          "source": "The Edit Page",
+          "translation": "Editページ"
+        },
+        {
+          "id": "p016_b004",
+          "source": "The Edit page exposes a source-record style NLE that incorporates many specialized features for both creative editing and finishing. The Edit page is divided into three main regions: the browsers found at the left, the Viewers at the top, and the Timeline at the bottom, all of which work together to let you import, edit, and trim timelines with a flexible variety of tools and methods.",
+          "translation": "Editページは、従来型のソース・レコード方式のノンリニア編集環境です。画面は主に、ブラウザ、ビューア、タイムラインの3つの領域に分かれています。"
+        },
+        {
+          "id": "p016_b005",
+          "source": "The Edit page",
+          "translation": "Editページ"
+        },
+        {
+          "id": "p016_b006",
+          "source": "For more information on the Edit page, see Chapter 33, “Using the Edit Page.”",
+          "translation": "Editページの詳細については、第33章「Editing Basics」を参照してください。"
+        },
+        {
+          "id": "p016_b007",
+          "source": "29 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "29 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p016_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "blocks": [
+        {
+          "id": "p017_b000",
+          "source": "The Media Pool",
+          "translation": "Media Pool"
+        },
+        {
+          "id": "p017_b001",
+          "source": "As with everywhere else it appears in DaVinci Resolve, the Media Pool lets you organize and peruse all of the media and timelines in a project. DaVinci Resolve projects may contain one or more edited timelines (sometimes called a sequence in other applications).",
+          "translation": "Media Poolでは、プロジェクト内のメディアとタイムラインを整理し、閲覧できます。プロジェクトには、編集済みのタイムラインを1つ以上含めることができます。"
+        },
+        {
+          "id": "p017_b002",
+          "source": "The Media Pool in the Edit page is identical to that shown on the Media, Fusion, Color, and Fairlight pages, and shows you all of the source clips and timelines that are available for editing. A Bin list at the left shows a hierarchical list of folders that you can use to organize your media.",
+          "translation": "EditページのMedia Poolは、他のページのMedia Poolと同じです。左側にはBinリストがあり、フォルダーを使ってメディアを整理できます。"
+        },
+        {
+          "id": "p017_b003",
+          "source": "By default, the Media Pool has a single bin, named “Master,” but you can add more bins as necessary to organize your clips, opening any of them to expose their contents with a single click. The Bin list can be hidden or shown via the button at the upper-left of the Media Pool. A browser to the right shows the contents of the currently selected bin.",
+          "translation": "デフォルトではMasterビンが1つだけありますが、必要に応じてビンを追加できます。Binリストは表示／非表示を切り替えられ、右側のブラウザには選択したビンの内容が表示されます。"
+        },
+        {
+          "id": "p017_b004",
+          "source": "The Media Pool in Thumbnail mode",
+          "translation": "ThumbnailモードのMedia Pool"
+        },
+        {
+          "id": "p017_b005",
+          "source": "30 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "30 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p017_b006",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "blocks": [
+        {
+          "id": "p018_b000",
+          "source": "Effects Library Browsing",
+          "translation": "Effects Libraryの閲覧"
+        },
+        {
+          "id": "p018_b001",
+          "source": "The Effects Library contains a folder with the different Video Transitions, Title Effects, Generators, and Filters that are available for editing in the Timeline. The Effects Library has two panels, a Toolbox panel that contains the default Transitions, Titles, and Generators that Resolve comes with, and an OpenFX panel that contains any OpenFX transitions and generators you might have installed on your system.",
+          "translation": "Effects Libraryには、Video Transitions、Title Effects、Generators、Filtersなどが含まれます。ToolboxパネルとOpenFXパネルを使って、タイムラインに追加できる各種エフェクトを探せます。"
+        },
+        {
+          "id": "p018_b002",
+          "source": "The Effects Library",
+          "translation": "Effects Library"
+        },
+        {
+          "id": "p018_b003",
+          "source": "Edit Index",
+          "translation": "Edit Index"
+        },
+        {
+          "id": "p018_b004",
+          "source": "Clicking the Index button opens the Edit Index. By default, this shows an EDL-style list view of all the edit events in the current timeline. Whichever timeline is selected in the Timeline list displays its events here; each clip and transition is shown as an individual event, each of which contains multiple columns of information. If you re-edit a timeline, your changes are automatically reflected in this list.",
+          "translation": "IndexボタンをクリックするとEdit Indexが開きます。これはEDL形式に似たイベント一覧で、選択中のタイムラインに含まれるクリップ、トランジション、その他のイベントが列として表示されます。タイムラインを編集すると、このリストも自動的に更新されます。"
+        },
+        {
+          "id": "p018_b005",
+          "source": "Edit Index List shown open",
+          "translation": "開いた状態のEdit Indexリスト"
+        },
+        {
+          "id": "p018_b006",
+          "source": "31 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "31 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p018_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "blocks": [
+        {
+          "id": "p019_b000",
+          "source": "Source/Offline and Timeline Viewers",
+          "translation": "Source/OfflineビューアとTimelineビューア"
+        },
+        {
+          "id": "p019_b001",
+          "source": "The Source Viewer lets you view individual clips from the Media Pool to prepare them for editing. Meanwhile, the Timeline Viewer shows the frame at the position of the playhead in the Timeline. You can select either viewer by clicking, and the name of the viewer that currently has focus appears in orange. The color shown in the Source Viewer usually reflects that of the original source media, while the Timeline Viewer shows whatever grading you’ve done in the Color page.",
+          "translation": "Source ViewerとTimeline Viewerでは、それぞれソースクリップと編集中のタイムラインを確認します。現在フォーカスされているビューアはオレンジ色で示され、ソースの色確認とグレーディング結果の確認を切り分けて作業できます。"
+        },
+        {
+          "id": "p019_b002",
+          "source": "Source and Timeline Viewers",
+          "translation": "Source ViewerとTimeline Viewer"
+        },
+        {
+          "id": "p019_b003",
+          "source": "If you want to change the Edit page layout to hide the Source Viewer, you can choose Workspace > Single Viewer Mode to hide the Source Viewer and instead use just a single viewer to contextually display either a selected Source Clip or the current frame of the Timeline.",
+          "translation": "Source Viewerは、WorkspaceメニューからSingle Viewer Modeを選ぶことで非表示にできます。"
+        },
+        {
+          "id": "p019_b004",
+          "source": "Single Viewer mode",
+          "translation": "Single Viewerモード"
+        },
+        {
+          "id": "p019_b005",
+          "source": "In Single Viewer mode, whatever you select in the Media Pool or Timeline determines which controls appear in the Viewer, which lets you do nearly everything you can do with two simultaneously open viewers.",
+          "translation": "Single Viewerモードでは、表示中の内容に応じたコンテキストコントロールがViewerに表示されます。"
+        },
+        {
+          "id": "p019_b006",
+          "source": "You can also put either the Source or Timeline Viewers into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), causing whichever viewer is currently selected to fill the entire screen. This command toggles Cinema Viewer mode on and off.",
+          "translation": "Source ViewerとTimeline Viewerでは、Cinema Viewerモードも利用できます。"
+        },
+        {
+          "id": "p019_b007",
+          "source": "32 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "32 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p019_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "blocks": [
+        {
+          "id": "p020_b000",
+          "source": "Inspector",
+          "translation": "Inspector"
+        },
+        {
+          "id": "p020_b001",
+          "source": "The Inspector can be opened to let you customize compositing, transform, and cropping parameters for clips, as well as clip-specific retime and scaling options. Furthermore, the Inspector lets you edit the parameters of transitions, titles, and generators used in the Timeline, in order to customize their effect. Ordinarily, the Inspector opens alongside the Source and Timeline Viewers, but on smaller displays, opening the Inspector switches the Edit page to a single-viewer mode, showing you the Timeline item that you’re inspecting alongside the Inspector with that clip’s parameters.",
+          "translation": "Inspectorでは、合成、変形、クロップ、リタイム、スケーリング、トランジション、タイトル、ジェネレータなどのパラメータを調整できます。通常はビューアの横に開きますが、表示領域が狭い場合はSingle Viewerモードになります。"
+        },
+        {
+          "id": "p020_b002",
+          "source": "The Inspector, opened and showing a clip’s parameters",
+          "translation": "クリップのパラメータを表示しているInspector"
+        },
+        {
+          "id": "p020_b003",
+          "source": "Toolbar",
+          "translation": "Toolbar"
+        },
+        {
+          "id": "p020_b004",
+          "source": "Eleven buttons starting from the left, running along the top of the Timeline, let you choose different tools for performing various editing functions.",
+          "translation": "Timeline上部に並ぶ11個のボタンで、編集に使用するツールを選択できます。"
+        },
+        {
+          "id": "p020_b005",
+          "source": "Buttons in the toolbar",
+          "translation": "Toolbarのボタン"
+        },
+        {
+          "id": "p020_b006",
+          "source": "Timeline",
+          "translation": "Timeline"
+        },
+        {
+          "id": "p020_b007",
+          "source": "The Timeline shows whichever timeline you’ve double-clicked in the Timelines browser. It’s the workspace where you either edit programs together from scratch, or import sequences from other applications to work on inside of Resolve. You can only have one Timeline open at a time.",
+          "translation": "Timelineには、ダブルクリックして開いたタイムラインが表示されます。ここで番組を編集したり、読み込んだシーケンスを操作したりします。一度に開けるタイムラインは1つです。"
+        },
+        {
+          "id": "p020_b008",
+          "source": "The Timeline is divided into audio and video tracks, each of which has a series of header controls at the left that let you choose destination tracks for editing, name tracks, and turn tracks on and off, among other things. The appearance of the Timeline can be customized using the Timeline View Options drop-down in the toolbar.",
+          "translation": "Timelineはオーディオトラックとビデオトラックに分かれており、各トラックのヘッダーにはコントロールがあります。Timeline View Optionsでは、Timelineの表示方法を変更できます。"
+        },
+        {
+          "id": "p020_b009",
+          "source": "33 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "33 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p020_b010",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "blocks": [
+        {
+          "id": "p021_b000",
+          "source": "An edited timeline",
+          "translation": "編集済みのTimeline"
+        },
+        {
+          "id": "p021_b001",
+          "source": "Floating Timecode Window",
+          "translation": "フローティングTimecodeウィンドウ"
+        },
+        {
+          "id": "p021_b002",
+          "source": "A timecode window is available from the Workspace menu on every page, including the Edit page. Choosing this option displays a floating timecode window that shows the timecode of the Viewer or Timeline that currently has focus. This window is resizable so you can make the timecode larger or smaller.",
+          "translation": "TimecodeウィンドウはWorkspaceメニューから各ページで表示できます。これはフローティングウィンドウで、ViewerまたはTimelineのフォーカスに応じたタイムコードを表示し、サイズも変更できます。"
+        },
+        {
+          "id": "p021_b003",
+          "source": "A new floating timecode window is available",
+          "translation": "新しいフローティングTimecodeウィンドウを利用できます"
+        },
+        {
+          "id": "p021_b004",
+          "source": "Motion Graphics and Visual Effects in DaVinci Resolve",
+          "translation": "DaVinci Resolveのモーショングラフィックスとビジュアルエフェクト"
+        },
+        {
+          "id": "p021_b005",
+          "source": "To begin with, DaVinci Resolve has a wealth of effects in both the Edit and Color pages for creating titles, transforming and animating clips, compositing and creating transparency effects, cutting mattes, applying filters, image stabilization, lens dewarping, and so on.",
+          "translation": "EditページとColorページには、タイトル、変形、合成、透明度、マット、フィルター、スタビライズ、歪み補正などを扱うためのエフェクト機能が用意されています。"
+        },
+        {
+          "id": "p021_b006",
+          "source": "Then of course there’s the Fusion page, which adds considerably more powerful VFX and motion graphics capabilities via its node-based interface and deep toolset of effects nodes, keyframing and curve editing controls, and 2D and 3D compositing features.",
+          "translation": "Fusionページでは、ノードベースのインターフェイスを使って、さらに高度なビジュアルエフェクトやモーショングラフィックスを作成できます。"
+        },
+        {
+          "id": "p021_b007",
+          "source": "To use DaVinci Resolve to the best effect, it’s prudent to begin to think of the Edit, Fusion, and Color pages as complementary sets of controls.",
+          "translation": "Edit、Fusion、Colorの各ページは、互いに補完し合うコントロール群として考えると理解しやすくなります。"
+        },
+        {
+          "id": "p021_b008",
+          "source": "• For editors, the Fusion and Color pages are really just two giant inspectors; one filled with every compositing tool you could hope to use, and the other filled with every control for color and visual adjustment you could want, each of which are only one click away.",
+          "translation": "編集者にとっては、FusionページとColorページは、特定のショットをより深く調整するための巨大なInspectorのように機能します。"
+        },
+        {
+          "id": "p021_b009",
+          "source": "34 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "34 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p021_b010",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "blocks": [
+        {
+          "id": "p022_b000",
+          "source": "• For compositing artists, the Edit page can be considered a robust shot management interface as well as an opportunity to do VFX work that’s deeply integrated with the edit of the program you’re working on.",
+          "translation": "合成アーティストにとっては、Editページが強力なショット管理インターフェイスとなり、視覚効果作業を編集と統合して進められます。"
+        },
+        {
+          "id": "p022_b001",
+          "source": "• For colorists, the Edit page is a refined environment for dealing with conform issues and taking care of myriad finishing tasks quickly and easily, that itself is only one click away.",
+          "translation": "カラリストにとっては、Editページがコンフォームやフィニッシング作業を行うための環境になります。"
+        },
+        {
+          "id": "p022_b002",
+          "source": "For more information on the effects that are available in DaVinci Resolve, see the chapters available within Part 6, “Editing Effects and Transitions” and Part 11, “Color Page Effects”.",
+          "translation": "エフェクトの詳細については、第6部と第11部を参照してください。"
+        },
+        {
+          "id": "p022_b003",
+          "source": "VFX Connect",
+          "translation": "VFX Connect"
+        },
+        {
+          "id": "p022_b004",
+          "source": "As robust as the built-in compositing capabilities of DaVinci Resolve now are, when you run into instances where the various capabilities found in the Edit, Fusion, and Color pages aren’t enough to achieve the effect you require, you can use the VFX Connect features of DaVinci Resolve to send one or more clips from the Edit page Timeline to Blackmagic Fusion, the powerful node-based compositing application from Blackmagic Design, in order to do more robust compositing and effects work there. Furthermore, the VFX Connect feature can also be used to round-trip media to and render results from third-party applications such as The Foundry’s Nuke, Autodesk Flame, or Blender.",
+          "translation": "VFX Connectを使うと、Editページのタイムライン上のクリップをBlackmagic Fusionや、Nuke、Flame、Blenderなどのサードパーティ製アプリケーションへ送れます。"
+        },
+        {
+          "id": "p022_b005",
+          "source": "This is a simple round-trip operation that lets you send clips from the DaVinci Resolve timeline to Fusion or another application, where you’ll add effects and do whatever work needs to be done before rendering a finished effect file that, if properly named, will automatically appear back in your timeline. When you use VFX Connect with Blackmagic Fusion, a project file is automatically generated and the render path is automatically named for automatic linking from the DaVinci Resolve timeline. If you use this feature with third-party applications, you’ll need to set up the naming of your rendered effect file manually.",
+          "translation": "これはシンプルなラウンドトリップワークフローです。指定した名前でエフェクトファイルをレンダリングすると、そのファイルは自動的にDaVinci Resolveへ戻されます。Fusionではプロジェクトとパスが自動的に作成されますが、サードパーティ製アプリケーションでは手動で命名する必要があります。"
+        },
+        {
+          "id": "p022_b006",
+          "source": "For more information, see Chapter 63, “Introduction to Compositing in Fusion.”",
+          "translation": "VFX Connectの詳細については、第63章を参照してください。"
+        },
+        {
+          "id": "p022_b007",
+          "source": "The New VFX Connect Clip dialo",
+          "translation": "New VFX Connect Clipダイアログ"
+        },
+        {
+          "id": "p022_b008",
+          "source": "35 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "35 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p022_b009",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "blocks": [
+        {
+          "id": "p023_b000",
+          "source": "The Fusion Page",
+          "translation": "Fusionページ"
+        },
+        {
+          "id": "p023_b001",
+          "source": "The Fusion page is intended, eventually, to be a feature-complete integration of Blackmagic Design Fusion, a powerful 2D and 3D compositing application with over thirty years of evolution serving the film and broadcast industry, creating effects that have been seen in countless films and television series.",
+          "translation": "Fusionページは、Blackmagic Design FusionをDaVinci Resolve内に完全に統合することを目的としたページです。Fusionは強力な2D/3Dコンポジット環境です。"
+        },
+        {
+          "id": "p023_b002",
+          "source": "Merged right into DaVinci Resolve with a newly updated user interface, the Fusion page makes it possible to jump immediately from editing right into compositing, with no need to export media, relink files, or launch another application to get your work done. Everything you need now lives right inside DaVinci Resolve.",
+          "translation": "DaVinci Resolveに統合されたことで、書き出し、再リンク、別アプリケーションの起動を行わずに、編集からコンポジット作業へ直接移動できます。"
+        },
+        {
+          "id": "p023_b003",
+          "source": "The Fusion page showing Viewers, the Node Editor, and the Inspector",
+          "translation": "Viewer、Node Editor、Inspectorを表示しているFusionページ"
+        },
+        {
+          "id": "p023_b004",
+          "source": "For more information on using the Fusion page, see Chapter 63, “Introduction to Compositing in Fusion.”",
+          "translation": "Fusionページの詳細については、第63章「Using the Fusion Page」を参照してください。"
+        },
+        {
+          "id": "p023_b005",
+          "source": "The Work Area",
+          "translation": "作業エリア"
+        },
+        {
+          "id": "p023_b006",
+          "source": "You’ll probably not see this term used much, in favor of the specific panels within the work area that you’ll be using, but the area referred to as the Work Area is the region at the bottom half of the Fusion page UI, within which you can expose the three main panels used to construct compositions and edit animations in the Fusion page. These are the Node Editor, the Spline Editor, and the Keyframes Editor. By default, the Node Editor is the first thing you’ll see, and the main area you’ll be working within, but it can sit side by side with the Spline Editor and Keyframes Editor as necessary, and you can make more horizontal room on your display for these three panels by putting the Effects Library and Inspector into half-height mode, if necessary.",
+          "translation": "画面下半分の作業エリアには、Node Editor、Spline Editor、Keyframes Editorが表示されます。Effects LibraryとInspectorは半分の高さで表示することもでき、作業内容に応じて必要なパネルを切り替えられます。"
+        },
+        {
+          "id": "p023_b007",
+          "source": "36 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "36 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p023_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "blocks": [
+        {
+          "id": "p024_b000",
+          "source": "The Work Area showing the Node Editor, the Spline Editor, and Keyframes Editor",
+          "translation": "Node Editor、Spline Editor、Keyframes Editorを表示している作業エリア"
+        },
+        {
+          "id": "p024_b001",
+          "source": "Viewers",
+          "translation": "Viewer"
+        },
+        {
+          "id": "p024_b002",
+          "source": "The Viewer Area area encompasses the Time Ruler and transport controls. The Time Ruler is the principal “timeline” of the Fusion page, which focuses exclusively on the current composition you’re working on and may consist of one clip or several. This area can be set to display either one or two viewers at the top of the Fusion page, chosen via the Viewer button at the far right of the Viewer title bar. Each viewer can show a single node’s output from anywhere in the node tree. You assign which node is displayed in which viewer. This makes it easy to load separate nodes into each viewer for comparison. For example, you can load a Keyer node into the left Viewer and the final composite into the right Viewer, so you can see the image you’re adjusting and the final result at the same time.",
+          "translation": "Viewerエリアには、Time Rulerとトランスポートコントロールがあり、コンポジションを再生して確認できます。Viewerは1つまたは2つ表示でき、Viewerボタンを使って、どのノードの出力をどのViewerに表示するかを選択します。"
+        },
+        {
+          "id": "p024_b003",
+          "source": "Dual viewers let you edit an upstream node in one while seeing its effect on the overall composition in the other",
+          "translation": "2つのViewerを使うと、一方で上流のノードを編集しながら、もう一方でコンポジション全体への影響を確認できます"
+        },
+        {
+          "id": "p024_b004",
+          "source": "Ordinarily, each viewer shows 2D nodes from your composition as a single image. However, when you’re viewing a 3D node, you have the option to set that viewer to one of several 3D views, including a perspective view that gives you a repositionable stage on which to arrange the elements of the world you’re creating, or a quad view that lets you see your composition from four angles, making it easier to arrange and edit objects and layers within the XYZ axes of the 3D space in which you’re working.",
+          "translation": "2Dノードと3DノードのどちらもViewerで確認できます。3Dビューでは、パースビューや、X/Y/Z軸に沿ったクアッドビューを利用できます。"
+        },
+        {
+          "id": "p024_b005",
+          "source": "Toolbar",
+          "translation": "Toolbar"
+        },
+        {
+          "id": "p024_b006",
+          "source": "The toolbar, located underneath the Time Ruler, contains buttons that let you quickly add commonly used nodes to the Node Editor. Clicking any of these buttons adds that node after the currently selected node in the node tree, or adds an unconnected instance of that node if no nodes are selected.",
+          "translation": "Time Rulerの下にあるToolbarには、よく使うノードを追加するボタンがあります。ノードを選択している場合はその後ろに追加され、何も選択していない場合は接続されていないノードとして追加されます。"
+        },
+        {
+          "id": "p024_b007",
+          "source": "The toolbar has buttons for adding commonly used nodes to the Node Editor",
+          "translation": "Toolbarには、よく使うノードをNode Editorへ追加するためのボタンがあります"
+        },
+        {
+          "id": "p024_b008",
+          "source": "37 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "37 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p024_b009",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "blocks": [
+        {
+          "id": "p025_b000",
+          "source": "The toolbar is divided into six sections that group commonly used nodes together. As you hover the pointer over any button, a tooltip shows you that node’s name.",
+          "translation": "Toolbarは6つのセクションに分かれています。各ボタンの上にポインタを置くと、ツールチップで名前を確認できます。"
+        },
+        {
+          "id": "p025_b001",
+          "source": "Effects Library",
+          "translation": "Effects Library"
+        },
+        {
+          "id": "p025_b002",
+          "source": "The Effects Library on the Fusion page shows all of the nodes and effects that are available in the Fusion page, including effects that come with DaVinci Resolve and third-party OFX, if available. While the toolbar shows many of the most common nodes you’ll be using in any composite, the Effects Library contains every single tool available in the Fusion page, organized by category, with each node ready to be quickly added to the Node Editor. Suffice it to say there are many, many more nodes available in the Effects Library than on the toolbar, spanning a wide range of uses.",
+          "translation": "Effects Libraryには、DaVinci Resolve標準のエフェクトやサードパーティ製OpenFXを含む、すべてのFusionノードとエフェクトが表示されます。Toolbarにはよく使うノードだけが並びますが、Effects Libraryではカテゴリ別にすべてのツールを探せます。"
+        },
+        {
+          "id": "p025_b003",
+          "source": "The Effects Library with Tools open",
+          "translation": "Toolsを開いたEffects Library"
+        },
+        {
+          "id": "p025_b004",
+          "source": "Node Editor",
+          "translation": "Node Editor"
+        },
+        {
+          "id": "p025_b005",
+          "source": "The Node Editor is the heart of the Fusion page, because it’s where you build the tree of nodes that makes up each composition. Each node you add to the node tree adds a specific operation that creates one effect, whether it’s blurring the image, adjusting color, painting strokes, drawing and adding a mask, extracting a key, creating text, or compositing two images into one.",
+          "translation": "Node EditorはFusionページの中心です。ここでは、各処理を表すノードをツリー状につなぎ、コンポジションを構築します。"
+        },
+        {
+          "id": "p025_b006",
+          "source": "38 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "38 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p025_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "blocks": [
+        {
+          "id": "p026_b000",
+          "source": "The Node Editor displaying a node tree creating a composition",
+          "translation": "コンポジションを作成するノードツリーを表示しているNode Editor"
+        },
+        {
+          "id": "p026_b001",
+          "source": "Inspector",
+          "translation": "Inspector"
+        },
+        {
+          "id": "p026_b002",
+          "source": "The Inspector is a panel on the right side of the Fusion page that you use to display and manipulate the parameters of one or more selected nodes. When a node is selected in the Node Editor, its parameters and settings appear in the Inspector, ready for you to modify. The Fusion Inspector is divided into two panels. The Tools panel shows you the parameters of selected nodes.",
+          "translation": "Fusionページ右側のInspectorでは、選択したノードのパラメータを表示し、調整できます。Toolsパネルには選択中のツールのコントロールが表示されます。"
+        },
+        {
+          "id": "p026_b003",
+          "source": "The Modifiers panel shows you different things for different nodes. For all nodes, it shows you the controls for Modifiers, or adjustable expressions, that you’ve added to specific parameters to automatically animate them in different ways.",
+          "translation": "Modifiersパネルでは、モディファイアや調整可能な式に関するコントロールを操作できます。"
+        },
+        {
+          "id": "p026_b004",
+          "source": "The Inspector shows parameters from one or more selected nodes Nodes with different tabs expand the Controls, Transform, and Settings parameters",
+          "translation": "Inspectorには、選択した1つまたは複数のノードのパラメータが表示されます。タブを持つノードでは、Controls、Transform、Settingsの各パラメータを展開できます"
+        },
+        {
+          "id": "p026_b005",
+          "source": "39 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "39 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p026_b006",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "blocks": [
+        {
+          "id": "p027_b000",
+          "source": "Additionally, many nodes expose multiple tabs’ worth of controls in the Inspector, seen as icons at the top of the parameter section for each node. Click any tab to expose that set of controls.",
+          "translation": "多くのノードでは、パラメータが複数のタブに分かれています。目的のタブをクリックして、そのカテゴリのコントロールを表示します。"
+        },
+        {
+          "id": "p027_b001",
+          "source": "Thumbnail Timeline",
+          "translation": "Thumbnail Timeline"
+        },
+        {
+          "id": "p027_b002",
+          "source": "Hidden by default, the Thumbnail timeline can be opened by clicking the Clips button in the UI Toolbar and appears underneath the Node Editor when it’s open. The Thumbnail timeline shows you every clip in the current Timeline, giving you a way to navigate from one clip to another when working on multiple compositions in your project and providing an interface for creating and switching among multiple versions of compositions and resetting the current composition, when necessary.",
+          "translation": "Thumbnail Timelineはデフォルトでは非表示です。ClipsボタンをクリックするとNode Editorの下に表示され、クリップ間の移動、コンポジションのバージョン管理、リセットなどを行えます。"
+        },
+        {
+          "id": "p027_b003",
+          "source": "The Thumbnail timeline lets you navigate the Timeline and manage versions of compositions",
+          "translation": "Thumbnail Timelineでは、Timeline内を移動し、コンポジションのバージョンを管理できます"
+        },
+        {
+          "id": "p027_b004",
+          "source": "Media Pool",
+          "translation": "Media Pool"
+        },
+        {
+          "id": "p027_b005",
+          "source": "In the Fusion page, the Media Pool continues to serve its purpose as the repository of all media you’ve imported into your project. This makes it easy to add additional clips to your compositions simply by dragging the clip you want from the Media Pool into the Node Editor. The media you add appears as a new MediaIn node in your composition, ready to be integrated into your node tree however you need.",
+          "translation": "FusionページのMedia Poolは、プロジェクト内のメディアを利用するための保管場所です。クリップをNode Editorへドラッグすると、MediaInノードとして追加されます。"
+        },
+        {
+          "id": "p027_b006",
+          "source": "The Media Pool in Thumbnail mode showing video clips",
+          "translation": "ビデオクリップを表示しているThumbnailモードのMedia Pool"
+        },
+        {
+          "id": "p027_b007",
+          "source": "40 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "40 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p027_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "blocks": [
+        {
+          "id": "p028_b000",
+          "source": "Status Bar",
+          "translation": "ステータスバー"
+        },
+        {
+          "id": "p028_b001",
+          "source": "The status bar at the bottom of the Fusion page, immediately above the Resolve Page bar, shows you a variety of up-to-date information about things you’re selecting and what’s happening in the Fusion page.",
+          "translation": "ステータスバーはFusionページ下部、Node Editorの上、Resolveページバーの上に表示され、現在の状態に関する情報を表示します。"
+        },
+        {
+          "id": "p028_b002",
+          "source": "For example, hovering the pointer over any node displays information about that node in the status bar (as well as in a floating tooltip), while the currently achieved frame rate appears whenever you initiate playback, and the percentage of the RAM cache that’s used appears at all times. Other information, updates, and warnings appears in this area as you work.",
+          "translation": "ノードにポインタを重ねると、そのノードに関する情報が表示されます。また、再生中に達成されているフレームレート、RAMキャッシュの割合、更新や警告も表示されます。"
+        },
+        {
+          "id": "p028_b003",
+          "source": "The status bar under the Node Editor showing you information about a node under the pointer and a floating tooltip",
+          "translation": "ポインタ下のノードに関する情報とフローティングツールチップを表示しているNode Editor下のステータスバー"
+        },
+        {
+          "id": "p028_b004",
+          "source": "The Console",
+          "translation": "Console"
+        },
+        {
+          "id": "p028_b005",
+          "source": "The console, available by choosing Workspace > Console, is a window in which you can see the error, log, script, and input messages that may explain something the Fusion page is trying to do in greater detail. The console is also where you can read FusionScript outputs or input FusionScripts directly. Occasionally, the status bar (described above) will display a badge to let you know there’s a message in the console you might be interested in. The badge will indicate if the message is an error, log, or script message.",
+          "translation": "ConsoleはWorkspace > Consoleから開きます。エラー、ログ、スクリプト、入力メッセージが表示され、FusionScriptの出力や入力にも使用できます。新しいメッセージがある場合はバッジで示されます。"
+        },
+        {
+          "id": "p028_b006",
+          "source": "The Console window",
+          "translation": "Consoleウィンドウ"
+        },
+        {
+          "id": "p028_b007",
+          "source": "41 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "41 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p028_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "blocks": [
+        {
+          "id": "p029_b000",
+          "source": "The Color Page",
+          "translation": "Colorページ"
+        },
+        {
+          "id": "p029_b001",
+          "source": "The Color page is where you color correct, or grade, your program. It has all of the controls available for manipulating color and contrast, reducing noise, creating limited secondary color corrections, building image effects of different kinds, adjusting clip geometry, and making many other corrective and stylistic adjustments. The Color page is divided into seven main areas that work together to let you build a grade.",
+          "translation": "Colorページでは、カラー補正とグレーディングを行います。色とコントラスト、ノイズ、セカンダリ補正、画像エフェクト、ジオメトリなどを扱うためのコントロールがあり、画面は主に7つの領域で構成されています。"
+        },
+        {
+          "id": "p029_b002",
+          "source": "For more detailed information about the Color page, see Chapter 126, “Using the Color Page.”",
+          "translation": "Colorページの詳しい情報については、第126章を参照してください。"
+        },
+        {
+          "id": "p029_b003",
+          "source": "The Color page",
+          "translation": "Colorページ"
+        },
+        {
+          "id": "p029_b004",
+          "source": "Viewer",
+          "translation": "Viewer"
+        },
+        {
+          "id": "p029_b005",
+          "source": "The Viewer shows the frame at the current position of the playhead in the Timeline. The contents of the Viewer are almost always output to video via whichever I/O interface you have connected. At the top of the Viewer is a header that displays the Project and Timeline names, as well as a Viewer Timecode display that shows the source timecode of each clip by default. The Timeline name is also a drop-down display that lets you switch to any other timeline in the project. A jog bar (sometimes referred to as a scrubber bar) underneath the image lets you drag the playhead across the entire duration of the clip, while transport controls underneath that let you control playback. A toolbar at the top provides controls governing Image Wipes, Split-Screen controls, and Highlight display. Additional controls let you turn audio playback on and off, or adjust them by right-clicking on the speaker icon and dragging the slider. You can also choose which onscreen controls are currently displayed.",
+          "translation": "ColorページのViewerでは、現在のタイムラインフレームを確認しながらグレーディングできます。トランスポートコントロールを使って再生や移動を行い、必要に応じて表示モードや比較表示を切り替えられます。"
+        },
+        {
+          "id": "p029_b006",
+          "source": "42 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "42 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p029_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "blocks": [
+        {
+          "id": "p030_b000",
+          "source": "Viewer with transport controls",
+          "translation": "トランスポートコントロール付きViewer"
+        },
+        {
+          "id": "p030_b001",
+          "source": "You can also put the Viewer into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), so that it fills the entire screen. This command toggles Cinema Viewer mode on and off. Two other modes, Enhanced Viewer (Option-F) and Full Screen Viewer (Shift-F), are available to provide more working area for tasks such as window positioning and rotoscoping.",
+          "translation": "Cinema Viewerモード、Enhanced Viewer、Full Screen Viewerを使うと、Viewerをより大きく表示して映像を確認できます。"
+        },
+        {
+          "id": "p030_b002",
+          "source": "Gallery",
+          "translation": "Gallery"
+        },
+        {
+          "id": "p030_b003",
+          "source": "The Gallery is used for storing still frames to use as reference when comparing clips to one another. Each still frame also stores that clip’s grade so you can copy it later; stills and grades are stored together. A button lets you open up the Album browser, used for organizing your stills. At the top of the Gallery, Memories let you store grade information that you can apply using a control panel or keyboard shortcuts. You can also open a larger Gallery window within the Color page that provides more room for organizing your saved stills and grades.",
+          "translation": "Galleryには、参照用の静止画フレームを保存できます。静止画にはグレードも保存されるため、他のショットへ適用したり比較したりできます。Albumブラウザ、Memories、より大きなGalleryウィンドウも利用できます。"
+        },
+        {
+          "id": "p030_b004",
+          "source": "For more information on the Gallery page, see Chapter 141, “Using the Gallery.”",
+          "translation": "Galleryページの詳細については、第141章を参照してください。"
+        },
+        {
+          "id": "p030_b005",
+          "source": "The Gallery has Memories, stills saved in albums, and your PowerGrades",
+          "translation": "Galleryには、Memories、アルバムに保存されたスチル、PowerGradesが表示されます"
+        },
+        {
+          "id": "p030_b006",
+          "source": "43 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "43 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p030_b007",
+          "source": "INTRO",
+          "translation": "概要"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "blocks": [
+        {
+          "id": "p031_b000",
+          "source": "Node Editor",
+          "translation": "Node Editor"
+        },
+        {
+          "id": "p031_b001",
+          "source": "The Node Editor is where you assemble one or more individual corrections (nodes) together to create multi-correction grades (seen as node trees). This is a powerful way of assembling grades, since different combinations of nodes let you create different corrections and very specific adjustments by reordering operations, combining keys, or changing the layer order of different adjustments.",
+          "translation": "Node Editorでは、複数の補正を組み合わせたグレードを構築します。ノードの順序を入れ替えたり、キーを組み合わせたり、レイヤーの順序を調整したりできます。"
+        },
+        {
+          "id": "p031_b002",
+          "source": "For more information about the Node Editor, see Chapter 143, “Node Editing Basics.”",
+          "translation": "Node Editorの詳細については、第143章を参照してください。"
+        },
+        {
+          "id": "p031_b003",
+          "source": "Node Editor to construct your grade processing signal flow",
+          "translation": "グレード処理の信号フローを構築するNode Editor"
+        },
+        {
+          "id": "p031_b004",
+          "source": "Timeline",
+          "translation": "Timeline"
+        },
+        {
+          "id": "p031_b005",
+          "source": "The Timeline in the Color page reflects the contents of the Timeline in the Edit page, but has a different appearance that’s tailored to the requirements of the colorist. However, the content is identical, and changes made to the Timeline in the Edit page are immediately seen in the Color page as you switch back and forth. The Color page Timeline provides several ways of navigating the clips in your project, as well as keeping track of what has been done to which clips.",
+          "translation": "ColorページのTimelineはEditページのTimelineを反映しますが、カラリスト向けに異なる見た目になっています。内容は同じで、移動やトラック表示の変更に使用できます。"
+        },
+        {
+          "id": "p031_b006",
+          "source": "The Color page Timeline",
+          "translation": "ColorページのTimeline"
+        },
+        {
+          "id": "p031_b007",
+          "source": "44 DaVinci Resolve Interface | Chapter 1 Introduction to DaVinci Resolve",
+          "translation": "44 DaVinci Resolveインターフェイス | 第1章 DaVinci Resolve入門"
+        },
+        {
+          "id": "p031_b008",
+          "source": "INTRO",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 43,
       "blocks": [
-        {"id": "p043_b000", "translation": "第2章\nDaVinci Resolve\nユーザーインターフェイスの使用"},
-        {"id": "p043_b001", "translation": "この章では、DaVinci Resolveのグラフィカルユーザーインターフェイス（GUI）で使われている、さまざまな暗黙の規則と操作方法の概要を説明します。"},
-        {"id": "p043_b002", "translation": "これには、マウス、ペンとタブレット、またはトラックパッドの各ボタンが、さまざまなウィンドウやインターフェイスウィジェットでどのように使われるか、メニューバー、コンテキストメニュー、オプションメニューを使ってアプリケーション全体にコマンドがどのように配置されているか、そしてフィールドやその他のコントロールをどのように操作するかが含まれます。"},
-        {"id": "p043_b003", "translation": "こうした規則の多くは、使用しているプラットフォームのファイルシステムや、ほかのメディアアプリケーションで見られる一般的なユーザーインターフェイスの規則と重なりますが、DaVinci Resolve独自のものもあります。そのため、ほかのアプリケーションの熟練ユーザーだと考えている場合でも、この章には目を通す価値があります。"},
-        {"id": "p043_b004", "translation": "目次"},
-        {"id": "p043_b005", "translation": "基本的なドキュメント用語 ........................ 57"},
-        {"id": "p043_b006", "translation": "「UI」または「GUI」とは ................................ 57"},
-        {"id": "p043_b007", "translation": "「ポインター」とは ........................................ 57"},
-        {"id": "p043_b008", "translation": "キーボードショートカットについて ............ 57"},
-        {"id": "p043_b009", "translation": "DaVinci Resolveインターフェイスのカスタマイズ .... 57"},
-        {"id": "p043_b010", "translation": "フルスクリーンとフローティングウィンドウでの作業 .... 57"},
-        {"id": "p043_b011", "translation": "パネルとパネルフォーカス ........................ 57"},
-        {"id": "p043_b012", "translation": "インターフェイスツールバーでパネルを表示/非表示にする .... 58"},
-        {"id": "p043_b013", "translation": "Workspaceサブメニューでパネルを表示/非表示にする .... 59"},
-        {"id": "p043_b014", "translation": "異なるパネルのサイズを調整する .............. 59"},
-        {"id": "p043_b015", "translation": "シングルモニター/デュアルモニターレイアウトを使う .... 61"},
-        {"id": "p043_b016", "translation": "EditページでFull Screen Timelineオプションを使う .... 62"},
-        {"id": "p043_b017", "translation": "Video Clean Feed（Studio版のみ） ............ 63"},
-        {"id": "p043_b018", "translation": "カスタム画面レイアウトを保存する ............ 63"},
-        {"id": "p043_b019", "translation": "デフォルトレイアウトにリセットする .......... 63"},
-        {"id": "p043_b020", "translation": "インターフェイスの特定パネルを切り離す .... 64"},
-        {"id": "p043_b021", "translation": "DaVinci Resolveユーザーインターフェイスの規則 .... 66"},
-        {"id": "p043_b022", "translation": "コンテキストメニュー ................................ 66"},
-        {"id": "p043_b023", "translation": "ドロップダウンメニュー ............................ 66"},
-        {"id": "p043_b024", "translation": "パラメーターを調整する ............................ 67"},
-        {"id": "p043_b025", "translation": "マウスまたはその他の入力デバイスを使う .... 69"},
-        {"id": "p043_b026", "translation": "マウス、トラックパッド、タブレットの動作 .... 70"},
-        {"id": "p043_b027", "translation": "タイムラインのスクロール動作 .................. 70"},
-        {"id": "p043_b028", "translation": "ビューアの動作 ............................................ 71"},
-        {"id": "p043_b029", "translation": "キーボードショートカット ......................... 72"},
-        {"id": "p043_b030", "translation": "DaVinci Resolveでの取り消しとやり直し .... 72"},
-        {"id": "p043_b031", "translation": "56 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"},
-        {"id": "p043_b032", "translation": "概要"}
+        {
+          "id": "p043_b000",
+          "translation": "第2章\nDaVinci Resolve\nユーザーインターフェイスの使用"
+        },
+        {
+          "id": "p043_b001",
+          "translation": "この章では、DaVinci Resolveのグラフィカルユーザーインターフェイス（GUI）で使われている、さまざまな暗黙の規則と操作方法の概要を説明します。"
+        },
+        {
+          "id": "p043_b002",
+          "translation": "これには、マウス、ペンとタブレット、またはトラックパッドの各ボタンが、さまざまなウィンドウやインターフェイスウィジェットでどのように使われるか、メニューバー、コンテキストメニュー、オプションメニューを使ってアプリケーション全体にコマンドがどのように配置されているか、そしてフィールドやその他のコントロールをどのように操作するかが含まれます。"
+        },
+        {
+          "id": "p043_b003",
+          "translation": "こうした規則の多くは、使用しているプラットフォームのファイルシステムや、ほかのメディアアプリケーションで見られる一般的なユーザーインターフェイスの規則と重なりますが、DaVinci Resolve独自のものもあります。そのため、ほかのアプリケーションの熟練ユーザーだと考えている場合でも、この章には目を通す価値があります。"
+        },
+        {
+          "id": "p043_b004",
+          "translation": "目次"
+        },
+        {
+          "id": "p043_b005",
+          "translation": "基本的なドキュメント用語 ........................ 57"
+        },
+        {
+          "id": "p043_b006",
+          "translation": "「UI」または「GUI」とは ................................ 57"
+        },
+        {
+          "id": "p043_b007",
+          "translation": "「ポインター」とは ........................................ 57"
+        },
+        {
+          "id": "p043_b008",
+          "translation": "キーボードショートカットについて ............ 57"
+        },
+        {
+          "id": "p043_b009",
+          "translation": "DaVinci Resolveインターフェイスのカスタマイズ .... 57"
+        },
+        {
+          "id": "p043_b010",
+          "translation": "フルスクリーンとフローティングウィンドウでの作業 .... 57"
+        },
+        {
+          "id": "p043_b011",
+          "translation": "パネルとパネルフォーカス ........................ 57"
+        },
+        {
+          "id": "p043_b012",
+          "translation": "インターフェイスツールバーでパネルを表示/非表示にする .... 58"
+        },
+        {
+          "id": "p043_b013",
+          "translation": "Workspaceサブメニューでパネルを表示/非表示にする .... 59"
+        },
+        {
+          "id": "p043_b014",
+          "translation": "異なるパネルのサイズを調整する .............. 59"
+        },
+        {
+          "id": "p043_b015",
+          "translation": "シングルモニター/デュアルモニターレイアウトを使う .... 61"
+        },
+        {
+          "id": "p043_b016",
+          "translation": "EditページでFull Screen Timelineオプションを使う .... 62"
+        },
+        {
+          "id": "p043_b017",
+          "translation": "Video Clean Feed（Studio版のみ） ............ 63"
+        },
+        {
+          "id": "p043_b018",
+          "translation": "カスタム画面レイアウトを保存する ............ 63"
+        },
+        {
+          "id": "p043_b019",
+          "translation": "デフォルトレイアウトにリセットする .......... 63"
+        },
+        {
+          "id": "p043_b020",
+          "translation": "インターフェイスの特定パネルを切り離す .... 64"
+        },
+        {
+          "id": "p043_b021",
+          "translation": "DaVinci Resolveユーザーインターフェイスの規則 .... 66"
+        },
+        {
+          "id": "p043_b022",
+          "translation": "コンテキストメニュー ................................ 66"
+        },
+        {
+          "id": "p043_b023",
+          "translation": "ドロップダウンメニュー ............................ 66"
+        },
+        {
+          "id": "p043_b024",
+          "translation": "パラメーターを調整する ............................ 67"
+        },
+        {
+          "id": "p043_b025",
+          "translation": "マウスまたはその他の入力デバイスを使う .... 69"
+        },
+        {
+          "id": "p043_b026",
+          "translation": "マウス、トラックパッド、タブレットの動作 .... 70"
+        },
+        {
+          "id": "p043_b027",
+          "translation": "タイムラインのスクロール動作 .................. 70"
+        },
+        {
+          "id": "p043_b028",
+          "translation": "ビューアの動作 ............................................ 71"
+        },
+        {
+          "id": "p043_b029",
+          "translation": "キーボードショートカット ......................... 72"
+        },
+        {
+          "id": "p043_b030",
+          "translation": "DaVinci Resolveでの取り消しとやり直し .... 72"
+        },
+        {
+          "id": "p043_b031",
+          "translation": "56 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"
+        },
+        {
+          "id": "p043_b032",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 54,
       "blocks": [
-        {"id": "p054_b000", "translation": "オプションメニュー　Modeドロップダウン"},
-        {"id": "p054_b001", "translation": "さらに、多くの（ただしすべてではない）パネルやパレットには、右上隅に「Mode」ドロップダウンが表示され、そのパレット内で別の種類の機能を選択できます。"},
-        {"id": "p054_b002", "translation": "トランスポートコントロールやツールバーアイコンなど一部のボタンは、ポインターを重ねると小さな下向き矢印を表示します。これは、そのコントロールを右クリックして、その機能を制御するチェックマーク付きオプションにアクセスできることを示しています。"},
-        {"id": "p054_b003", "translation": "（左）ボタンにポインターを重ねて隠しメニューがあることを表示、（右）ボタンを右クリックしてドロップダウンメニューのオプションを表示"},
-        {"id": "p054_b004", "translation": "パラメーターを調整する"},
-        {"id": "p054_b005", "translation": "数値パラメーターは通常、いくつかの異なる方法で編集できます。"},
-        {"id": "p054_b006", "translation": "スライダーとダイヤル"},
-        {"id": "p054_b007", "translation": "スライダーはドラッグして、特定の範囲内でパラメーターの値を変更できます。ダイヤルが表示されている場合、その値は制限なく連続的に編集できることを意味します。スライダーは通常、パラメーターを大きく粗く調整するのに適しています。その隣にある「仮想スライダー」を使うと、より細かく調整できます。"},
-        {"id": "p054_b008", "translation": "数値フィールドを伴うスライダーとダイヤル"},
-        {"id": "p054_b009", "translation": "仮想スライダーとフィールド"},
-        {"id": "p054_b010", "translation": "数値フィールドが表示されている場合、ポインターをその上に重ねて「仮想スライダーカーソル」が表示されるまで待ち、クリックして右へドラッグすると値を上げ、左へドラッグすると値を下げることで、「仮想スライダー」として使用できます。一般に、フィールドの仮想スライダーを使うと、左側の実際のスライダーよりも細かく調整できます。"},
-        {"id": "p054_b011", "translation": "仮想スライダーの使用"},
-        {"id": "p054_b012", "translation": "ほとんどの数値を含むフィールドをダブルクリックすると数値がハイライトされ、キーボードで新しい値を入力してReturnキーを押すことで変更を確定できます。"},
-        {"id": "p054_b013", "translation": "67 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"},
-        {"id": "p054_b014", "translation": "概要"}
+        {
+          "id": "p054_b000",
+          "translation": "オプションメニュー　Modeドロップダウン"
+        },
+        {
+          "id": "p054_b001",
+          "translation": "さらに、多くの（ただしすべてではない）パネルやパレットには、右上隅に「Mode」ドロップダウンが表示され、そのパレット内で別の種類の機能を選択できます。"
+        },
+        {
+          "id": "p054_b002",
+          "translation": "トランスポートコントロールやツールバーアイコンなど一部のボタンは、ポインターを重ねると小さな下向き矢印を表示します。これは、そのコントロールを右クリックして、その機能を制御するチェックマーク付きオプションにアクセスできることを示しています。"
+        },
+        {
+          "id": "p054_b003",
+          "translation": "（左）ボタンにポインターを重ねて隠しメニューがあることを表示、（右）ボタンを右クリックしてドロップダウンメニューのオプションを表示"
+        },
+        {
+          "id": "p054_b004",
+          "translation": "パラメーターを調整する"
+        },
+        {
+          "id": "p054_b005",
+          "translation": "数値パラメーターは通常、いくつかの異なる方法で編集できます。"
+        },
+        {
+          "id": "p054_b006",
+          "translation": "スライダーとダイヤル"
+        },
+        {
+          "id": "p054_b007",
+          "translation": "スライダーはドラッグして、特定の範囲内でパラメーターの値を変更できます。ダイヤルが表示されている場合、その値は制限なく連続的に編集できることを意味します。スライダーは通常、パラメーターを大きく粗く調整するのに適しています。その隣にある「仮想スライダー」を使うと、より細かく調整できます。"
+        },
+        {
+          "id": "p054_b008",
+          "translation": "数値フィールドを伴うスライダーとダイヤル"
+        },
+        {
+          "id": "p054_b009",
+          "translation": "仮想スライダーとフィールド"
+        },
+        {
+          "id": "p054_b010",
+          "translation": "数値フィールドが表示されている場合、ポインターをその上に重ねて「仮想スライダーカーソル」が表示されるまで待ち、クリックして右へドラッグすると値を上げ、左へドラッグすると値を下げることで、「仮想スライダー」として使用できます。一般に、フィールドの仮想スライダーを使うと、左側の実際のスライダーよりも細かく調整できます。"
+        },
+        {
+          "id": "p054_b011",
+          "translation": "仮想スライダーの使用"
+        },
+        {
+          "id": "p054_b012",
+          "translation": "ほとんどの数値を含むフィールドをダブルクリックすると数値がハイライトされ、キーボードで新しい値を入力してReturnキーを押すことで変更を確定できます。"
+        },
+        {
+          "id": "p054_b013",
+          "translation": "67 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"
+        },
+        {
+          "id": "p054_b014",
+          "translation": "概要"
+        }
       ]
     },
     {
       "page": 55,
       "blocks": [
-        {"id": "p055_b000", "translation": "矢印キーによる数値フィールド値の編集"},
-        {"id": "p055_b001", "translation": "矢印キーを使って数値フィールド内を移動し、小数の桁ごとに調整することで、数値パラメーター値を手動で編集できます。"},
-        {"id": "p055_b002", "translation": "矢印キーを使って数値パラメーターを調整するには:"},
-        {"id": "p055_b003", "translation": "1 フィールド内の数値をダブルクリックして選択すると、その値の周囲にハイライトが表示されます。"},
-        {"id": "p055_b004", "translation": "2 左/右矢印キーを使い、調整したい小数桁の右側へカーソルを移動します。"},
-        {"id": "p055_b005", "translation": "3 上/下矢印キーを使って、その小数桁の値を変更します。"},
-        {"id": "p055_b006", "translation": "4 数値全体を選択している場合、上/下矢印キーは最小値を調整します。"},
-        {"id": "p055_b007", "translation": "このカーソルは、上/下矢印キーで10分の1の位を調整する位置にあります。"},
-        {"id": "p055_b008", "translation": "仮想スライダーでの数値フィールド値のコピーとペースト"},
-        {"id": "p055_b009", "translation": "フィールド内の任意の値に対して、標準的なコピー/ペースト操作を行い、別のフィールドへ移すことができます。"},
-        {"id": "p055_b010", "translation": "フィールドから数値パラメーターをコピーしてペーストするには:"},
-        {"id": "p055_b011", "translation": "1 コピー元のフィールドを右クリックし、ドロップダウンメニューからcopy（Command-C）を選択します。"},
-        {"id": "p055_b012", "translation": "2 コピー先のフィールドを右クリックし、ドロップダウンメニューからpaste（Command-V）を選択します。"},
-        {"id": "p055_b013", "translation": "アイコンとボタン"},
-        {"id": "p055_b014", "translation": "一部のコントロールはアイコンやボタンとして表示され、クリックするだけで、それらが持つ機能を呼び出せます。"},
-        {"id": "p055_b015", "translation": "機能を示すアイコン付きボタンの組み合わせ"},
-        {"id": "p055_b016", "translation": "パラメーターをリセットする"},
-        {"id": "p055_b017", "translation": "編集可能なパラメーターをデフォルト設定に戻すには、そのテキストラベルをダブルクリックするか、リセットボタンが表示されている場合はそれをクリックします。通常、コントロールのグループのヘッダーにあるマスターリセットボタンは、そのグループ内のすべてのコントロールをリセットします。パラメーターの右側に表示される個別のリセットコントロールは、通常そのパラメーターだけをリセットします。リセットコントロールが見当たらない場合は、パラメーター名をダブルクリックしてみるとよいでしょう。"},
-        {"id": "p055_b018", "translation": "リセットボタン"},
-        {"id": "p055_b019", "translation": "68 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"},
-        {"id": "p055_b020", "translation": "概要"}
+        {
+          "id": "p055_b000",
+          "translation": "矢印キーによる数値フィールド値の編集"
+        },
+        {
+          "id": "p055_b001",
+          "translation": "矢印キーを使って数値フィールド内を移動し、小数の桁ごとに調整することで、数値パラメーター値を手動で編集できます。"
+        },
+        {
+          "id": "p055_b002",
+          "translation": "矢印キーを使って数値パラメーターを調整するには:"
+        },
+        {
+          "id": "p055_b003",
+          "translation": "1 フィールド内の数値をダブルクリックして選択すると、その値の周囲にハイライトが表示されます。"
+        },
+        {
+          "id": "p055_b004",
+          "translation": "2 左/右矢印キーを使い、調整したい小数桁の右側へカーソルを移動します。"
+        },
+        {
+          "id": "p055_b005",
+          "translation": "3 上/下矢印キーを使って、その小数桁の値を変更します。"
+        },
+        {
+          "id": "p055_b006",
+          "translation": "4 数値全体を選択している場合、上/下矢印キーは最小値を調整します。"
+        },
+        {
+          "id": "p055_b007",
+          "translation": "このカーソルは、上/下矢印キーで10分の1の位を調整する位置にあります。"
+        },
+        {
+          "id": "p055_b008",
+          "translation": "仮想スライダーでの数値フィールド値のコピーとペースト"
+        },
+        {
+          "id": "p055_b009",
+          "translation": "フィールド内の任意の値に対して、標準的なコピー/ペースト操作を行い、別のフィールドへ移すことができます。"
+        },
+        {
+          "id": "p055_b010",
+          "translation": "フィールドから数値パラメーターをコピーしてペーストするには:"
+        },
+        {
+          "id": "p055_b011",
+          "translation": "1 コピー元のフィールドを右クリックし、ドロップダウンメニューからcopy（Command-C）を選択します。"
+        },
+        {
+          "id": "p055_b012",
+          "translation": "2 コピー先のフィールドを右クリックし、ドロップダウンメニューからpaste（Command-V）を選択します。"
+        },
+        {
+          "id": "p055_b013",
+          "translation": "アイコンとボタン"
+        },
+        {
+          "id": "p055_b014",
+          "translation": "一部のコントロールはアイコンやボタンとして表示され、クリックするだけで、それらが持つ機能を呼び出せます。"
+        },
+        {
+          "id": "p055_b015",
+          "translation": "機能を示すアイコン付きボタンの組み合わせ"
+        },
+        {
+          "id": "p055_b016",
+          "translation": "パラメーターをリセットする"
+        },
+        {
+          "id": "p055_b017",
+          "translation": "編集可能なパラメーターをデフォルト設定に戻すには、そのテキストラベルをダブルクリックするか、リセットボタンが表示されている場合はそれをクリックします。通常、コントロールのグループのヘッダーにあるマスターリセットボタンは、そのグループ内のすべてのコントロールをリセットします。パラメーターの右側に表示される個別のリセットコントロールは、通常そのパラメーターだけをリセットします。リセットコントロールが見当たらない場合は、パラメーター名をダブルクリックしてみるとよいでしょう。"
+        },
+        {
+          "id": "p055_b018",
+          "translation": "リセットボタン"
+        },
+        {
+          "id": "p055_b019",
+          "translation": "68 DaVinci Resolveインターフェイス | 第2章 DaVinci Resolveユーザーインターフェイスの使用"
+        },
+        {
+          "id": "p055_b020",
+          "translation": "概要"
+        }
       ]
     }
   ]

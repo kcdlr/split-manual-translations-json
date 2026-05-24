@@ -348,6 +348,42 @@ def measure_wrapped_text_end(
     return rect.y0 + fontsize + (len(lines) * line_advance)
 
 
+def numbered_step_parts(text: str) -> tuple[str, str] | None:
+    match = re.match(r"^(\d+)\s+(.*)$", text)
+    if not match:
+        return None
+    return match.groups()
+
+
+def numbered_step_body_rect(rect: fitz.Rect) -> fitz.Rect:
+    body_x0 = min(rect.x1 - 20, rect.x0 + 17)
+    return fitz.Rect(body_x0, rect.y0, rect.x1, rect.y1)
+
+
+def measure_block_text(
+    block_type: str,
+    text: str,
+    font_assets: dict[str, dict[str, Any]],
+    rect: fitz.Rect,
+    fontsize: float,
+    line_advance: float,
+    weight: str,
+) -> tuple[int, float]:
+    if block_type == "numbered_step":
+        parts = numbered_step_parts(text)
+        if parts:
+            _, body = parts
+            body_rect = numbered_step_body_rect(rect)
+            font = font_asset(font_assets, "regular")["font"]
+            lines = wrap_text(font, body, fontsize, max(1, body_rect.width))
+            y = rect.y0 + fontsize
+            return len(lines), max(y + line_advance, y + (len(lines) * line_advance))
+
+    font = font_asset(font_assets, weight)["font"]
+    lines = wrap_text(font, text, fontsize, max(1, rect.width))
+    return len(lines), rect.y0 + fontsize + (len(lines) * line_advance)
+
+
 def overlaps_vertically(a: fitz.Rect, b: fitz.Rect, padding: float = 0) -> bool:
     return (a.y0 - padding) < b.y1 and (b.y0 - padding) < a.y1
 
@@ -442,8 +478,8 @@ def draw_numbered_step(
     fontsize: float,
     line_advance: float,
 ) -> float:
-    match = re.match(r"^(\d+)\s+(.*)$", text)
-    if not match:
+    parts = numbered_step_parts(text)
+    if not parts:
         return draw_wrapped_text(
             page,
             rect,
@@ -455,7 +491,7 @@ def draw_numbered_step(
             line_factor=line_advance / fontsize,
         )
 
-    number, body = match.groups()
+    number, body = parts
     number_asset = font_asset(font_assets, "bold")
     body_asset = font_asset(font_assets, "regular")
     y = rect.y0 + fontsize
@@ -471,8 +507,7 @@ def draw_numbered_step(
         overlay=True,
     )
 
-    body_x0 = min(rect.x1 - 20, rect.x0 + 17)
-    body_rect = fitz.Rect(body_x0, rect.y0, rect.x1, rect.y1)
+    body_rect = numbered_step_body_rect(rect)
     lines = wrap_text(body_asset["font"], body, fontsize, max(1, body_rect.width))
     body_y = y
     for line in lines:
@@ -594,10 +629,18 @@ def layout_translated_blocks(
         fontsize = source_font_size(features, body_font_size)
         line_advance = fontsize * base_line_ratio
         weight = source_font_weight(features)
-        measuring_font = font_asset(font_assets, "regular")["font"]
+        source_line_count = max(1, features.get("line_count", 1))
         while fontsize > 6.0:
-            measured_end = measure_wrapped_text_end(measuring_font, target, translated, fontsize, line_advance)
-            if measured_end <= flow_limit:
+            measured_lines, measured_end = measure_block_text(
+                block_type,
+                translated,
+                font_assets,
+                target,
+                fontsize,
+                line_advance,
+                weight,
+            )
+            if measured_end <= flow_limit and measured_lines <= source_line_count:
                 break
             fontsize = round(fontsize - 0.25, 2)
             line_advance = fontsize * base_line_ratio

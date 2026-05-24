@@ -395,8 +395,6 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
     colors = features.get("colors", set())
     text = features.get("text", block.get("source", ""))
 
-    if rect.x0 > 520 or "BrandonGrotesque-Black" in fonts:
-        return "side_label"
     if rect.y0 > 760:
         return "footer"
     if toc_page and 110 < rect.y0 < 710:
@@ -408,10 +406,10 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         and ("ProximaNovaT-Thin" in fonts or text.rstrip().split(" ")[-1].isdigit())
     ):
         return "toc_entry"
-    if 50.0 in sizes or (22.0 in sizes and rect.y0 < 120 and rect.x0 < 95):
+    if 50.0 in sizes or max(sizes or {0}) >= 22.0:
         return "chapter_title"
-    if 22.0 in sizes:
-        return "chapter_title"
+    if rect.x0 > 520 or "BrandonGrotesque-Black" in fonts:
+        return "side_label"
     if (
         "ProximaNova-Bold" in fonts
         and "ProximaNova-Light" in fonts

@@ -386,6 +386,17 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
     return "body"
 
 
+def should_widen_flow_block(block_type: str, features: dict[str, Any]) -> bool:
+    if block_type != "body" or features.get("line_count", 1) != 1:
+        return False
+
+    sizes = features.get("sizes", set())
+    if min(sizes or {99}) <= 9.5:
+        return False
+
+    return True
+
+
 def is_toc_page(blocks: list[dict[str, Any]]) -> bool:
     small_rows = 0
     for block in blocks:
@@ -555,10 +566,12 @@ def layout_translated_blocks(
         features = block_features.get(block["id"], {})
         column_key = round(bbox.x0 / 20) * 20
         x0 = bbox.x0 + page_width
-        source_x1 = max(bbox.x1, column_rights.get(column_key, bbox.x1))
-        for _, other_bbox, _ in flow_blocks:
-            if other_bbox.x0 > bbox.x0 + 40 and overlaps_vertically(bbox, other_bbox):
-                source_x1 = min(source_x1, other_bbox.x0 - 12)
+        source_x1 = bbox.x1
+        if should_widen_flow_block(block_type, features):
+            source_x1 = max(source_x1, column_rights.get(column_key, bbox.x1))
+            for _, other_bbox, _ in flow_blocks:
+                if other_bbox.x0 > bbox.x0 + 40 and overlaps_vertically(bbox, other_bbox):
+                    source_x1 = min(source_x1, other_bbox.x0 - 12)
         source_x1 = max(source_x1, bbox.x1)
         x1 = source_x1 + page_width
         y_constraints = [
@@ -609,9 +622,14 @@ def layout_translated_blocks(
                 line_factor=line_advance / fontsize,
             )
         next_cursor = next_y + paragraph_spacing - fontsize
-        for covered_key in column_rights:
-            if bbox.x0 - 1 <= covered_key <= source_x1:
-                cursors.setdefault(covered_key, []).append((bbox.y0, next_cursor))
+        covered_keys = {column_key}
+        covered_keys.update(
+            covered_key
+            for covered_key in column_rights
+            if bbox.x0 < covered_key <= source_x1
+        )
+        for covered_key in covered_keys:
+            cursors.setdefault(covered_key, []).append((bbox.y0, next_cursor))
 
 
 def make_page_copy_without_text(src: fitz.Document, page_index: int, blocks: list[dict[str, Any]]) -> fitz.Document:

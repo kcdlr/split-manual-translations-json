@@ -232,21 +232,6 @@ def add_text_redactions(page: fitz.Page, blocks: list[dict[str, Any]]) -> None:
     )
 
 
-def choose_font_size(rect: fitz.Rect, text: str) -> float:
-    height = rect.height
-    if rect.y0 < 150 and height >= 80:
-        return 30
-    if height >= 120:
-        return 8.2
-    if height >= 70:
-        return 7.8
-    if height >= 40:
-        return 7.2
-    if height >= 20:
-        return 8.5
-    return 7
-
-
 def int_color_to_rgb(color: int | None) -> tuple[float, float, float]:
     if color is None:
         return (0.12, 0.12, 0.12)
@@ -279,62 +264,30 @@ def source_font_size(features: dict[str, Any], fallback: float = 9.5) -> float:
     return float(sizes[0]) if sizes else fallback
 
 
-def source_font_weight(features: dict[str, Any], block_type: str = "") -> str:
-    fonts = features.get("fonts", set())
-    if block_type in {"section_heading", "subheading"} or any("Semibold" in font for font in fonts):
+def span_weight(font_name: str) -> str:
+    if "Semibold" in font_name:
         return "semibold"
-    if block_type == "side_label" or any(("Bold" in font or "Black" in font) for font in fonts):
+    if "Bold" in font_name or "Black" in font_name:
         return "bold"
     return "regular"
 
 
+def source_font_weight(features: dict[str, Any]) -> str:
+    weighted: dict[str, int] = {}
+    order: list[str] = []
+    for span in features.get("spans", []):
+        weight = span_weight(span.get("font", ""))
+        if weight not in weighted:
+            weighted[weight] = 0
+            order.append(weight)
+        weighted[weight] += max(1, len(span.get("text", "")))
+    if not weighted:
+        return "regular"
+    return max(order, key=lambda item: weighted[item])
+
+
 def font_asset(font_assets: dict[str, dict[str, Any]], weight: str) -> dict[str, Any]:
     return font_assets.get(weight, font_assets["regular"])
-
-
-def insert_fitted_text(
-    page: fitz.Page,
-    rect: fitz.Rect,
-    text: str,
-    font_assets: dict[str, dict[str, Any]],
-    color: tuple[float, float, float],
-    weight: str = "regular",
-    base_size: float | None = None,
-) -> None:
-    asset = font_asset(font_assets, weight)
-    base_size = base_size or choose_font_size(rect, text)
-    min_size = 4.2
-    inset = min(2, max(0, rect.width * 0.01))
-    target = fitz.Rect(rect.x0 + inset, rect.y0 + 1, rect.x1 - inset, rect.y1 - 1)
-
-    size = base_size
-    while size >= min_size:
-        result = page.insert_textbox(
-            target,
-            text,
-            fontname=asset["name"],
-            fontfile=asset["path"],
-            fontsize=size,
-            color=color,
-            fill=color,
-            align=fitz.TEXT_ALIGN_LEFT,
-            overlay=True,
-        )
-        if result >= 0:
-            return
-        size -= 0.5
-
-    page.insert_textbox(
-        target,
-        text,
-        fontname=asset["name"],
-        fontfile=asset["path"],
-        fontsize=min_size,
-        color=color,
-        fill=color,
-        align=fitz.TEXT_ALIGN_LEFT,
-        overlay=True,
-    )
 
 
 def wrap_text(font: fitz.Font, text: str, fontsize: float, max_width: float) -> list[str]:
@@ -395,16 +348,8 @@ def measure_wrapped_text_end(
     return rect.y0 + fontsize + (len(lines) * line_advance)
 
 
-def is_side_label(rect: fitz.Rect) -> bool:
-    return rect.x0 > 520
-
-
-def is_footer(rect: fitz.Rect) -> bool:
-    return rect.y0 > 760
-
-
-def is_title(rect: fitz.Rect) -> bool:
-    return rect.x0 < 95 and rect.y0 < 115 and rect.height > 20
+def overlaps_vertically(a: fitz.Rect, b: fitz.Rect, padding: float = 20) -> bool:
+    return (a.y0 - padding) < b.y1 and (b.y0 - padding) < a.y1
 
 
 def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bool) -> str:
@@ -413,7 +358,6 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
     sizes = features.get("sizes", set())
     colors = features.get("colors", set())
     text = features.get("text", block.get("source", ""))
-    line_count = features.get("line_count", 1)
 
     if rect.x0 > 520 or "BrandonGrotesque-Black" in fonts:
         return "side_label"
@@ -432,17 +376,6 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         return "chapter_title"
     if 22.0 in sizes:
         return "chapter_title"
-    if 15.0 in sizes and "ProximaNova-Semibold" in fonts:
-        return "section_heading"
-    if (
-        sizes == {11.5}
-        and "ProximaNova-Regular" in fonts
-        and line_count == 1
-        and colors == {0}
-    ):
-        return "minor_heading"
-    if min(sizes or {99}) <= 8.5 and 7303022 in colors and rect.y0 < 760 and rect.x0 < 520:
-        return "caption"
     if (
         "ProximaNova-Bold" in fonts
         and "ProximaNova-Light" in fonts
@@ -450,28 +383,6 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         and re.match(r"^\d+\s+", text)
     ):
         return "numbered_step"
-    if text.startswith(("NOTE:", "TIP:")) or (
-        rect.x0 >= 100
-        and rect.width > 300
-        and rect.height < 55
-        and ("For more information" in text or "see Chapter" in text)
-    ) or (
-        rect.x0 > 250
-        and rect.y0 > 630
-        and rect.width < 230
-        and rect.height > 45
-        and sizes == {9.5}
-        and "ProximaNova-Light" in fonts
-    ) or (rect.x0 >= 100 and {"ProximaNova-Bold", "ProximaNova-Light"} <= fonts):
-        return "note"
-    if (
-        sizes == {9.5}
-        and "ProximaNova-Semibold" in fonts
-        and line_count == 1
-        and colors == {0}
-        and rect.width < 280
-    ):
-        return "subheading"
     return "body"
 
 
@@ -510,33 +421,6 @@ def insert_toc_line(
         if result >= 0:
             return
         size = round(size - 0.2, 2)
-
-
-def draw_one_line_label(
-    page: fitz.Page,
-    rect: fitz.Rect,
-    text: str,
-    font_assets: dict[str, dict[str, Any]],
-    fontsize: float,
-    color: tuple[float, float, float],
-    weight: str,
-    page_width: float,
-) -> None:
-    asset = font_asset(font_assets, weight)
-    font = asset["font"]
-    width = font.text_length(text, fontsize=fontsize)
-    target = fitz.Rect(rect)
-    target.x1 = min(page_width * 2 - 34, max(target.x1, target.x0 + width + 8))
-    page.insert_text(
-        fitz.Point(target.x0, target.y0 + fontsize),
-        text,
-        fontname=asset["name"],
-        fontfile=asset["path"],
-        fontsize=fontsize,
-        color=color,
-        fill=color,
-        overlay=True,
-    )
 
 
 def draw_numbered_step(
@@ -626,11 +510,10 @@ def layout_translated_blocks(
             bbox.y1,
         )
 
-        if (
-            block_type
-            in {"chapter_title", "section_heading", "minor_heading", "subheading", "caption", "toc_entry"}
-            and bbox.x0 < page_width - 80
-        ):
+        if block_type in {"side_label", "footer"}:
+            continue
+
+        if block_type in {"chapter_title", "toc_entry"} and bbox.x0 < page_width - 80:
             fixed_anchors.append(bbox)
 
         if block_type == "chapter_title":
@@ -644,7 +527,7 @@ def layout_translated_blocks(
                 font_assets,
                 fontsize=title_font_size,
                 color=source_color(features),
-                weight=source_font_weight(features, block_type),
+                weight=source_font_weight(features),
                 line_factor=1.15,
             )
         elif block_type == "toc_entry":
@@ -656,76 +539,15 @@ def layout_translated_blocks(
                 source_color(features),
                 fontsize=source_font_size(features, 9.0),
             )
-        elif block_type == "section_heading":
-            draw_one_line_label(
-                page,
-                target,
-                translated,
-                font_assets,
-                fontsize=source_font_size(features, 15.0),
-                color=source_color(features),
-                weight=source_font_weight(features, block_type),
-                page_width=page_width,
-            )
-        elif block_type == "minor_heading":
-            draw_one_line_label(
-                page,
-                target,
-                translated,
-                font_assets,
-                fontsize=source_font_size(features, 11.5),
-                color=source_color(features),
-                weight=source_font_weight(features, block_type),
-                page_width=page_width,
-            )
-        elif block_type == "subheading":
-            draw_one_line_label(
-                page,
-                target,
-                translated,
-                font_assets,
-                fontsize=source_font_size(features, body_font_size),
-                color=source_color(features),
-                weight=source_font_weight(features, block_type),
-                page_width=page_width,
-            )
-        elif block_type == "caption":
-            caption_target = fitz.Rect(target)
-            caption_target.y1 = min(caption_target.y1 + 16, page.rect.y1 - 44)
-            draw_wrapped_text(
-                page,
-                caption_target,
-                translated,
-                font_assets,
-                fontsize=source_font_size(features, 8.0),
-                color=source_color(features),
-                weight=source_font_weight(features, block_type),
-                line_factor=1.22,
-            )
-        elif block_type == "note":
-            insert_fitted_text(
-                page,
-                target,
-                translated,
-                font_assets,
-                source_color(features),
-                weight=source_font_weight(features, block_type),
-                base_size=source_font_size(features, 9.5),
-            )
-        elif block_type in {"side_label", "footer"}:
-            insert_fitted_text(
-                page,
-                target,
-                translated,
-                font_assets,
-                source_color(features),
-                weight=source_font_weight(features, block_type),
-                base_size=source_font_size(features, 8.5),
-            )
         else:
             flow_blocks.append((block, bbox, block_type))
 
     flow_blocks.sort(key=lambda item: (round(item[1].x0 / 20) * 20, item[1].y0))
+    column_rights: dict[int, float] = {}
+    for _, bbox, _ in flow_blocks:
+        column_key = round(bbox.x0 / 20) * 20
+        column_rights[column_key] = max(column_rights.get(column_key, bbox.x1), bbox.x1)
+
     cursors: dict[int, float] = {}
     base_line_ratio = body_line_advance / body_font_size
     for block, bbox, block_type in flow_blocks:
@@ -733,7 +555,17 @@ def layout_translated_blocks(
         features = block_features.get(block["id"], {})
         column_key = round(bbox.x0 / 20) * 20
         x0 = bbox.x0 + page_width
-        x1 = bbox.x1 + page_width
+        source_x1 = max(bbox.x1, column_rights.get(column_key, bbox.x1))
+        has_right_neighbor = False
+        for _, other_bbox, _ in flow_blocks:
+            if other_bbox.x0 > bbox.x0 + 40 and overlaps_vertically(bbox, other_bbox, padding=40):
+                source_x1 = min(source_x1, other_bbox.x0 - 12)
+                has_right_neighbor = True
+        if has_right_neighbor:
+            source_x1 = max(source_x1, bbox.x0 + 80)
+        else:
+            source_x1 = max(source_x1, bbox.x1)
+        x1 = source_x1 + page_width
         y0 = max(bbox.y0, cursors.get(column_key, bbox.y0))
         next_fixed_y = min(
             (
@@ -748,9 +580,9 @@ def layout_translated_blocks(
         target = fitz.Rect(x0, y0, x1, y1)
         fontsize = source_font_size(features, body_font_size)
         line_advance = fontsize * base_line_ratio
-        weight = source_font_weight(features, block_type)
+        weight = source_font_weight(features)
         measuring_font = font_asset(font_assets, "regular")["font"]
-        while fontsize > 7.0:
+        while fontsize > 6.0:
             measured_end = measure_wrapped_text_end(measuring_font, target, translated, fontsize, line_advance)
             if measured_end <= flow_limit:
                 break
@@ -833,6 +665,8 @@ def build_pdf(
 
     for page_index, src_page in enumerate(src):
         blocks = extract_text_blocks(src_page, page_index)
+        block_features = extract_block_features(src_page, page_index)
+        toc_page = is_toc_page(blocks)
         out_page = out.new_page(width=output_rect.width, height=output_rect.height)
 
         left_rect = fitz.Rect(0, 0, first.width, first.height)
@@ -840,12 +674,17 @@ def build_pdf(
 
         out_page.show_pdf_page(left_rect, src, page_index)
 
-        translated_blocks = [block for block in blocks if block["id"] in translations]
+        translated_blocks = [
+            block
+            for block in blocks
+            if block["id"] in translations
+            and classify_block(block, block_features.get(block["id"], {}), toc_page)
+            not in {"side_label", "footer"}
+        ]
         redacted = make_page_copy_without_text(src, page_index, translated_blocks)
         out_page.show_pdf_page(right_rect, redacted, 0)
         redacted.close()
 
-        block_features = extract_block_features(src_page, page_index)
         image_rects = extract_image_rects(src_page)
         layout_translated_blocks(
             out_page,

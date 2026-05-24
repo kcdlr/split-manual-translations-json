@@ -494,7 +494,7 @@
         {
           "id": "p006_b001",
           "source": "Lets you choose from a variety of settings that modify DaVinci Resolve’s behavior. The LUT Locations section lets you point DaVinci Resolve to any external folders containing LUTs for use in your project.",
-          "translation": "DaVinci Resolveの動作を変更するさまざまな設定を選択できます。LUT Locationsセクションでは、プロジェクトで使用するLUTが含まれる外部フォルダーをDaVinci Resolveに指定できます。"
+          "translation": "DaVinci Resolveの動作を変更するさまざまな設定を選択できます。LUT Locationsセクションでは、プロジェクトで使用するLUTを含む外部フォルダーをDaVinci Resolveに指定できます。"
         },
         {
           "id": "p006_b002",
@@ -504,7 +504,7 @@
         {
           "id": "p006_b003",
           "source": "The Internet Accounts panel serves as a login manager for the Blackmagic Cloud and other social media sites.",
-          "translation": "Internet Accountsパネルは、Blackmagic Cloudやその他のソーシャルメディアサイト用のログインマネージャーとして機能します。"
+          "translation": "Internet Accountsパネルは、Blackmagic Cloudやその他のソーシャルメディアサイトのログインマネージャーとして機能します。"
         },
         {
           "id": "p006_b004",
@@ -514,7 +514,7 @@
         {
           "id": "p006_b005",
           "source": "This tab is used for special DaVinci Resolve configurations and SAN parameters that are applicable to older file systems.",
-          "translation": "このタブは、古いファイルシステムに適用される特殊なDaVinci Resolve設定やSANパラメーターに使用します。"
+          "translation": "このタブは、古いファイルシステムに適用される特殊なDaVinci Resolve構成やSANパラメーターに使用します。"
         },
         {
           "id": "p006_b006",
@@ -524,7 +524,7 @@
         {
           "id": "p006_b007",
           "source": "User preferences govern the setup of the user interface in DaVinci Resolve, letting you customize it to work the way you like.",
-          "translation": "User PreferencesではDaVinci Resolveのユーザーインターフェイス設定を管理し、自分の好みに合う作業環境へカスタマイズできます。"
+          "translation": "User Preferencesは、DaVinci Resolveのユーザーインターフェイスの設定を管理し、自分の好みに合う作業方法になるようカスタマイズできます。"
         },
         {
           "id": "p006_b008",
@@ -534,7 +534,7 @@
         {
           "id": "p006_b009",
           "source": "A Language drop-down menu at the top lets you specify which language the DaVinci Resolve user interface displays. DaVinci Resolve currently supports English, Chinese, Japanese, and Spanish, Portuguese, French, Russian, Thai, Vietnamese, and Korean. Additional checkboxes let you choose options for which project to open during startup, and how to configure the Viewers that appear in every page of DaVinci Resolve.",
-          "translation": "上部のLanguageドロップダウンメニューでは、DaVinci Resolveのユーザーインターフェイスに表示する言語を指定できます。DaVinci Resolveは現在、英語、中国語、日本語、スペイン語、ポルトガル語、フランス語、ロシア語、タイ語、ベトナム語、韓国語に対応しています。追加のチェックボックスでは、起動時に開くプロジェクトや、DaVinci Resolveの各ページに表示されるビューアの設定方法を選択できます。"
+          "translation": "上部のLanguageドロップダウンメニューでは、DaVinci Resolveのユーザーインターフェイスに表示する言語を指定できます。DaVinci Resolveは現在、英語、中国語、日本語、スペイン語、ポルトガル語、フランス語、ロシア語、タイ語、ベトナム語、韓国語に対応しています。追加のチェックボックスでは、起動時にどのプロジェクトを開くか、またDaVinci Resolveの各ページに表示されるViewerをどのように構成するかを選択できます。"
         },
         {
           "id": "p006_b010",
@@ -544,7 +544,7 @@
         {
           "id": "p006_b011",
           "source": "This panel contains the all-important auto-save controls, including the Live Save option that enables Resolve to incrementally save your changes as you work.",
-          "translation": "このパネルには重要な自動保存コントロールがあり、作業中の変更をResolveが段階的に保存できるLive Saveオプションも含まれています。"
+          "translation": "このパネルには、非常に重要な自動保存コントロールが含まれています。その中には、作業中にResolveが変更内容を段階的に保存できるLive Saveオプションも含まれます。"
         },
         {
           "id": "p006_b012",
@@ -554,7 +554,7 @@
         {
           "id": "p006_b013",
           "source": "Numerous controls in this panel let you customize the editing experience in the Edit page, including default settings to use when making new timelines, and general settings that govern standard effects durations and trim behaviors.",
-          "translation": "このパネルの多数のコントロールでは、Editページでの編集体験をカスタマイズできます。新しいタイムラインを作成するときに使用するデフォルト設定や、標準エフェクトの継続時間、トリム動作を管理する一般設定などが含まれます。"
+          "translation": "このパネルには多数のコントロールがあり、Editページでの編集体験をカスタマイズできます。新しいタイムラインを作成するときに使用するデフォルト設定や、標準エフェクトの継続時間とトリム動作を管理する一般設定などが含まれます。"
         },
         {
           "id": "p006_b014",
@@ -564,7 +564,7 @@
         {
           "id": "p006_b015",
           "source": "These controls let you customize the grading experience in the Color page, with options controlling video scope display, the look of UI overlays, and other color-specific functions.",
-          "translation": "これらのコントロールでは、Colorページでのグレーディング体験をカスタマイズできます。ビデオスコープ表示、UIオーバーレイの見た目、その他カラー固有の機能を制御するオプションがあります。"
+          "translation": "これらのコントロールでは、Colorページでのグレーディング体験をカスタマイズできます。ビデオスコープの表示、UIオーバーレイの見た目、その他カラー固有の機能を制御するオプションがあります。"
         },
         {
           "id": "p006_b016",
@@ -639,7 +639,7 @@
         {
           "id": "p007_b003",
           "source": "The Project Settings open in the middle of the screen, divided into a series of panels which can be selected from a sidebar to the left. Each panel contains a collection of related settings that affects some category of DaVinci Resolve functionality. To open a panel of settings, simply click its name in the sidebar at the left.",
-          "translation": "Project Settingsは画面中央に開き、左側のサイドバーから選択できる一連のパネルに分かれています。各パネルには、DaVinci Resolveの機能カテゴリに影響する関連設定がまとまっています。設定パネルを開くには、左側のサイドバーでその名前をクリックします。"
+          "translation": "Project Settingsは画面中央に開き、左側のサイドバーから選択できる一連のパネルに分かれています。各パネルには、DaVinci Resolveの機能カテゴリのいずれかに影響する関連設定がまとまっています。設定パネルを開くには、左側のサイドバーでその名前をクリックするだけです。"
         },
         {
           "id": "p007_b004",
@@ -664,7 +664,7 @@
         {
           "id": "p008_b000",
           "source": "The Master Settings define the principal attributes of a project, such as the timeline resolution, timeline frame rate, color science, and bit depth. Image Scaling settings define how clips that don’t match the timeline resolution are scaled to fit. There are other panels for Color Management, Camera Raw, Capture and Playback, etc.",
-          "translation": "Master Settingsでは、タイムライン解像度、タイムラインフレームレート、カラーサイエンス、ビット深度など、プロジェクトの主要な属性を定義します。Image Scaling設定では、タイムライン解像度と一致しないクリップをどのように拡大縮小して合わせるかを定義します。その他にも、Color Management、Camera Raw、Capture and Playbackなどのパネルがあります。"
+          "translation": "Master Settingsでは、タイムライン解像度、タイムラインフレームレート、カラーサイエンス、ビット深度など、プロジェクトの主要な属性を定義します。Image Scaling設定では、タイムライン解像度と一致しないクリップをどのように拡大縮小して合わせるかを定義します。このほかにも、Color Management、Camera Raw、Capture and Playbackなどのパネルがあります。"
         },
         {
           "id": "p008_b001",
@@ -684,7 +684,7 @@
         {
           "id": "p008_b004",
           "source": "DaVinci Resolve is divided into seven main pages of functionality, each of which facilitates a different specialization of a typical post production workflow, and each of which can be accessed using buttons at the very bottom of the DaVinci Resolve interface. These buttons are organized in order of workflow, and they’re always available, letting you quickly switch between importing media, fast editing, detailed editing, compositing, grading, audio mixing, and outputting your project in a structured manner.",
-          "translation": "DaVinci Resolveは7つの主要な機能ページに分かれており、それぞれが一般的なポストプロダクションワークフローの異なる専門作業を支援します。各ページにはDaVinci Resolveインターフェイスの最下部にあるボタンからアクセスできます。これらのボタンはワークフローの順に並んでおり、常に利用できるため、メディアの読み込み、高速編集、詳細な編集、コンポジット、グレーディング、オーディオミキシング、プロジェクトの出力を構造的にすばやく切り替えられます。"
+          "translation": "DaVinci Resolveは7つの主要な機能ページに分かれており、それぞれが一般的なポストプロダクションワークフローにおける異なる専門作業を支援します。各ページには、DaVinci Resolveインターフェイスの最下部にあるボタンからアクセスできます。これらのボタンはワークフローの順に並んでおり、常に利用できるため、メディアの読み込み、高速編集、詳細な編集、コンポジット、グレーディング、オーディオミキシング、プロジェクトの出力を、構造化された流れの中ですばやく切り替えられます。"
         },
         {
           "id": "p008_b005",
@@ -694,7 +694,7 @@
         {
           "id": "p008_b006",
           "source": "If you right-click anywhere within the Resolve Page bar at the bottom of the DaVinci Resolve UI, two options appear in a contextual menu: “Show Icons and Labels” and “ Show Icons Only.” If you show icons only, the Resolve Page bar at the bottom takes less room.",
-          "translation": "DaVinci Resolve UI下部のResolveページバー内を右クリックすると、コンテキストメニューに「Show Icons and Labels」と「Show Icons Only」の2つのオプションが表示されます。アイコンのみを表示すると、下部のResolveページバーが占めるスペースを小さくできます。"
+          "translation": "DaVinci Resolve UIの下部にあるResolve Pageバー内の任意の場所を右クリックすると、コンテキストメニューに「Show Icons and Labels」と「Show Icons Only」の2つのオプションが表示されます。アイコンのみを表示すると、下部のResolve Pageバーが占めるスペースは少なくなります。"
         },
         {
           "id": "p008_b007",
@@ -719,7 +719,7 @@
         {
           "id": "p008_b011",
           "source": "You can leave the page navigation bar showing and just hide the buttons of specific pages. For example:",
-          "translation": "ページナビゲーションバーは表示したまま、特定のページのボタンだけを非表示にできます。たとえば:"
+          "translation": "ページナビゲーションバーは表示したまま、特定のページのボタンだけを非表示にすることもできます。たとえば次のような場合です。"
         },
         {
           "id": "p008_b012",
@@ -729,12 +729,12 @@
         {
           "id": "p008_b013",
           "source": " If you’re setting up a DaVinci Resolve workstation for an artist making specific contributions to a project, and you want to hide easy access to pages of functionality they won’t (or shouldn’t) be using; this can be especially useful in collaborative workflow projects",
-          "translation": "• プロジェクトで特定の作業を担当するアーティスト向けにDaVinci Resolveワークステーションを設定していて、その人が使わない、または使うべきでない機能ページへ簡単にアクセスできないようにしたい場合。これはコラボレーションワークフローのプロジェクトで特に便利です"
+          "translation": "• プロジェクトで特定の作業を担当するアーティスト向けにDaVinci Resolveワークステーションを設定していて、そのアーティストが使用しない、または使用すべきでない機能ページへ簡単にアクセスできないようにしたい場合。これは、コラボレーションワークフローのプロジェクトで特に役立ちます。"
         },
         {
           "id": "p008_b014",
           "source": "You can disable/re-enable each page’s buttons using the Workspace > Show Page submenu. Effects and adjustments that have been applied on hidden pages continue to affect the current project, they’re only hidden, and you can still navigate to them using the Workspace > Switch to Page submenu commands or keyboard shortcuts.",
-          "translation": "Workspace > Show Pageサブメニューを使って、各ページのボタンを無効化または再有効化できます。非表示にしたページで適用済みのエフェクトや調整は現在のプロジェクトに影響し続けます。非表示になっているだけで、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使えば、引き続きそのページへ移動できます。"
+          "translation": "Workspace > Show Pageサブメニューを使って、各ページのボタンを無効化したり再有効化したりできます。非表示にしたページで適用されたエフェクトや調整は現在のプロジェクトに引き続き影響します。それらは非表示になっているだけで、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使えば、引き続きそのページへ移動できます。"
         },
         {
           "id": "p008_b015",
@@ -759,7 +759,7 @@
         {
           "id": "p009_b001",
           "source": "If you’re an artist that only uses a single page of the DaVinci Resolve experience, or if you want more screen real estate to work with given your existing computer display’s limited resolution, you can choose Workspace > Show Page Navigation to hide the page navigation bar at the bottom of the DaVinci Resolve user interface. While this bar is closed, you can still navigate to other pages using the Workspace > Switch to Page submenu commands or keyboard shortcuts.",
-          "translation": "DaVinci Resolveの1つのページだけを使うアーティストの場合や、使用しているコンピュータディスプレイの解像度が限られていて作業領域を広げたい場合は、Workspace > Show Page Navigationを選択して、DaVinci Resolveユーザーインターフェイス下部のページナビゲーションバーを非表示にできます。このバーを閉じていても、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使って、他のページへ移動できます。"
+          "translation": "DaVinci Resolveの機能のうち1つのページだけを使うアーティストの場合や、使用しているコンピュータディスプレイの解像度が限られていて作業領域を広げたい場合は、Workspace > Show Page Navigationを選択して、DaVinci Resolveユーザーインターフェイス下部のページナビゲーションバーを非表示にできます。このバーを閉じていても、Workspace > Switch to Pageサブメニューのコマンドやキーボードショートカットを使って、他のページへ移動できます。"
         },
         {
           "id": "p009_b002",
@@ -774,7 +774,7 @@
         {
           "id": "p009_b004",
           "source": "With this interface element hidden, you can use keyboard shortcuts to access the individual pages (Shift - 2 through 8), Project manager (Shift - 1), and Project settings (Shift - 9). You can also access these functions from DaVinci Resolve’s main menu bar.",
-          "translation": "このインターフェイス要素を非表示にしている場合でも、キーボードショートカットで各ページ（Shift-2〜8）、Project Manager（Shift-1）、Project Settings（Shift-9）にアクセスできます。これらの機能にはDaVinci Resolveのメインメニューバーからもアクセスできます。"
+          "translation": "このインターフェイス要素を非表示にしている場合でも、キーボードショートカットで各ページ（Shift-2〜8）、Project Manager（Shift-1）、Project Settings（Shift-9）にアクセスできます。これらの機能には、DaVinci Resolveのメインメニューバーからアクセスすることもできます。"
         },
         {
           "id": "p009_b005",
@@ -784,7 +784,7 @@
         {
           "id": "p009_b006",
           "source": "The Media page is the primary interface for clip import, media management, and clip organization in DaVinci Resolve. It’s central to the way DaVinci Resolve works that the source media used by a project is organized separately from the project data that you import and manage in the Edit page. In this way, you can manage and update the clips used by timelines in the current project with ease, switching between offline and online media, reorganizing clips, and troubleshooting any problems that occur.",
-          "translation": "Mediaページは、DaVinci Resolveでクリップの読み込み、メディア管理、クリップ整理を行うための主要なインターフェイスです。プロジェクトで使用するソースメディアを、Editページで読み込み管理するプロジェクトデータとは別に整理することは、DaVinci Resolveの動作の中心です。これにより、現在のプロジェクトのタイムラインで使われているクリップを簡単に管理・更新し、オフラインメディアとオンラインメディアを切り替えたり、クリップを再整理したり、発生した問題をトラブルシュートしたりできます。"
+          "translation": "Mediaページは、DaVinci Resolveでクリップの読み込み、メディア管理、クリップ整理を行うための主要なインターフェイスです。プロジェクトで使用するソースメディアを、Editページで読み込み管理するプロジェクトデータとは別に整理することは、DaVinci Resolveの動作の中心です。この方法により、現在のプロジェクトのタイムラインで使われているクリップを簡単に管理および更新でき、オフラインメディアとオンラインメディアの切り替え、クリップの再整理、発生した問題のトラブルシューティングを行えます。"
         },
         {
           "id": "p009_b007",
@@ -794,7 +794,7 @@
         {
           "id": "p009_b008",
           "source": "The Media page also contains much of the core functionality that will be used for on-set workflows, and in the ingest, organizational, and sound-syncing steps of digital dailies workflows. This chapter covers most of the functionality found in the Media page, including functions in detail that are referenced throughout this manual.",
-          "translation": "Mediaページには、撮影現場のワークフローや、デジタルデイリーの取り込み、整理、音声同期の工程で使用される中核機能も多く含まれています。この章では、Mediaページにある機能の大部分を扱い、本マニュアル全体で参照される機能についても詳しく説明します。"
+          "translation": "Mediaページには、撮影現場のワークフローや、デジタルデイリーの取り込み、整理、音声同期の工程で使用される中核機能も多く含まれています。この章では、Mediaページにある機能の大部分を取り上げるとともに、本マニュアル全体で参照される機能についても詳しく説明します。"
         },
         {
           "id": "p009_b009",
@@ -814,7 +814,7 @@
         {
           "id": "p010_b000",
           "source": "The Media page is divided into six different areas, designed to make it easy to find, select, and work with media in your project. Much of the functionality and most of the commands are found within the contextual menus that appear when you right-click clips in the Library, File Browser, or Media Pool.",
-          "translation": "Mediaページは6つの異なる領域に分かれており、プロジェクト内のメディアを見つけ、選択し、操作しやすいように設計されています。機能やコマンドの多くは、Library、File Browser、Media Poolでクリップを右クリックしたときに表示されるコンテキストメニュー内にあります。"
+          "translation": "Mediaページは6つの異なる領域に分かれており、プロジェクト内のメディアを見つけ、選択し、操作しやすいように設計されています。機能の多くとコマンドの大部分は、Library、File Browser、Media Poolでクリップを右クリックしたときに表示されるコンテキストメニュー内にあります。"
         },
         {
           "id": "p010_b001",
@@ -844,17 +844,17 @@
         {
           "id": "p010_b006",
           "source": "Clips that you select in any area of the Media page show their contents in the Viewer. A jog bar appears at the bottom, letting you drag the playhead directly with the pointer, while a jog control between the mode drop-down and transport controls lets you move through a long clip more slowly. The full width of the jog bar represents the full duration of the clip in the Viewer. The current position of the playhead is shown in the timecode field at the upper right-hand corner of the Viewer. Simple transport controls appear underneath the jog bar, letting you Jump to First Frame, Play/Stop, and Jump to Last Frame. Audio levels can be adjusted by right-clicking on the speaker icon and dragging the slider.",
-          "translation": "Mediaページの任意の領域で選択したクリップは、その内容がビューアに表示されます。下部にはジョグバーが表示され、ポインターで再生ヘッドを直接ドラッグできます。また、モードドロップダウンとトランスポートコントロールの間にあるジョグコントロールを使うと、長いクリップ内をゆっくり移動できます。ジョグバー全体の幅は、ビューア内のクリップ全体の長さを表します。再生ヘッドの現在位置は、ビューア右上のタイムコードフィールドに表示されます。ジョグバーの下にはシンプルなトランスポートコントロールがあり、先頭フレームへジャンプ、再生/停止、最終フレームへジャンプを行えます。オーディオレベルは、スピーカーアイコンを右クリックしてスライダーをドラッグすることで調整できます。"
+          "translation": "Mediaページの任意の領域で選択したクリップは、その内容がViewerに表示されます。下部にはジョグバーが表示され、ポインタで再生ヘッドを直接ドラッグできます。また、モードドロップダウンとトランスポートコントロールの間にあるジョグコントロールを使うと、長いクリップ内をよりゆっくり移動できます。ジョグバー全体の幅は、Viewer内のクリップ全体の長さを表します。再生ヘッドの現在位置は、Viewer右上のタイムコードフィールドに表示されます。ジョグバーの下にはシンプルなトランスポートコントロールが表示され、先頭フレームへジャンプ、再生／停止、最終フレームへジャンプを行えます。スピーカーアイコンを右クリックしてスライダーをドラッグすると、オーディオレベルを調整できます。"
         },
         {
           "id": "p010_b007",
           "source": "You can also put the Viewer into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), so that it fills the entire screen. This command toggles Cinema Viewer mode on and off.",
-          "translation": "Workspace > Viewer Mode > Cinema Viewer（Command-F）を選択して、ビューアをCinema Viewerモードにし、画面全体に表示することもできます。このコマンドはCinema Viewerモードのオン/オフを切り替えます。"
+          "translation": "Workspace > Viewer Mode > Cinema Viewer（Command-F）を選択して、ViewerをCinema Viewerモードにすることもできます。このモードではViewerが画面全体に表示されます。このコマンドはCinema Viewerモードのオン／オフを切り替えます。"
         },
         {
           "id": "p010_b008",
           "source": "If you have two monitors connected to your computer, you can make the Viewer fill one entire screen and keep the Resolve UI in the other monitor by choosing Workspace > Full Screen Viewer On, and selecting the display you wish to use for the Viewer.",
-          "translation": "コンピュータに2台のモニターが接続されている場合は、Workspace > Full Screen Viewer Onを選択し、ビューアに使用するディスプレイを選ぶことで、ビューアを1つの画面全体に表示し、もう一方のモニターにResolve UIを表示したままにできます。"
+          "translation": "コンピュータに2台のモニターが接続されている場合は、Workspace > Full Screen Viewer Onを選択し、Viewerに使用するディスプレイを選ぶことで、Viewerを1つの画面全体に表示し、もう一方のモニターにResolve UIを表示したままにできます。"
         },
         {
           "id": "p010_b009",
@@ -884,7 +884,7 @@
         {
           "id": "p011_b002",
           "source": "The Media Pool contains all of the video, audio, and still image media that you import into the current project. It also contains any media that’s automatically imported along with timelines that have been imported into DaVinci Resolve. Ordinarily, all media imported into a project goes into the Master bin, however the Media Pool can be organized into as many user-definable bins as you like, depending on your needs. Media can be freely moved from one bin to another from within the Media Pool. The Media Pool also appears on the Edit, Fusion, Color, and Fairlight pages, making it possible to browse and open clips and timelines everywhere they’re relevant.",
-          "translation": "Media Poolには、現在のプロジェクトで使用するビデオ、オーディオ、静止画メディア、そしてこのページで作成したタイムラインがすべて含まれます。Media Poolの左側にあるMasterビンには、プロジェクトに追加したすべてのメディアファイルとタイムラインが入っています。また、必要な数だけビンを作成して、メディアをさらに細かく整理できます。Media Poolは、Mediaページだけでなく、Edit、Fusion、Color、Fairlightの各ページにも表示されます。"
+          "translation": "Media Poolには、現在のプロジェクトへ読み込むビデオ、オーディオ、静止画メディアがすべて含まれます。また、DaVinci Resolveへ読み込まれたタイムラインに伴って自動的に読み込まれるメディアも含まれます。通常、プロジェクトに読み込んだすべてのメディアはMasterビンに入りますが、必要に応じて、Media Poolはユーザーが定義できる任意の数のビンに整理できます。メディアはMedia Pool内で、あるビンから別のビンへ自由に移動できます。Media PoolはEdit、Fusion、Color、Fairlightの各ページにも表示されるため、関連する場所であればどこでもクリップやタイムラインを参照して開くことができます。"
         },
         {
           "id": "p011_b003",
@@ -914,12 +914,12 @@
         {
           "id": "p012_b001",
           "source": "When you select a clip in any area of the Media page, its metadata is displayed within the Metadata Editor. If you select multiple clips, only the last clip’s information appears. The Metadata Editor’s header contains uneditable information about the selected clip, including the file name, directory, duration, frame rate, resolution, and codec.",
-          "translation": "Media Poolでクリップを選択すると、そのクリップに関連付けられたメタデータがMetadata Editorに表示されます。複数のクリップを選択した場合は、最後に選択したクリップの情報が表示されます。Metadata Editorの上部には、ファイル名、シーン、ショット、テイクなど、選択したクリップについての編集できない情報が表示されます。"
+          "translation": "Mediaページの任意の領域でクリップを選択すると、そのメタデータがMetadata Editor内に表示されます。複数のクリップを選択した場合は、最後に選択したクリップの情報だけが表示されます。Metadata Editorのヘッダーには、ファイル名、ディレクトリ、継続時間、フレームレート、解像度、コーデックなど、選択したクリップに関する編集できない情報が含まれます。"
         },
         {
           "id": "p012_b002",
           "source": "A series of editable fields within the Metadata Editor lets you review and edit the different metadata items that are available. A drop-down menu at the upper right of the Metadata Editor lets you choose from many different sets of metadata fields and checkboxes, each grouped for a specific task or workflow.",
-          "translation": "Metadata Editorの残りの部分には、必要に応じて入力または変更できる編集可能なフィールドがあります。右上のドロップダウンメニューでは、表示するメタデータセットを選択できます。また、各メタデータセットはカテゴリ別にグループ化されており、チェックボックスで表示する項目を切り替えられます。"
+          "translation": "Metadata Editor内の一連の編集可能フィールドでは、利用可能なさまざまなメタデータ項目を確認し、編集できます。Metadata Editor右上のドロップダウンメニューでは、多くの異なるメタデータフィールドセットとチェックボックスから選択できます。それぞれは、特定の作業またはワークフロー向けにグループ化されています。"
         },
         {
           "id": "p012_b003",
@@ -934,7 +934,7 @@
         {
           "id": "p012_b005",
           "source": "The Audio panel can be put into one of two modes via a pair of buttons above the audio meters. In the default Meters mode, Audio Meters are displayed that show the levels of audio in clips you’re playing. In Waveform mode, you can load audio clips side by side with video clips opened in the Viewer in order to sync them together manually. The Audio panel can also be hidden.",
-          "translation": "Audio Panelでは、選択したクリップのオーディオを確認できます。MetersとWaveformの2つの表示モードがあり、オーディオをビデオと並べて同期させる作業に役立ちます。不要なときはこのパネルを非表示にできます。"
+          "translation": "Audioパネルは、オーディオメーターの上にある2つのボタンで、2つのモードのいずれかに切り替えられます。デフォルトのMetersモードでは、再生しているクリップのオーディオレベルを表示するAudio Metersが表示されます。Waveformモードでは、Viewerで開いているビデオクリップの横にオーディオクリップを読み込み、手動で同期させることができます。Audioパネルは非表示にすることもできます。"
         },
         {
           "id": "p012_b006",
@@ -959,17 +959,17 @@
         {
           "id": "p013_b001",
           "source": "The Cut page is a focused environment for fast editing. It’s useful in situations where you need to quickly cut a news segment, build an episode of web content, edit a straightforward program, experiment with multiple arrangements of a scene, or put together a first assembly edit.",
-          "translation": "Cutページは、ニュース、Webコンテンツ、単純な番組、実験的な編集、アセンブリ編集など、すばやく編集を行うために設計された、焦点を絞った編集環境です。"
+          "translation": "Cutページは、高速編集に焦点を絞った環境です。ニュースセグメントをすばやくカットする、Webコンテンツのエピソードを組み立てる、単純な番組を編集する、シーンの複数の構成を試す、最初のアセンブリ編集をまとめる、といった状況で役立ちます。"
         },
         {
           "id": "p013_b002",
           "source": "The Cut page is also a good introductory editing interface for people who are new to editing, as it presents a streamlined set of tools that are fast to learn and simple to use. Whatever your background, you’ll find the Cut page to be a valuable addition to your editing experience in DaVinci Resolve.",
-          "translation": "Cutページは、編集のための入門的なインターフェイスとしても機能します。多くの編集ツールが合理化されており、できるだけ少ない操作で編集を進められます。"
+          "translation": "Cutページは、編集が初めての人にとっても優れた入門用編集インターフェイスです。すばやく習得でき、簡単に使える合理化されたツールセットが提示されるためです。どのような経験を持っていても、CutページはDaVinci Resolveでの編集体験に価値ある追加要素になるはずです。"
         },
         {
           "id": "p013_b003",
           "source": "The default workspace of the Cut page consists of the Media Pool, a single Viewer, and the Timeline area. These three regions let you quickly import and organize clips, edit clips, and even export the result, all from within the Cut page.",
-          "translation": "デフォルトのワークスペースは、Media Pool、単一のViewer、Timeline領域で構成されています。"
+          "translation": "Cutページのデフォルトワークスペースは、Media Pool、単一のViewer、Timeline領域で構成されています。これら3つの領域により、クリップの読み込みと整理、クリップの編集、さらには結果の書き出しまで、すべてCutページ内ですばやく行えます。"
         },
         {
           "id": "p013_b004",
@@ -989,17 +989,17 @@
         {
           "id": "p013_b007",
           "source": "The Media Pool appears in the Cut page as well, and contains all video clips, audio clips, graphics, and other media that you import into your project. You can create Bins with which to organize all of this media, to make it easier to find what you need quickly. These bins are opened via the bin drop-down at the upper left-hand corner.",
-          "translation": "Media PoolはCutページにも表示され、プロジェクト内のビデオ、オーディオ、グラフィック、その他のメディアを利用できます。ビンを使ってメディアを整理でき、ビンドロップダウンから表示するビンを選択できます。"
+          "translation": "Media PoolはCutページにも表示され、プロジェクトへ読み込んだすべてのビデオクリップ、オーディオクリップ、グラフィック、その他のメディアを含みます。このメディアを整理するためのビンを作成でき、必要なものをすばやく見つけやすくできます。これらのビンは左上隅のビンドロップダウンから開きます。"
         },
         {
           "id": "p013_b008",
           "source": "Each piece of media you import, whether it’s video, audio, or graphics, appears as an individual clip, and they can be selected, scrubbed for fast viewing, reorganized into bins, opened into the Viewer for playback, or edited into a timeline using the edit buttons or via drag and drop.",
-          "translation": "メディアはクリップとして表示され、選択、スクラブ、並べ替え、開く、ボタン操作またはドラッグ＆ドロップによる編集ができます。"
+          "translation": "読み込んだメディアは、ビデオ、オーディオ、グラフィックのいずれであっても、個別のクリップとして表示されます。それらは選択したり、すばやく確認するためにスクラブしたり、ビンへ再整理したり、再生のためにViewerで開いたり、編集ボタンまたはドラッグ＆ドロップを使ってタイムラインへ編集したりできます。"
         },
         {
           "id": "p013_b009",
           "source": "Owing to the Cut page’s mission to make editing faster, the Media Pool has different options for viewing (such as the Strip view) and customizing.",
-          "translation": "Cutページの目的は高速な編集であるため、Media Poolにはメディアを表示およびカスタマイズするための専用オプションが用意されています。"
+          "translation": "Cutページは編集を高速化することを目的としているため、Media PoolにはStrip Viewなどの表示オプションやカスタマイズ用の異なるオプションがあります。"
         },
         {
           "id": "p013_b010",
@@ -1029,7 +1029,7 @@
         {
           "id": "p014_b002",
           "source": "The Viewer lets you see clips from the Media Pool or clips in the Timeline play, and has numerous controls to control what you see and how things play.",
-          "translation": "Viewerでは、クリップやタイムラインを再生して確認でき、再生や編集に関連するコントロールにもアクセスできます。"
+          "translation": "Viewerでは、Media Pool内のクリップやTimeline内のクリップの再生を確認できます。また、表示する内容や再生のされ方を制御する多数のコントロールがあります。"
         },
         {
           "id": "p014_b003",
@@ -1039,7 +1039,7 @@
         {
           "id": "p014_b004",
           "source": "The Viewer has four mode options. Which option is currently in use can be seen, and switched, by four buttons in the upper left-hand corner of the Viewer.",
-          "translation": "Viewerには4つのモードオプションがあり、Viewer左上にある4つのボタンで切り替えます。"
+          "translation": "Viewerには4つのモードオプションがあります。現在どのオプションが使用されているかは、Viewer左上隅の4つのボタンで確認でき、そこで切り替えることもできます。"
         },
         {
           "id": "p014_b005",
@@ -1069,27 +1069,27 @@
         {
           "id": "p015_b001",
           "source": " You can double-click any clip to open it into the Viewer as a Source Clip.",
-          "translation": "Source Clip: 選択したクリップを通常のソースクリップとして表示します。"
+          "translation": "• 任意のクリップをダブルクリックすると、そのクリップをSource ClipとしてViewerで開くことができます。"
         },
         {
           "id": "p015_b002",
           "source": " You can view an entire bin full of clips in the Source Tape.",
-          "translation": "Source Tape: 現在のビン内のすべてのクリップを、1本の連続したテープのように表示します。"
+          "translation": "• Source Tapeでは、ビン全体に含まれるクリップをまとめて表示できます。"
         },
         {
           "id": "p015_b003",
           "source": " You can play your edited program in the Timeline.",
-          "translation": "Timeline: 現在のタイムラインを表示します。"
+          "translation": "• Timelineでは、編集済みの番組を再生できます。"
         },
         {
           "id": "p015_b004",
           "source": " You can see all of your synced material at the same time in the Multi Source Viewer.",
-          "translation": "Multi Source Viewer: 複数のソースを同時に表示して比較できます。"
+          "translation": "• Multi Source Viewerでは、同期済みの素材をすべて同時に表示できます。"
         },
         {
           "id": "p015_b005",
           "source": "Clicking the Tools button in the lower left of the Viewer reveals an effects toolbar that you can use to add and edit clip effects, right within the Viewer with no Inspector needed. The Tools button reveals a variety of controls over sizing, cropping, audio, speed effects, stabilization, dynamic zoom, and compositing.",
-          "translation": "Toolsボタンをクリックすると、エフェクト、トランジション、タイトル、その他の編集ツールにアクセスするツールバーが開きます。"
+          "translation": "Viewer左下のToolsボタンをクリックするとエフェクトツールバーが表示され、Inspectorを使わずに、Viewer内で直接クリップエフェクトを追加および編集できます。Toolsボタンでは、サイズ変更、クロップ、オーディオ、スピードエフェクト、スタビライズ、ダイナミックズーム、コンポジットに関するさまざまなコントロールが表示されます。"
         },
         {
           "id": "p015_b006",
@@ -1104,7 +1104,7 @@
         {
           "id": "p015_b008",
           "source": "An audio meter to the right of the Viewer shows you a graphical representation of the audio levels playing in the current clip or in the Timeline as you play through the Viewer, via animated vertical bars that are tinted to indicate how loud the levels are.",
-          "translation": "Audio MeterはViewerの右側に表示され、再生中のオーディオレベルを確認できます。"
+          "translation": "Viewer右側のAudio Meterは、Viewerで現在のクリップまたはTimelineを再生しているときに鳴っているオーディオレベルを、グラフィカルに表示します。アニメーションする縦バーで示され、バーにはレベルの大きさが分かるように色が付けられます。"
         },
         {
           "id": "p015_b009",
@@ -1114,12 +1114,12 @@
         {
           "id": "p015_b010",
           "source": "The word “timeline” refers both to an edited sequence of clips which constitutes a program that is stored in the Media Pool, and to the area of the Cut page interface where you can open this sequence of clips to see its contents, and for playback and editing.",
-          "translation": "Cutページでは、Timelineという用語は、編集されたシーケンスそのものと、そのシーケンスを操作する画面領域の両方を指します。"
+          "translation": "「timeline」という言葉は、Media Poolに保存される番組を構成する編集済みクリップシーケンスと、そのクリップシーケンスを開いて内容を確認し、再生や編集を行うCutページインターフェイス上の領域の両方を指します。"
         },
         {
           "id": "p015_b011",
           "source": "For the Cut page user, the timeline is divided into an Upper Timeline at the top, and a larger and more detailed Timeline Editor showing a zoomed in portion of the timeline around the playhead at the bottom. Working together, these two views of your edited sequence make it possible to navigate your entire project and cut in great detail.",
-          "translation": "TimelineはUpper TimelineとTimeline Editorに分かれており、全体を見渡しながら、細部を拡大してカットや調整を行えます。"
+          "translation": "Cutページのユーザーにとって、timelineは上部のUpper Timelineと、下部で再生ヘッド周辺のタイムラインを拡大表示する、より大きく詳細なTimeline Editorに分かれています。編集済みシーケンスのこれら2つの表示を組み合わせることで、プロジェクト全体を移動しながら、細部まで詳しくカットできます。"
         },
         {
           "id": "p015_b012",
@@ -1129,12 +1129,12 @@
         {
           "id": "p015_b013",
           "source": "Three icons at the upper left-hand corner of the Timeline lets you choose a variety of timeline tasks. They are composed of Timeline Options, Timeline Actions, and Edit Actions.",
-          "translation": "Timeline左上には、Timeline Options、Timeline Actions、Edit Actionsの3つのアイコンがあります。"
+          "translation": "Timeline左上隅の3つのアイコンでは、さまざまなタイムライン作業を選択できます。これらはTimeline Options、Timeline Actions、Edit Actionsで構成されています。"
         },
         {
           "id": "p015_b014",
           "source": "The Timeline is divided into multiple tracks, with each track capable of holding a sequence of clips in order to create a program. The main tracks, which are labeled numerically, combine a clip’s video and audio into a single item in the Timeline, for simplicity. Editing the In or Out point of a clip edits the video and audio together.",
-          "translation": "Timelineにはトラックが表示されます。Cutページでは、メイントラックがビデオとオーディオを組み合わせて表示し、イン点とアウト点を使った編集では両方が一緒に編集されます。"
+          "translation": "Timelineは複数のトラックに分かれており、各トラックには番組を作成するためにクリップのシーケンスを保持できます。番号でラベル付けされたメイントラックでは、分かりやすくするために、クリップのビデオとオーディオがTimeline内の1つの項目にまとめられます。クリップのイン点またはアウト点を編集すると、ビデオとオーディオが一緒に編集されます。"
         },
         {
           "id": "p015_b015",
@@ -1164,7 +1164,7 @@
         {
           "id": "p016_b002",
           "source": "TIP: In the Edit page, Video+Audio clips are presented as separated Video and Audio items on different tracks. When you open the Fairlight page, audio is presented on tracks with lanes, where each audio channel can be seen. In this way, each page gives you different sets of controls over the contents of the timeline that are appropriate for each page.",
-          "translation": "ヒント: Editページではビデオトラックとオーディオトラックが分かれて表示され、Fairlightページではオーディオトラックがさらにレーンとして表示されます。各ページには、その作業に適した異なるコントロールが用意されています。"
+          "translation": "ヒント: Editページでは、Video+Audioクリップは別々のトラック上のビデオ項目とオーディオ項目として分離して表示されます。Fairlightページを開くと、オーディオはレーンを持つトラックとして表示され、各オーディオチャンネルを確認できます。このように、各ページでは、それぞれのページに適した、タイムライン内容に対する異なるコントロールセットが提供されます。"
         },
         {
           "id": "p016_b003",
@@ -1174,7 +1174,7 @@
         {
           "id": "p016_b004",
           "source": "The Edit page exposes a source-record style NLE that incorporates many specialized features for both creative editing and finishing. The Edit page is divided into three main regions: the browsers found at the left, the Viewers at the top, and the Timeline at the bottom, all of which work together to let you import, edit, and trim timelines with a flexible variety of tools and methods.",
-          "translation": "Editページは、従来型のソース・レコード方式のノンリニア編集環境です。画面は主に、ブラウザ、ビューア、タイムラインの3つの領域に分かれています。"
+          "translation": "Editページでは、クリエイティブ編集とフィニッシングの両方に対応する多くの専門機能を組み込んだ、ソース・レコード方式のNLEが提供されます。Editページは主に3つの領域に分かれています。左側のブラウザ、上部のViewer、下部のTimelineです。これらが連携することで、柔軟なさまざまなツールと方法を使って、タイムラインの読み込み、編集、トリムを行えます。"
         },
         {
           "id": "p016_b005",
@@ -1209,17 +1209,17 @@
         {
           "id": "p017_b001",
           "source": "As with everywhere else it appears in DaVinci Resolve, the Media Pool lets you organize and peruse all of the media and timelines in a project. DaVinci Resolve projects may contain one or more edited timelines (sometimes called a sequence in other applications).",
-          "translation": "Media Poolでは、プロジェクト内のメディアとタイムラインを整理し、閲覧できます。プロジェクトには、編集済みのタイムラインを1つ以上含めることができます。"
+          "translation": "DaVinci Resolve内の他の場所で表示される場合と同じように、Media Poolではプロジェクト内のすべてのメディアとタイムラインを整理し、閲覧できます。DaVinci Resolveプロジェクトには、1つまたは複数の編集済みタイムラインを含めることができます。これは他のアプリケーションではシーケンスと呼ばれることもあります。"
         },
         {
           "id": "p017_b002",
           "source": "The Media Pool in the Edit page is identical to that shown on the Media, Fusion, Color, and Fairlight pages, and shows you all of the source clips and timelines that are available for editing. A Bin list at the left shows a hierarchical list of folders that you can use to organize your media.",
-          "translation": "EditページのMedia Poolは、他のページのMedia Poolと同じです。左側にはBinリストがあり、フォルダーを使ってメディアを整理できます。"
+          "translation": "EditページのMedia Poolは、Media、Fusion、Color、Fairlightの各ページに表示されるものと同一で、編集に利用できるすべてのソースクリップとタイムラインを表示します。左側のBinリストには、メディアを整理するために使用できるフォルダーの階層リストが表示されます。"
         },
         {
           "id": "p017_b003",
           "source": "By default, the Media Pool has a single bin, named “Master,” but you can add more bins as necessary to organize your clips, opening any of them to expose their contents with a single click. The Bin list can be hidden or shown via the button at the upper-left of the Media Pool. A browser to the right shows the contents of the currently selected bin.",
-          "translation": "デフォルトではMasterビンが1つだけありますが、必要に応じてビンを追加できます。Binリストは表示／非表示を切り替えられ、右側のブラウザには選択したビンの内容が表示されます。"
+          "translation": "デフォルトでは、Media Poolには「Master」という名前のビンが1つありますが、クリップを整理するために必要に応じてさらにビンを追加できます。どのビンも1回クリックするだけで開き、その内容を表示できます。Binリストは、Media Pool左上のボタンで非表示または表示にできます。右側のブラウザには、現在選択されているビンの内容が表示されます。"
         },
         {
           "id": "p017_b004",
@@ -1249,7 +1249,7 @@
         {
           "id": "p018_b001",
           "source": "The Effects Library contains a folder with the different Video Transitions, Title Effects, Generators, and Filters that are available for editing in the Timeline. The Effects Library has two panels, a Toolbox panel that contains the default Transitions, Titles, and Generators that Resolve comes with, and an OpenFX panel that contains any OpenFX transitions and generators you might have installed on your system.",
-          "translation": "Effects Libraryには、Video Transitions、Title Effects、Generators、Filtersなどが含まれます。ToolboxパネルとOpenFXパネルを使って、タイムラインに追加できる各種エフェクトを探せます。"
+          "translation": "Effects Libraryには、Timelineでの編集に使用できるさまざまなVideo Transitions、Title Effects、Generators、Filtersを含むフォルダーがあります。Effects Libraryには2つのパネルがあります。Resolveに付属するデフォルトのTransitions、Titles、Generatorsを含むToolboxパネルと、システムにインストールされているOpenFXトランジションやジェネレータを含むOpenFXパネルです。"
         },
         {
           "id": "p018_b002",
@@ -1264,7 +1264,7 @@
         {
           "id": "p018_b004",
           "source": "Clicking the Index button opens the Edit Index. By default, this shows an EDL-style list view of all the edit events in the current timeline. Whichever timeline is selected in the Timeline list displays its events here; each clip and transition is shown as an individual event, each of which contains multiple columns of information. If you re-edit a timeline, your changes are automatically reflected in this list.",
-          "translation": "IndexボタンをクリックするとEdit Indexが開きます。これはEDL形式に似たイベント一覧で、選択中のタイムラインに含まれるクリップ、トランジション、その他のイベントが列として表示されます。タイムラインを編集すると、このリストも自動的に更新されます。"
+          "translation": "IndexボタンをクリックするとEdit Indexが開きます。デフォルトでは、現在のタイムライン内のすべての編集イベントがEDL形式風のリスト表示で示されます。Timelineリストで選択されているタイムラインのイベントがここに表示され、各クリップとトランジションは個別のイベントとして表示されます。それぞれのイベントには複数の情報列があります。タイムラインを再編集すると、その変更はこのリストに自動的に反映されます。"
         },
         {
           "id": "p018_b005",
@@ -1294,7 +1294,7 @@
         {
           "id": "p019_b001",
           "source": "The Source Viewer lets you view individual clips from the Media Pool to prepare them for editing. Meanwhile, the Timeline Viewer shows the frame at the position of the playhead in the Timeline. You can select either viewer by clicking, and the name of the viewer that currently has focus appears in orange. The color shown in the Source Viewer usually reflects that of the original source media, while the Timeline Viewer shows whatever grading you’ve done in the Color page.",
-          "translation": "Source ViewerとTimeline Viewerでは、それぞれソースクリップと編集中のタイムラインを確認します。現在フォーカスされているビューアはオレンジ色で示され、ソースの色確認とグレーディング結果の確認を切り分けて作業できます。"
+          "translation": "Source Viewerでは、Media Pool内の個別クリップを表示し、編集の準備を行えます。一方、Timeline Viewerには、Timeline内の再生ヘッド位置にあるフレームが表示されます。どちらのViewerもクリックして選択でき、現在フォーカスを持つViewerの名前はオレンジ色で表示されます。Source Viewerに表示される色は通常、元のソースメディアの色を反映し、Timeline ViewerにはColorページで行ったグレーディングの結果が表示されます。"
         },
         {
           "id": "p019_b002",
@@ -1304,7 +1304,7 @@
         {
           "id": "p019_b003",
           "source": "If you want to change the Edit page layout to hide the Source Viewer, you can choose Workspace > Single Viewer Mode to hide the Source Viewer and instead use just a single viewer to contextually display either a selected Source Clip or the current frame of the Timeline.",
-          "translation": "Source Viewerは、WorkspaceメニューからSingle Viewer Modeを選ぶことで非表示にできます。"
+          "translation": "Editページのレイアウトを変更してSource Viewerを非表示にしたい場合は、Workspace > Single Viewer Modeを選択します。これによりSource Viewerが非表示になり、選択したSource ClipまたはTimelineの現在フレームを、文脈に応じて1つのViewerだけで表示できます。"
         },
         {
           "id": "p019_b004",
@@ -1314,12 +1314,12 @@
         {
           "id": "p019_b005",
           "source": "In Single Viewer mode, whatever you select in the Media Pool or Timeline determines which controls appear in the Viewer, which lets you do nearly everything you can do with two simultaneously open viewers.",
-          "translation": "Single Viewerモードでは、表示中の内容に応じたコンテキストコントロールがViewerに表示されます。"
+          "translation": "Single Viewerモードでは、Media PoolまたはTimelineで何を選択しているかによって、Viewerに表示されるコントロールが決まります。これにより、2つのViewerを同時に開いている場合にできることのほぼすべてを行えます。"
         },
         {
           "id": "p019_b006",
           "source": "You can also put either the Source or Timeline Viewers into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), causing whichever viewer is currently selected to fill the entire screen. This command toggles Cinema Viewer mode on and off.",
-          "translation": "Source ViewerとTimeline Viewerでは、Cinema Viewerモードも利用できます。"
+          "translation": "Workspace > Viewer Mode > Cinema Viewer（Command-F）を選択すると、Source ViewerまたはTimeline ViewerのどちらもCinema Viewerモードにできます。これにより、現在選択されているViewerが画面全体を占めます。このコマンドはCinema Viewerモードのオン／オフを切り替えます。"
         },
         {
           "id": "p019_b007",
@@ -1344,7 +1344,7 @@
         {
           "id": "p020_b001",
           "source": "The Inspector can be opened to let you customize compositing, transform, and cropping parameters for clips, as well as clip-specific retime and scaling options. Furthermore, the Inspector lets you edit the parameters of transitions, titles, and generators used in the Timeline, in order to customize their effect. Ordinarily, the Inspector opens alongside the Source and Timeline Viewers, but on smaller displays, opening the Inspector switches the Edit page to a single-viewer mode, showing you the Timeline item that you’re inspecting alongside the Inspector with that clip’s parameters.",
-          "translation": "Inspectorでは、合成、変形、クロップ、リタイム、スケーリング、トランジション、タイトル、ジェネレータなどのパラメータを調整できます。通常はビューアの横に開きますが、表示領域が狭い場合はSingle Viewerモードになります。"
+          "translation": "Inspectorを開くと、クリップのコンポジット、変形、クロップのパラメータに加えて、クリップ固有のリタイムやスケーリングのオプションをカスタマイズできます。さらにInspectorでは、Timelineで使用されているトランジション、タイトル、ジェネレータのパラメータを編集し、その効果をカスタマイズできます。通常、InspectorはSource ViewerおよびTimeline Viewerの横に開きますが、小さいディスプレイでは、Inspectorを開くとEditページがSingle Viewerモードに切り替わり、調整しているTimeline項目と、そのクリップのパラメータを表示するInspectorが並んで表示されます。"
         },
         {
           "id": "p020_b002",
@@ -1359,7 +1359,7 @@
         {
           "id": "p020_b004",
           "source": "Eleven buttons starting from the left, running along the top of the Timeline, let you choose different tools for performing various editing functions.",
-          "translation": "Timeline上部に並ぶ11個のボタンで、編集に使用するツールを選択できます。"
+          "translation": "Timeline上部に左から並ぶ11個のボタンでは、さまざまな編集機能を実行するための異なるツールを選択できます。"
         },
         {
           "id": "p020_b005",
@@ -1374,12 +1374,12 @@
         {
           "id": "p020_b007",
           "source": "The Timeline shows whichever timeline you’ve double-clicked in the Timelines browser. It’s the workspace where you either edit programs together from scratch, or import sequences from other applications to work on inside of Resolve. You can only have one Timeline open at a time.",
-          "translation": "Timelineには、ダブルクリックして開いたタイムラインが表示されます。ここで番組を編集したり、読み込んだシーケンスを操作したりします。一度に開けるタイムラインは1つです。"
+          "translation": "Timelineには、Timelinesブラウザでダブルクリックしたタイムラインが表示されます。ここは、番組を一から編集して組み立てたり、他のアプリケーションからシーケンスを読み込んでResolve内で作業したりするための作業空間です。一度に開けるTimelineは1つだけです。"
         },
         {
           "id": "p020_b008",
           "source": "The Timeline is divided into audio and video tracks, each of which has a series of header controls at the left that let you choose destination tracks for editing, name tracks, and turn tracks on and off, among other things. The appearance of the Timeline can be customized using the Timeline View Options drop-down in the toolbar.",
-          "translation": "Timelineはオーディオトラックとビデオトラックに分かれており、各トラックのヘッダーにはコントロールがあります。Timeline View Optionsでは、Timelineの表示方法を変更できます。"
+          "translation": "Timelineはオーディオトラックとビデオトラックに分かれており、それぞれの左側には一連のヘッダーコントロールがあります。これらを使って、編集先トラックの選択、トラック名の指定、トラックのオン／オフ切り替えなどを行えます。Timelineの見た目は、Toolbar内のTimeline View Optionsドロップダウンを使ってカスタマイズできます。"
         },
         {
           "id": "p020_b009",
@@ -1409,7 +1409,7 @@
         {
           "id": "p021_b002",
           "source": "A timecode window is available from the Workspace menu on every page, including the Edit page. Choosing this option displays a floating timecode window that shows the timecode of the Viewer or Timeline that currently has focus. This window is resizable so you can make the timecode larger or smaller.",
-          "translation": "TimecodeウィンドウはWorkspaceメニューから各ページで表示できます。これはフローティングウィンドウで、ViewerまたはTimelineのフォーカスに応じたタイムコードを表示し、サイズも変更できます。"
+          "translation": "Timecodeウィンドウは、Editページを含むすべてのページでWorkspaceメニューから利用できます。このオプションを選ぶと、現在フォーカスを持っているViewerまたはTimelineのタイムコードを表示するフローティングTimecodeウィンドウが表示されます。このウィンドウはサイズ変更できるため、タイムコードを大きくしたり小さくしたりできます。"
         },
         {
           "id": "p021_b003",
@@ -1424,22 +1424,22 @@
         {
           "id": "p021_b005",
           "source": "To begin with, DaVinci Resolve has a wealth of effects in both the Edit and Color pages for creating titles, transforming and animating clips, compositing and creating transparency effects, cutting mattes, applying filters, image stabilization, lens dewarping, and so on.",
-          "translation": "EditページとColorページには、タイトル、変形、合成、透明度、マット、フィルター、スタビライズ、歪み補正などを扱うためのエフェクト機能が用意されています。"
+          "translation": "まず、DaVinci ResolveにはEditページとColorページの両方に豊富なエフェクトがあります。タイトルの作成、クリップの変形とアニメーション、コンポジットと透明効果の作成、マットの切り出し、フィルターの適用、画像のスタビライズ、レンズの歪み補正などを行えます。"
         },
         {
           "id": "p021_b006",
           "source": "Then of course there’s the Fusion page, which adds considerably more powerful VFX and motion graphics capabilities via its node-based interface and deep toolset of effects nodes, keyframing and curve editing controls, and 2D and 3D compositing features.",
-          "translation": "Fusionページでは、ノードベースのインターフェイスを使って、さらに高度なビジュアルエフェクトやモーショングラフィックスを作成できます。"
+          "translation": "もちろんFusionページもあり、ノードベースのインターフェイスと、エフェクトノード、キーフレームおよびカーブ編集コントロール、2Dおよび3Dコンポジット機能からなる深いツールセットによって、さらに強力なVFXとモーショングラフィックス機能を追加します。"
         },
         {
           "id": "p021_b007",
           "source": "To use DaVinci Resolve to the best effect, it’s prudent to begin to think of the Edit, Fusion, and Color pages as complementary sets of controls.",
-          "translation": "Edit、Fusion、Colorの各ページは、互いに補完し合うコントロール群として考えると理解しやすくなります。"
+          "translation": "DaVinci Resolveを最大限に活用するには、Edit、Fusion、Colorの各ページを、互いに補完し合うコントロールセットとして考え始めるのが賢明です。"
         },
         {
           "id": "p021_b008",
           "source": "• For editors, the Fusion and Color pages are really just two giant inspectors; one filled with every compositing tool you could hope to use, and the other filled with every control for color and visual adjustment you could want, each of which are only one click away.",
-          "translation": "編集者にとっては、FusionページとColorページは、特定のショットをより深く調整するための巨大なInspectorのように機能します。"
+          "translation": "• 編集者にとって、FusionページとColorページは実際には2つの巨大なInspectorのようなものです。一方には使いたいと思うあらゆるコンポジットツールが詰め込まれ、もう一方には必要になる色と映像調整のためのあらゆるコントロールが詰め込まれており、どちらも1クリックでアクセスできます。"
         },
         {
           "id": "p021_b009",
@@ -1459,17 +1459,17 @@
         {
           "id": "p022_b000",
           "source": "• For compositing artists, the Edit page can be considered a robust shot management interface as well as an opportunity to do VFX work that’s deeply integrated with the edit of the program you’re working on.",
-          "translation": "合成アーティストにとっては、Editページが強力なショット管理インターフェイスとなり、視覚効果作業を編集と統合して進められます。"
+          "translation": "• コンポジットアーティストにとって、Editページは堅牢なショット管理インターフェイスであると同時に、作業中の番組の編集と深く統合された形でVFX作業を行う機会でもあります。"
         },
         {
           "id": "p022_b001",
           "source": "• For colorists, the Edit page is a refined environment for dealing with conform issues and taking care of myriad finishing tasks quickly and easily, that itself is only one click away.",
-          "translation": "カラリストにとっては、Editページがコンフォームやフィニッシング作業を行うための環境になります。"
+          "translation": "• カラリストにとって、Editページはコンフォーム上の問題を扱い、多数のフィニッシング作業をすばやく簡単に処理するための洗練された環境であり、それ自体が1クリック先にあります。"
         },
         {
           "id": "p022_b002",
           "source": "For more information on the effects that are available in DaVinci Resolve, see the chapters available within Part 6, “Editing Effects and Transitions” and Part 11, “Color Page Effects”.",
-          "translation": "エフェクトの詳細については、第6部と第11部を参照してください。"
+          "translation": "DaVinci Resolveで利用できるエフェクトの詳細については、第6部「Editing Effects and Transitions」と第11部「Color Page Effects」に含まれる各章を参照してください。"
         },
         {
           "id": "p022_b003",
@@ -1479,12 +1479,12 @@
         {
           "id": "p022_b004",
           "source": "As robust as the built-in compositing capabilities of DaVinci Resolve now are, when you run into instances where the various capabilities found in the Edit, Fusion, and Color pages aren’t enough to achieve the effect you require, you can use the VFX Connect features of DaVinci Resolve to send one or more clips from the Edit page Timeline to Blackmagic Fusion, the powerful node-based compositing application from Blackmagic Design, in order to do more robust compositing and effects work there. Furthermore, the VFX Connect feature can also be used to round-trip media to and render results from third-party applications such as The Foundry’s Nuke, Autodesk Flame, or Blender.",
-          "translation": "VFX Connectを使うと、Editページのタイムライン上のクリップをBlackmagic Fusionや、Nuke、Flame、Blenderなどのサードパーティ製アプリケーションへ送れます。"
+          "translation": "DaVinci Resolveに組み込まれたコンポジット機能は現在非常に強力ですが、Edit、Fusion、Colorの各ページにあるさまざまな機能だけでは必要な効果を実現できない場合があります。そのような場合は、DaVinci ResolveのVFX Connect機能を使って、EditページのTimelineから1つ以上のクリップをBlackmagic Designの強力なノードベースコンポジットアプリケーションであるBlackmagic Fusionへ送り、そこでより本格的なコンポジットやエフェクト作業を行えます。さらにVFX Connect機能は、The FoundryのNuke、Autodesk Flame、Blenderなどのサードパーティ製アプリケーションへメディアをラウンドトリップし、そこから結果をレンダリングするためにも使用できます。"
         },
         {
           "id": "p022_b005",
           "source": "This is a simple round-trip operation that lets you send clips from the DaVinci Resolve timeline to Fusion or another application, where you’ll add effects and do whatever work needs to be done before rendering a finished effect file that, if properly named, will automatically appear back in your timeline. When you use VFX Connect with Blackmagic Fusion, a project file is automatically generated and the render path is automatically named for automatic linking from the DaVinci Resolve timeline. If you use this feature with third-party applications, you’ll need to set up the naming of your rendered effect file manually.",
-          "translation": "これはシンプルなラウンドトリップワークフローです。指定した名前でエフェクトファイルをレンダリングすると、そのファイルは自動的にDaVinci Resolveへ戻されます。Fusionではプロジェクトとパスが自動的に作成されますが、サードパーティ製アプリケーションでは手動で命名する必要があります。"
+          "translation": "これは、DaVinci ResolveのタイムラインからFusionまたは別のアプリケーションへクリップを送り、そこでエフェクトを追加したり必要な作業を行ったりしたあと、完成したエフェクトファイルをレンダリングするというシンプルなラウンドトリップ操作です。適切に名前が付けられていれば、そのファイルは自動的にタイムラインへ戻って表示されます。Blackmagic FusionでVFX Connectを使用する場合は、プロジェクトファイルが自動的に生成され、DaVinci Resolveタイムラインから自動リンクできるようレンダーパスも自動的に命名されます。この機能をサードパーティ製アプリケーションで使用する場合は、レンダリングしたエフェクトファイルの命名を手動で設定する必要があります。"
         },
         {
           "id": "p022_b006",
@@ -1519,12 +1519,12 @@
         {
           "id": "p023_b001",
           "source": "The Fusion page is intended, eventually, to be a feature-complete integration of Blackmagic Design Fusion, a powerful 2D and 3D compositing application with over thirty years of evolution serving the film and broadcast industry, creating effects that have been seen in countless films and television series.",
-          "translation": "Fusionページは、Blackmagic Design FusionをDaVinci Resolve内に完全に統合することを目的としたページです。Fusionは強力な2D/3Dコンポジット環境です。"
+          "translation": "Fusionページは最終的に、Blackmagic Design Fusionを機能面で完全に統合したものになることを意図しています。Fusionは、映画および放送業界に30年以上にわたって貢献し、数えきれないほどの映画やテレビシリーズで見られるエフェクトを作成してきた、強力な2Dおよび3Dコンポジットアプリケーションです。"
         },
         {
           "id": "p023_b002",
           "source": "Merged right into DaVinci Resolve with a newly updated user interface, the Fusion page makes it possible to jump immediately from editing right into compositing, with no need to export media, relink files, or launch another application to get your work done. Everything you need now lives right inside DaVinci Resolve.",
-          "translation": "DaVinci Resolveに統合されたことで、書き出し、再リンク、別アプリケーションの起動を行わずに、編集からコンポジット作業へ直接移動できます。"
+          "translation": "新しく更新されたユーザーインターフェイスとともにDaVinci Resolveへ直接統合されたことで、Fusionページでは、メディアを書き出したり、ファイルを再リンクしたり、作業のために別のアプリケーションを起動したりする必要なく、編集からすぐにコンポジットへ移れます。必要なものはすべてDaVinci Resolveの中にあります。"
         },
         {
           "id": "p023_b003",
@@ -1534,7 +1534,7 @@
         {
           "id": "p023_b004",
           "source": "For more information on using the Fusion page, see Chapter 63, “Introduction to Compositing in Fusion.”",
-          "translation": "Fusionページの詳細については、第63章「Using the Fusion Page」を参照してください。"
+          "translation": "Fusionページの使用方法の詳細については、第63章「Introduction to Compositing in Fusion」を参照してください。"
         },
         {
           "id": "p023_b005",
@@ -1544,7 +1544,7 @@
         {
           "id": "p023_b006",
           "source": "You’ll probably not see this term used much, in favor of the specific panels within the work area that you’ll be using, but the area referred to as the Work Area is the region at the bottom half of the Fusion page UI, within which you can expose the three main panels used to construct compositions and edit animations in the Fusion page. These are the Node Editor, the Spline Editor, and the Keyframes Editor. By default, the Node Editor is the first thing you’ll see, and the main area you’ll be working within, but it can sit side by side with the Spline Editor and Keyframes Editor as necessary, and you can make more horizontal room on your display for these three panels by putting the Effects Library and Inspector into half-height mode, if necessary.",
-          "translation": "画面下半分の作業エリアには、Node Editor、Spline Editor、Keyframes Editorが表示されます。Effects LibraryとInspectorは半分の高さで表示することもでき、作業内容に応じて必要なパネルを切り替えられます。"
+          "translation": "この用語は、作業エリア内で使用する特定のパネル名の方が優先されるため、あまり目にしないかもしれません。しかしWork Areaと呼ばれる領域は、FusionページUIの下半分にある領域であり、Fusionページでコンポジションを構築し、アニメーションを編集するために使う3つの主要パネルを表示できます。それらはNode Editor、Spline Editor、Keyframes Editorです。デフォルトではNode Editorが最初に表示され、主に作業する領域になりますが、必要に応じてSpline EditorやKeyframes Editorと並べて表示できます。また必要であれば、Effects LibraryとInspectorを半分の高さのモードにして、これら3つのパネルのために画面上の横方向のスペースを広げることができます。"
         },
         {
           "id": "p023_b007",
@@ -1574,7 +1574,7 @@
         {
           "id": "p024_b002",
           "source": "The Viewer Area area encompasses the Time Ruler and transport controls. The Time Ruler is the principal “timeline” of the Fusion page, which focuses exclusively on the current composition you’re working on and may consist of one clip or several. This area can be set to display either one or two viewers at the top of the Fusion page, chosen via the Viewer button at the far right of the Viewer title bar. Each viewer can show a single node’s output from anywhere in the node tree. You assign which node is displayed in which viewer. This makes it easy to load separate nodes into each viewer for comparison. For example, you can load a Keyer node into the left Viewer and the final composite into the right Viewer, so you can see the image you’re adjusting and the final result at the same time.",
-          "translation": "Viewerエリアには、Time Rulerとトランスポートコントロールがあり、コンポジションを再生して確認できます。Viewerは1つまたは2つ表示でき、Viewerボタンを使って、どのノードの出力をどのViewerに表示するかを選択します。"
+          "translation": "Viewer AreaにはTime Rulerとトランスポートコントロールが含まれます。Time RulerはFusionページの主要な「timeline」であり、現在作業しているコンポジションだけに焦点を当てます。そのコンポジションは1つのクリップで構成されることも、複数のクリップで構成されることもあります。この領域は、Fusionページ上部に1つまたは2つのViewerを表示するよう設定でき、Viewerタイトルバー右端のViewerボタンで選択します。各Viewerは、ノードツリー内の任意の場所にある1つのノードの出力を表示できます。どのノードをどのViewerに表示するかはユーザーが割り当てます。これにより、比較のために別々のノードを各Viewerへ読み込むことが簡単になります。たとえば、左のViewerにKeyerノードを読み込み、右のViewerに最終コンポジットを読み込めば、調整している画像と最終結果を同時に確認できます。"
         },
         {
           "id": "p024_b003",
@@ -1584,7 +1584,7 @@
         {
           "id": "p024_b004",
           "source": "Ordinarily, each viewer shows 2D nodes from your composition as a single image. However, when you’re viewing a 3D node, you have the option to set that viewer to one of several 3D views, including a perspective view that gives you a repositionable stage on which to arrange the elements of the world you’re creating, or a quad view that lets you see your composition from four angles, making it easier to arrange and edit objects and layers within the XYZ axes of the 3D space in which you’re working.",
-          "translation": "2Dノードと3DノードのどちらもViewerで確認できます。3Dビューでは、パースビューや、X/Y/Z軸に沿ったクアッドビューを利用できます。"
+          "translation": "通常、各Viewerはコンポジション内の2Dノードを1枚の画像として表示します。ただし3Dノードを表示している場合は、そのViewerを複数の3Dビューのいずれかに設定できます。その中には、作成している世界の要素を配置するための、位置を変更できるステージを提供するパースビューや、コンポジションを4つの角度から確認できるクアッドビューがあります。クアッドビューを使うと、作業中の3D空間のXYZ軸内で、オブジェクトやレイヤーを配置および編集しやすくなります。"
         },
         {
           "id": "p024_b005",
@@ -1594,7 +1594,7 @@
         {
           "id": "p024_b006",
           "source": "The toolbar, located underneath the Time Ruler, contains buttons that let you quickly add commonly used nodes to the Node Editor. Clicking any of these buttons adds that node after the currently selected node in the node tree, or adds an unconnected instance of that node if no nodes are selected.",
-          "translation": "Time Rulerの下にあるToolbarには、よく使うノードを追加するボタンがあります。ノードを選択している場合はその後ろに追加され、何も選択していない場合は接続されていないノードとして追加されます。"
+          "translation": "Time Rulerの下にあるToolbarには、よく使うノードをNode Editorへすばやく追加するためのボタンがあります。これらのボタンをクリックすると、ノードツリー内で現在選択されているノードの後ろにそのノードが追加されます。ノードが選択されていない場合は、接続されていないそのノードのインスタンスが追加されます。"
         },
         {
           "id": "p024_b007",
@@ -1619,7 +1619,7 @@
         {
           "id": "p025_b000",
           "source": "The toolbar is divided into six sections that group commonly used nodes together. As you hover the pointer over any button, a tooltip shows you that node’s name.",
-          "translation": "Toolbarは6つのセクションに分かれています。各ボタンの上にポインタを置くと、ツールチップで名前を確認できます。"
+          "translation": "Toolbarは、よく使うノードをまとめた6つのセクションに分かれています。任意のボタンの上にポインタを置くと、ツールチップにそのノード名が表示されます。"
         },
         {
           "id": "p025_b001",
@@ -1629,7 +1629,7 @@
         {
           "id": "p025_b002",
           "source": "The Effects Library on the Fusion page shows all of the nodes and effects that are available in the Fusion page, including effects that come with DaVinci Resolve and third-party OFX, if available. While the toolbar shows many of the most common nodes you’ll be using in any composite, the Effects Library contains every single tool available in the Fusion page, organized by category, with each node ready to be quickly added to the Node Editor. Suffice it to say there are many, many more nodes available in the Effects Library than on the toolbar, spanning a wide range of uses.",
-          "translation": "Effects Libraryには、DaVinci Resolve標準のエフェクトやサードパーティ製OpenFXを含む、すべてのFusionノードとエフェクトが表示されます。Toolbarにはよく使うノードだけが並びますが、Effects Libraryではカテゴリ別にすべてのツールを探せます。"
+          "translation": "FusionページのEffects Libraryには、DaVinci Resolveに付属するエフェクトや、利用可能な場合はサードパーティ製OFXを含め、Fusionページで利用できるすべてのノードとエフェクトが表示されます。Toolbarにはどのコンポジットでもよく使う一般的なノードの多くが表示されますが、Effects LibraryにはFusionページで利用できるすべてのツールがカテゴリ別に整理され、各ノードをすばやくNode Editorへ追加できる状態で含まれています。つまり、Effects LibraryにはToolbarよりもはるかに多くのノードがあり、幅広い用途に対応しています。"
         },
         {
           "id": "p025_b003",
@@ -1644,7 +1644,7 @@
         {
           "id": "p025_b005",
           "source": "The Node Editor is the heart of the Fusion page, because it’s where you build the tree of nodes that makes up each composition. Each node you add to the node tree adds a specific operation that creates one effect, whether it’s blurring the image, adjusting color, painting strokes, drawing and adding a mask, extracting a key, creating text, or compositing two images into one.",
-          "translation": "Node EditorはFusionページの中心です。ここでは、各処理を表すノードをツリー状につなぎ、コンポジションを構築します。"
+          "translation": "Node EditorはFusionページの中心です。各コンポジションを構成するノードツリーをここで構築するためです。ノードツリーへ追加する各ノードは、1つのエフェクトを作成する特定の処理を追加します。それは画像をぼかす処理、色を調整する処理、ストロークをペイントする処理、マスクを描画して追加する処理、キーを抽出する処理、テキストを作成する処理、または2つの画像を1つに合成する処理などです。"
         },
         {
           "id": "p025_b006",
@@ -1674,17 +1674,17 @@
         {
           "id": "p026_b002",
           "source": "The Inspector is a panel on the right side of the Fusion page that you use to display and manipulate the parameters of one or more selected nodes. When a node is selected in the Node Editor, its parameters and settings appear in the Inspector, ready for you to modify. The Fusion Inspector is divided into two panels. The Tools panel shows you the parameters of selected nodes.",
-          "translation": "Fusionページ右側のInspectorでは、選択したノードのパラメータを表示し、調整できます。Toolsパネルには選択中のツールのコントロールが表示されます。"
+          "translation": "InspectorはFusionページ右側にあるパネルで、選択した1つまたは複数のノードのパラメータを表示し、操作するために使用します。Node Editorでノードを選択すると、そのパラメータと設定がInspectorに表示され、変更できる状態になります。FusionのInspectorは2つのパネルに分かれています。Toolsパネルには、選択したノードのパラメータが表示されます。"
         },
         {
           "id": "p026_b003",
           "source": "The Modifiers panel shows you different things for different nodes. For all nodes, it shows you the controls for Modifiers, or adjustable expressions, that you’ve added to specific parameters to automatically animate them in different ways.",
-          "translation": "Modifiersパネルでは、モディファイアや調整可能な式に関するコントロールを操作できます。"
+          "translation": "Modifiersパネルに表示される内容はノードによって異なります。すべてのノードについて、このパネルには、特定のパラメータへ追加したModifiers、つまり調整可能な式のコントロールが表示されます。これらは、そのパラメータをさまざまな方法で自動的にアニメートするために使用します。"
         },
         {
           "id": "p026_b004",
           "source": "The Inspector shows parameters from one or more selected nodes Nodes with different tabs expand the Controls, Transform, and Settings parameters",
-          "translation": "Inspectorには、選択した1つまたは複数のノードのパラメータが表示されます。タブを持つノードでは、Controls、Transform、Settingsの各パラメータを展開できます"
+          "translation": "Inspectorには、選択した1つまたは複数のノードのパラメータが表示されます。異なるタブを持つノードでは、Controls、Transform、Settingsの各パラメータを展開できます。"
         },
         {
           "id": "p026_b005",
@@ -1704,7 +1704,7 @@
         {
           "id": "p027_b000",
           "source": "Additionally, many nodes expose multiple tabs’ worth of controls in the Inspector, seen as icons at the top of the parameter section for each node. Click any tab to expose that set of controls.",
-          "translation": "多くのノードでは、パラメータが複数のタブに分かれています。目的のタブをクリックして、そのカテゴリのコントロールを表示します。"
+          "translation": "さらに、多くのノードではInspector内で複数のタブ分のコントロールを表示できます。これらは各ノードのパラメータセクション上部にあるアイコンとして表示されます。任意のタブをクリックすると、そのコントロールセットが表示されます。"
         },
         {
           "id": "p027_b001",
@@ -1714,7 +1714,7 @@
         {
           "id": "p027_b002",
           "source": "Hidden by default, the Thumbnail timeline can be opened by clicking the Clips button in the UI Toolbar and appears underneath the Node Editor when it’s open. The Thumbnail timeline shows you every clip in the current Timeline, giving you a way to navigate from one clip to another when working on multiple compositions in your project and providing an interface for creating and switching among multiple versions of compositions and resetting the current composition, when necessary.",
-          "translation": "Thumbnail Timelineはデフォルトでは非表示です。ClipsボタンをクリックするとNode Editorの下に表示され、クリップ間の移動、コンポジションのバージョン管理、リセットなどを行えます。"
+          "translation": "デフォルトでは非表示のThumbnail Timelineは、UI ToolbarのClipsボタンをクリックすると開くことができ、開いているときはNode Editorの下に表示されます。Thumbnail Timelineには現在のTimeline内のすべてのクリップが表示され、プロジェクト内の複数のコンポジションで作業しているときにクリップ間を移動する方法を提供します。また、必要に応じて、コンポジションの複数バージョンを作成して切り替えたり、現在のコンポジションをリセットしたりするためのインターフェイスも提供します。"
         },
         {
           "id": "p027_b003",
@@ -1729,7 +1729,7 @@
         {
           "id": "p027_b005",
           "source": "In the Fusion page, the Media Pool continues to serve its purpose as the repository of all media you’ve imported into your project. This makes it easy to add additional clips to your compositions simply by dragging the clip you want from the Media Pool into the Node Editor. The media you add appears as a new MediaIn node in your composition, ready to be integrated into your node tree however you need.",
-          "translation": "FusionページのMedia Poolは、プロジェクト内のメディアを利用するための保管場所です。クリップをNode Editorへドラッグすると、MediaInノードとして追加されます。"
+          "translation": "Fusionページでも、Media Poolはプロジェクトへ読み込んだすべてのメディアの保管場所としての役割を引き続き果たします。これにより、Media Poolから目的のクリップをNode Editorへドラッグするだけで、コンポジションへ追加のクリップを簡単に追加できます。追加したメディアはコンポジション内に新しいMediaInノードとして表示され、必要な形でノードツリーに組み込める状態になります。"
         },
         {
           "id": "p027_b006",
@@ -1759,17 +1759,17 @@
         {
           "id": "p028_b001",
           "source": "The status bar at the bottom of the Fusion page, immediately above the Resolve Page bar, shows you a variety of up-to-date information about things you’re selecting and what’s happening in the Fusion page.",
-          "translation": "ステータスバーはFusionページ下部、Node Editorの上、Resolveページバーの上に表示され、現在の状態に関する情報を表示します。"
+          "translation": "Fusionページ下部、Resolve Pageバーのすぐ上にあるステータスバーには、選択しているものやFusionページで起こっていることについて、さまざまな最新情報が表示されます。"
         },
         {
           "id": "p028_b002",
           "source": "For example, hovering the pointer over any node displays information about that node in the status bar (as well as in a floating tooltip), while the currently achieved frame rate appears whenever you initiate playback, and the percentage of the RAM cache that’s used appears at all times. Other information, updates, and warnings appears in this area as you work.",
-          "translation": "ノードにポインタを重ねると、そのノードに関する情報が表示されます。また、再生中に達成されているフレームレート、RAMキャッシュの割合、更新や警告も表示されます。"
+          "translation": "たとえば、任意のノードにポインタを重ねると、そのノードに関する情報がステータスバーに表示されます。これはフローティングツールチップにも表示されます。また、再生を開始すると現在達成されているフレームレートが表示され、RAMキャッシュの使用率は常に表示されます。作業中には、この領域にその他の情報、更新、警告も表示されます。"
         },
         {
           "id": "p028_b003",
           "source": "The status bar under the Node Editor showing you information about a node under the pointer and a floating tooltip",
-          "translation": "ポインタ下のノードに関する情報とフローティングツールチップを表示しているNode Editor下のステータスバー"
+          "translation": "ポインタの下にあるノードについての情報とフローティングツールチップを表示している、Node Editor下のステータスバー"
         },
         {
           "id": "p028_b004",
@@ -1779,7 +1779,7 @@
         {
           "id": "p028_b005",
           "source": "The console, available by choosing Workspace > Console, is a window in which you can see the error, log, script, and input messages that may explain something the Fusion page is trying to do in greater detail. The console is also where you can read FusionScript outputs or input FusionScripts directly. Occasionally, the status bar (described above) will display a badge to let you know there’s a message in the console you might be interested in. The badge will indicate if the message is an error, log, or script message.",
-          "translation": "ConsoleはWorkspace > Consoleから開きます。エラー、ログ、スクリプト、入力メッセージが表示され、FusionScriptの出力や入力にも使用できます。新しいメッセージがある場合はバッジで示されます。"
+          "translation": "Workspace > Consoleを選択して開けるConsoleは、Fusionページが実行しようとしていることをより詳しく説明する可能性のある、エラー、ログ、スクリプト、入力メッセージを確認できるウィンドウです。Consoleは、FusionScriptの出力を読んだり、FusionScriptを直接入力したりする場所でもあります。ときどき、上で説明したステータスバーにバッジが表示され、Console内に確認するとよいメッセージがあることを知らせます。バッジは、そのメッセージがエラー、ログ、スクリプトメッセージのいずれであるかを示します。"
         },
         {
           "id": "p028_b006",
@@ -1809,7 +1809,7 @@
         {
           "id": "p029_b001",
           "source": "The Color page is where you color correct, or grade, your program. It has all of the controls available for manipulating color and contrast, reducing noise, creating limited secondary color corrections, building image effects of different kinds, adjusting clip geometry, and making many other corrective and stylistic adjustments. The Color page is divided into seven main areas that work together to let you build a grade.",
-          "translation": "Colorページでは、カラー補正とグレーディングを行います。色とコントラスト、ノイズ、セカンダリ補正、画像エフェクト、ジオメトリなどを扱うためのコントロールがあり、画面は主に7つの領域で構成されています。"
+          "translation": "Colorページは、番組のカラー補正、つまりグレーディングを行う場所です。色とコントラストを操作する、ノイズを低減する、限定的なセカンダリカラー補正を作成する、さまざまな種類の画像エフェクトを構築する、クリップのジオメトリを調整する、その他多くの補正的およびスタイル的な調整を行うためのすべてのコントロールがあります。Colorページは、グレードを構築できるよう連携する7つの主要領域に分かれています。"
         },
         {
           "id": "p029_b002",
@@ -1829,7 +1829,7 @@
         {
           "id": "p029_b005",
           "source": "The Viewer shows the frame at the current position of the playhead in the Timeline. The contents of the Viewer are almost always output to video via whichever I/O interface you have connected. At the top of the Viewer is a header that displays the Project and Timeline names, as well as a Viewer Timecode display that shows the source timecode of each clip by default. The Timeline name is also a drop-down display that lets you switch to any other timeline in the project. A jog bar (sometimes referred to as a scrubber bar) underneath the image lets you drag the playhead across the entire duration of the clip, while transport controls underneath that let you control playback. A toolbar at the top provides controls governing Image Wipes, Split-Screen controls, and Highlight display. Additional controls let you turn audio playback on and off, or adjust them by right-clicking on the speaker icon and dragging the slider. You can also choose which onscreen controls are currently displayed.",
-          "translation": "ColorページのViewerでは、現在のタイムラインフレームを確認しながらグレーディングできます。トランスポートコントロールを使って再生や移動を行い、必要に応じて表示モードや比較表示を切り替えられます。"
+          "translation": "Viewerには、Timeline内の現在の再生ヘッド位置にあるフレームが表示されます。Viewerの内容は、接続されているI/Oインターフェイスを介して、ほぼ常にビデオへ出力されます。Viewer上部にはヘッダーがあり、Project名とTimeline名、そしてデフォルトで各クリップのソースタイムコードを表示するViewer Timecode表示が含まれます。Timeline名はドロップダウン表示にもなっており、プロジェクト内の他の任意のタイムラインへ切り替えられます。画像の下にあるジョグバー、別名スクラブバーでは、クリップ全体の継続時間に沿って再生ヘッドをドラッグできます。その下のトランスポートコントロールでは再生を制御できます。上部のToolbarには、Image Wipes、Split-Screenコントロール、Highlight表示を管理するコントロールがあります。追加のコントロールでは、オーディオ再生をオン／オフしたり、スピーカーアイコンを右クリックしてスライダーをドラッグすることで調整したりできます。現在表示するオンスクリーンコントロールを選択することもできます。"
         },
         {
           "id": "p029_b006",
@@ -1854,7 +1854,7 @@
         {
           "id": "p030_b001",
           "source": "You can also put the Viewer into Cinema Viewer mode by choosing Workspace > Viewer Mode > Cinema Viewer (Command-F), so that it fills the entire screen. This command toggles Cinema Viewer mode on and off. Two other modes, Enhanced Viewer (Option-F) and Full Screen Viewer (Shift-F), are available to provide more working area for tasks such as window positioning and rotoscoping.",
-          "translation": "Cinema Viewerモード、Enhanced Viewer、Full Screen Viewerを使うと、Viewerをより大きく表示して映像を確認できます。"
+          "translation": "Workspace > Viewer Mode > Cinema Viewer（Command-F）を選択して、ViewerをCinema Viewerモードにすることもできます。このモードではViewerが画面全体に表示されます。このコマンドはCinema Viewerモードのオン／オフを切り替えます。ほかにも、ウィンドウ位置の調整やロトスコープなどの作業でより広い作業領域を提供するため、Enhanced Viewer（Option-F）とFull Screen Viewer（Shift-F）の2つのモードを利用できます。"
         },
         {
           "id": "p030_b002",
@@ -1864,7 +1864,7 @@
         {
           "id": "p030_b003",
           "source": "The Gallery is used for storing still frames to use as reference when comparing clips to one another. Each still frame also stores that clip’s grade so you can copy it later; stills and grades are stored together. A button lets you open up the Album browser, used for organizing your stills. At the top of the Gallery, Memories let you store grade information that you can apply using a control panel or keyboard shortcuts. You can also open a larger Gallery window within the Color page that provides more room for organizing your saved stills and grades.",
-          "translation": "Galleryには、参照用の静止画フレームを保存できます。静止画にはグレードも保存されるため、他のショットへ適用したり比較したりできます。Albumブラウザ、Memories、より大きなGalleryウィンドウも利用できます。"
+          "translation": "Galleryは、クリップ同士を比較するときの参照として使用する静止画フレームを保存するために使います。各静止画フレームには、そのクリップのグレードも保存されるため、あとでコピーできます。スチルとグレードは一緒に保存されます。ボタンを使うとAlbumブラウザを開くことができ、保存したスチルの整理に使用します。Gallery上部のMemoriesでは、コントロールパネルまたはキーボードショートカットで適用できるグレード情報を保存できます。Colorページ内でより大きなGalleryウィンドウを開くこともでき、保存したスチルとグレードを整理するためのより広い領域を利用できます。"
         },
         {
           "id": "p030_b004",
@@ -1899,7 +1899,7 @@
         {
           "id": "p031_b001",
           "source": "The Node Editor is where you assemble one or more individual corrections (nodes) together to create multi-correction grades (seen as node trees). This is a powerful way of assembling grades, since different combinations of nodes let you create different corrections and very specific adjustments by reordering operations, combining keys, or changing the layer order of different adjustments.",
-          "translation": "Node Editorでは、複数の補正を組み合わせたグレードを構築します。ノードの順序を入れ替えたり、キーを組み合わせたり、レイヤーの順序を調整したりできます。"
+          "translation": "Node Editorは、1つまたは複数の個別補正、つまりノードを組み合わせて、複数補正のグレード、すなわちノードツリーを作成する場所です。これはグレードを組み立てるための強力な方法です。ノードの異なる組み合わせにより、処理の順序を入れ替えたり、キーを組み合わせたり、異なる調整のレイヤー順序を変更したりすることで、異なる補正や非常に具体的な調整を作成できるためです。"
         },
         {
           "id": "p031_b002",
@@ -1919,7 +1919,7 @@
         {
           "id": "p031_b005",
           "source": "The Timeline in the Color page reflects the contents of the Timeline in the Edit page, but has a different appearance that’s tailored to the requirements of the colorist. However, the content is identical, and changes made to the Timeline in the Edit page are immediately seen in the Color page as you switch back and forth. The Color page Timeline provides several ways of navigating the clips in your project, as well as keeping track of what has been done to which clips.",
-          "translation": "ColorページのTimelineはEditページのTimelineを反映しますが、カラリスト向けに異なる見た目になっています。内容は同じで、移動やトラック表示の変更に使用できます。"
+          "translation": "ColorページのTimelineはEditページのTimelineの内容を反映しますが、カラリストの要件に合わせて調整された異なる外観を持っています。ただし内容は同一であり、EditページでTimelineに加えた変更は、ページを行き来するとすぐにColorページにも表示されます。ColorページのTimelineには、プロジェクト内のクリップを移動するための複数の方法が用意されているほか、どのクリップに何が行われたかを把握するための方法もあります。"
         },
         {
           "id": "p031_b006",

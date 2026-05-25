@@ -17,6 +17,7 @@ TRANSLATIONS_JSON = "translations_01_intro_interface.json"
 OUTPUT_PDF = "01_Intro_Interface_ja_side_by_side.pdf"
 MISSING_JSON = "translations_01_intro_interface.missing.json"
 GENERATED_FONT_DIR = "generated_fonts"
+FRONT_TOC_TRANSLATION_PREFIX = "front_toc"
 FONT_WEIGHTS = {
     "regular": 400,
     "semibold": 600,
@@ -121,6 +122,7 @@ def extract_text_blocks(page: fitz.Page, page_index: int) -> list[dict[str, Any]
         blocks.append(
             {
                 "id": block_id(page_index, block_index),
+                "block_index": block_index,
                 "bbox": [x0, y0, x1, y1],
                 "source": text,
             }
@@ -440,6 +442,41 @@ def is_toc_page(blocks: list[dict[str, Any]]) -> bool:
     return small_rows > 30
 
 
+def has_front_scope_toc(source: fitz.Document) -> bool:
+    if source.page_count == 0:
+        return False
+    return is_toc_page(extract_text_blocks(source[0], 0))
+
+
+def translation_key_for_block(
+    block: dict[str, Any],
+    page_index: int,
+    front_scope_toc: bool,
+) -> str:
+    block_index = block["block_index"]
+    if front_scope_toc and page_index == 0:
+        return f"{FRONT_TOC_TRANSLATION_PREFIX}_b{block_index:03d}"
+    if front_scope_toc and page_index > 0:
+        return block_id(page_index - 1, block_index)
+    return block["id"]
+
+
+def resolve_page_translations(
+    blocks: list[dict[str, Any]],
+    page_index: int,
+    front_scope_toc: bool,
+    translations: dict[str, str],
+) -> dict[str, str]:
+    resolved: dict[str, str] = {}
+    for block in blocks:
+        translated = translations.get(
+            translation_key_for_block(block, page_index, front_scope_toc)
+        )
+        if translated:
+            resolved[block["id"]] = translated
+    return resolved
+
+
 def insert_toc_line(
     page: fitz.Page,
     rect: fitz.Rect,
@@ -685,14 +722,18 @@ def write_missing_report(
     source: fitz.Document,
     translations: dict[str, str],
     output_path: Path,
+    front_scope_toc: bool,
 ) -> int:
     missing_pages: list[dict[str, Any]] = []
     count = 0
     for page_index, page in enumerate(source):
         missing_blocks = []
         for block in extract_text_blocks(page, page_index):
-            if block["id"] not in translations:
-                missing_blocks.append(block)
+            translation_key = translation_key_for_block(block, page_index, front_scope_toc)
+            if translation_key not in translations:
+                missing_block = dict(block)
+                missing_block["translation_key"] = translation_key
+                missing_blocks.append(missing_block)
                 count += 1
         if missing_blocks:
             missing_pages.append({"page": page_index + 1, "blocks": missing_blocks})
@@ -716,8 +757,9 @@ def build_pdf(
 ) -> None:
     src = fitz.open(input_pdf)
     translations = load_translations(translations_json)
+    front_scope_toc = has_front_scope_toc(src)
 
-    missing_count = write_missing_report(src, translations, missing_json)
+    missing_count = write_missing_report(src, translations, missing_json, front_scope_toc)
     if missing_count:
         print(f"Missing translations: {missing_count} blocks -> {missing_json}")
 
@@ -728,6 +770,12 @@ def build_pdf(
     for page_index, src_page in enumerate(src):
         blocks = extract_text_blocks(src_page, page_index)
         block_features = extract_block_features(src_page, page_index)
+        page_translations = resolve_page_translations(
+            blocks,
+            page_index,
+            front_scope_toc,
+            translations,
+        )
         toc_page = is_toc_page(blocks)
         out_page = out.new_page(width=output_rect.width, height=output_rect.height)
 
@@ -739,7 +787,7 @@ def build_pdf(
         translated_blocks = [
             block
             for block in blocks
-            if block["id"] in translations
+            if block["id"] in page_translations
             and classify_block(block, block_features.get(block["id"], {}), toc_page)
             not in {"side_label", "footer"}
         ]
@@ -753,7 +801,7 @@ def build_pdf(
             blocks,
             block_features,
             image_rects,
-            translations,
+            page_translations,
             first.width,
             font_assets,
             body_font_size,

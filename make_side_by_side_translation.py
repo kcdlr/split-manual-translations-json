@@ -487,8 +487,20 @@ def insert_toc_line(
 ) -> None:
     asset = font_asset(font_assets, "regular")
     target = fitz.Rect(rect.x0, rect.y0 - 1, rect.x1, rect.y1 + 4)
-    size = min(fontsize, 7.2)
-    while size >= 6.0:
+    leader_match = re.match(r"^(?P<title>.*?)(?:\s*\.{3,}\s*)(?P<page>\d+)\s*$", text)
+    if leader_match:
+        insert_toc_leader_line(
+            page,
+            target,
+            leader_match.group("title").strip(),
+            leader_match.group("page"),
+            asset,
+            color,
+        )
+        return
+
+    size = min(fontsize, 12.0)
+    while size >= 7.2:
         result = page.insert_textbox(
             target,
             text,
@@ -502,7 +514,75 @@ def insert_toc_line(
         )
         if result >= 0:
             return
-        size = round(size - 0.2, 2)
+        size = round(size - 0.1, 2)
+
+
+def insert_toc_leader_line(
+    page: fitz.Page,
+    rect: fitz.Rect,
+    title: str,
+    page_number: str,
+    asset: dict[str, Any],
+    color: tuple[float, float, float],
+) -> None:
+    font = asset["font"]
+    size = 8.2
+    min_size = 6.0
+    min_gap = 8.0
+
+    while size >= min_size:
+        title_width = font.text_length(title, fontsize=size)
+        page_width = font.text_length(page_number, fontsize=size)
+        if title_width + page_width + min_gap <= rect.width:
+            break
+        size = round(size - 0.1, 2)
+
+    if size < min_size:
+        size = min_size
+
+    y = rect.y0 + size
+    page_x = rect.x1 - font.text_length(page_number, fontsize=size)
+    title_width = font.text_length(title, fontsize=size)
+
+    page.insert_text(
+        fitz.Point(rect.x0, y),
+        title,
+        fontname=asset["name"],
+        fontfile=asset["path"],
+        fontsize=size,
+        color=color,
+        fill=color,
+        overlay=True,
+    )
+
+    leader_left = rect.x0 + title_width + 5.0
+    leader_right = page_x - 5.0
+    if leader_right > leader_left:
+        dot_unit = ". "
+        dot_width = max(1, font.text_length(dot_unit, fontsize=size))
+        dot_count = int((leader_right - leader_left) / dot_width)
+        if dot_count > 1:
+            page.insert_text(
+                fitz.Point(leader_left, y),
+                dot_unit * dot_count,
+                fontname=asset["name"],
+                fontfile=asset["path"],
+                fontsize=size,
+                color=color,
+                fill=color,
+                overlay=True,
+            )
+
+    page.insert_text(
+        fitz.Point(page_x, y),
+        page_number,
+        fontname=asset["name"],
+        fontfile=asset["path"],
+        fontsize=size,
+        color=color,
+        fill=color,
+        overlay=True,
+    )
 
 
 def draw_numbered_step(

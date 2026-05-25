@@ -399,7 +399,7 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
 
     if rect.y0 > 760:
         return "footer"
-    if toc_page and 110 < rect.y0 < 710:
+    if toc_page and rect.y0 < 710:
         return "toc_entry"
     if (
         sizes == {9.0}
@@ -803,10 +803,12 @@ def write_missing_report(
     translations: dict[str, str],
     output_path: Path,
     front_scope_toc: bool,
+    page_range: range,
 ) -> int:
     missing_pages: list[dict[str, Any]] = []
     count = 0
-    for page_index, page in enumerate(source):
+    for page_index in page_range:
+        page = source[page_index]
         missing_blocks = []
         for block in extract_text_blocks(page, page_index):
             translation_key = translation_key_for_block(block, page_index, front_scope_toc)
@@ -834,12 +836,28 @@ def build_pdf(
     body_font_size: float,
     body_line_advance: float,
     paragraph_spacing: float,
+    page_from: int | None,
+    page_to: int | None,
 ) -> None:
     src = fitz.open(input_pdf)
     translations = load_translations(translations_json)
     front_scope_toc = has_front_scope_toc(src)
+    start_page = 0 if page_from is None else page_from - 1
+    end_page = src.page_count - 1 if page_to is None else page_to - 1
+    if start_page < 0 or end_page >= src.page_count or start_page > end_page:
+        raise ValueError(
+            f"Invalid page range: {page_from or 1}-{page_to or src.page_count} "
+            f"for {src.page_count} pages"
+        )
+    page_range = range(start_page, end_page + 1)
 
-    missing_count = write_missing_report(src, translations, missing_json, front_scope_toc)
+    missing_count = write_missing_report(
+        src,
+        translations,
+        missing_json,
+        front_scope_toc,
+        page_range,
+    )
     if missing_count:
         print(f"Missing translations: {missing_count} blocks -> {missing_json}")
 
@@ -847,7 +865,8 @@ def build_pdf(
     out = fitz.open()
     output_rect = fitz.Rect(0, 0, first.width * 2, first.height)
 
-    for page_index, src_page in enumerate(src):
+    for page_index in page_range:
+        src_page = src[page_index]
         blocks = extract_text_blocks(src_page, page_index)
         block_features = extract_block_features(src_page, page_index)
         page_translations = resolve_page_translations(
@@ -907,6 +926,8 @@ def main() -> None:
     parser.add_argument("--body-font-size", type=float, default=9.5)
     parser.add_argument("--body-line-advance", type=float, default=11.59)
     parser.add_argument("--paragraph-spacing", type=float, default=5.67)
+    parser.add_argument("--page-from", type=int, default=None)
+    parser.add_argument("--page-to", type=int, default=None)
     args = parser.parse_args()
 
     font_assets = make_font_assets(Path(args.font), Path(args.generated_font_dir))
@@ -919,6 +940,8 @@ def main() -> None:
         args.body_font_size,
         args.body_line_advance,
         args.paragraph_spacing,
+        args.page_from,
+        args.page_to,
     )
 
 

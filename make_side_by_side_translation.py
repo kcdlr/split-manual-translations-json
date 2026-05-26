@@ -399,7 +399,9 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
 
     if rect.y0 > 760:
         return "footer"
-    if toc_page and rect.y0 < 710:
+    if rect.x0 > 520:
+        return "side_label"
+    if toc_page:
         return "toc_entry"
     if (
         sizes == {9.0}
@@ -410,7 +412,7 @@ def classify_block(block: dict[str, Any], features: dict[str, Any], toc_page: bo
         return "toc_entry"
     if 50.0 in sizes or max(sizes or {0}) >= 22.0:
         return "chapter_title"
-    if rect.x0 > 520 or "BrandonGrotesque-Black" in fonts:
+    if "BrandonGrotesque-Black" in fonts:
         return "side_label"
     if (
         "ProximaNova-Bold" in fonts

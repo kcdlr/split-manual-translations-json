@@ -829,40 +829,49 @@ def write_missing_report(
     return count
 
 
-def build_pdf(
-    input_pdf: Path,
-    translations_json: Path,
-    output_pdf: Path,
-    missing_json: Path,
+def validate_page_range(
+    source: fitz.Document,
+    page_from: int | None,
+    page_to: int | None,
+) -> range:
+    start_page = 0 if page_from is None else page_from - 1
+    end_page = source.page_count - 1 if page_to is None else page_to - 1
+    if start_page < 0 or end_page >= source.page_count or start_page > end_page:
+        raise ValueError(
+            f"Invalid page range: {page_from or 1}-{page_to or source.page_count} "
+            f"for {source.page_count} pages"
+        )
+    return range(start_page, end_page + 1)
+
+
+def page_size_key(page: fitz.Page) -> tuple[float, float]:
+    return (round(page.rect.width, 3), round(page.rect.height, 3))
+
+
+def ensure_document_page_size(document: fitz.Document, expected_size: tuple[float, float], label: str) -> None:
+    mismatches = [
+        (index + 1, page_size_key(page))
+        for index, page in enumerate(document)
+        if page_size_key(page) != expected_size
+    ]
+    if mismatches:
+        first_page, actual_size = mismatches[0]
+        raise ValueError(
+            f"{label} page size mismatch on page {first_page}: "
+            f"expected {expected_size}, got {actual_size}"
+        )
+
+
+def render_side_by_side_pages(
+    src: fitz.Document,
+    translations: dict[str, str],
+    front_scope_toc: bool,
+    page_range: range,
     font_assets: dict[str, dict[str, Any]],
     body_font_size: float,
     body_line_advance: float,
     paragraph_spacing: float,
-    page_from: int | None,
-    page_to: int | None,
-) -> None:
-    src = fitz.open(input_pdf)
-    translations = load_translations(translations_json)
-    front_scope_toc = has_front_scope_toc(src)
-    start_page = 0 if page_from is None else page_from - 1
-    end_page = src.page_count - 1 if page_to is None else page_to - 1
-    if start_page < 0 or end_page >= src.page_count or start_page > end_page:
-        raise ValueError(
-            f"Invalid page range: {page_from or 1}-{page_to or src.page_count} "
-            f"for {src.page_count} pages"
-        )
-    page_range = range(start_page, end_page + 1)
-
-    missing_count = write_missing_report(
-        src,
-        translations,
-        missing_json,
-        front_scope_toc,
-        page_range,
-    )
-    if missing_count:
-        print(f"Missing translations: {missing_count} blocks -> {missing_json}")
-
+) -> fitz.Document:
     first = src[0].rect
     out = fitz.open()
     output_rect = fitz.Rect(0, 0, first.width * 2, first.height)
@@ -910,8 +919,84 @@ def build_pdf(
             paragraph_spacing,
         )
 
+    return out
+
+
+def build_pdf(
+    input_pdf: Path,
+    translations_json: Path,
+    output_pdf: Path,
+    missing_json: Path,
+    font_assets: dict[str, dict[str, Any]],
+    body_font_size: float,
+    body_line_advance: float,
+    paragraph_spacing: float,
+    page_from: int | None,
+    page_to: int | None,
+    append_base: Path | None,
+) -> None:
+    src = fitz.open(input_pdf)
+    translations = load_translations(translations_json)
+    front_scope_toc = has_front_scope_toc(src)
+    page_range = validate_page_range(src, page_from, page_to)
+    first = src[0].rect
+    expected_size = (round(first.width * 2, 3), round(first.height, 3))
+    append_base_doc: fitz.Document | None = None
+
+    if append_base is not None:
+        if page_from is None or page_to is None:
+            raise ValueError("--page-from and --page-to are required with --append-base")
+        if output_pdf.resolve() == append_base.resolve():
+            raise ValueError("--output must not be the same path as --append-base")
+        append_base_doc = fitz.open(append_base)
+        if append_base_doc.page_count != page_from - 1:
+            actual_page_count = append_base_doc.page_count
+            append_base_doc.close()
+            src.close()
+            raise ValueError(
+                f"--append-base page count must equal --page-from - 1: "
+                f"expected {page_from - 1}, got {actual_page_count}"
+            )
+        ensure_document_page_size(append_base_doc, expected_size, "--append-base")
+
+    missing_count = write_missing_report(
+        src,
+        translations,
+        missing_json,
+        front_scope_toc,
+        page_range,
+    )
+    if missing_count:
+        print(f"Missing translations: {missing_count} blocks -> {missing_json}")
+        if append_base_doc is not None:
+            append_base_doc.close()
+        src.close()
+        raise SystemExit(1)
+
+    chunk = render_side_by_side_pages(
+        src,
+        translations,
+        front_scope_toc,
+        page_range,
+        font_assets,
+        body_font_size,
+        body_line_advance,
+        paragraph_spacing,
+    )
+
+    out = fitz.open()
+    ensure_document_page_size(chunk, expected_size, "generated chunk")
+    if append_base is not None:
+        assert append_base_doc is not None
+        out.insert_pdf(append_base_doc)
+        out.insert_pdf(chunk)
+        append_base_doc.close()
+    else:
+        out.insert_pdf(chunk)
+
     out.save(output_pdf, garbage=4, deflate=True)
     out.close()
+    chunk.close()
     src.close()
 
 
@@ -930,6 +1015,7 @@ def main() -> None:
     parser.add_argument("--paragraph-spacing", type=float, default=5.67)
     parser.add_argument("--page-from", type=int, default=None)
     parser.add_argument("--page-to", type=int, default=None)
+    parser.add_argument("--append-base", default=None)
     args = parser.parse_args()
 
     font_assets = make_font_assets(Path(args.font), Path(args.generated_font_dir))
@@ -944,6 +1030,7 @@ def main() -> None:
         args.paragraph_spacing,
         args.page_from,
         args.page_to,
+        Path(args.append_base) if args.append_base else None,
     )
 
 

@@ -223,6 +223,89 @@ def load_translations(path: Path) -> dict[str, str]:
     return translations
 
 
+def load_translation_document(path: Path, source_pdf: Path) -> dict[str, Any]:
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return {
+        "source": source_pdf.name,
+        "notes": (
+            "Translations are keyed by PyMuPDF text block ids. Only PDF text "
+            "objects are translated; image-baked text is intentionally out of scope. "
+            "No summarization or omission."
+        ),
+        "pages": [],
+    }
+
+
+def extract_translation_blocks(
+    input_pdf: Path,
+    translations_json: Path,
+    page_from: int | None,
+    page_to: int | None,
+) -> None:
+    src = fitz.open(input_pdf)
+    front_scope_toc = has_front_scope_toc(src)
+    page_range = validate_page_range(src, page_from, page_to)
+    document = load_translation_document(translations_json, input_pdf)
+
+    pages_by_index: dict[int, dict[str, Any]] = {}
+    blocks_by_id: dict[str, dict[str, Any]] = {}
+    for page in document.get("pages", []):
+        page_index = page.get("page")
+        if not isinstance(page_index, int):
+            src.close()
+            raise ValueError(f"Invalid translation page entry: {page!r}")
+        pages_by_index[page_index] = page
+        for block in page.get("blocks", []):
+            block_id_value = block.get("id")
+            if not isinstance(block_id_value, str):
+                src.close()
+                raise ValueError(f"Invalid translation block entry: {block!r}")
+            blocks_by_id[block_id_value] = block
+
+    added = 0
+    for page_index in page_range:
+        page_entry = pages_by_index.setdefault(page_index, {"page": page_index, "blocks": []})
+        page_blocks = page_entry.setdefault("blocks", [])
+        existing_page_block_ids = {
+            block["id"]
+            for block in page_blocks
+            if isinstance(block, dict) and isinstance(block.get("id"), str)
+        }
+        for block in extract_text_blocks(src[page_index], page_index):
+            translation_key = translation_key_for_block(block, page_index, front_scope_toc)
+            existing = blocks_by_id.get(translation_key)
+            if existing is not None:
+                if existing.get("source") != block["source"]:
+                    src.close()
+                    raise ValueError(
+                        f"Source mismatch for {translation_key}: "
+                        f"existing={existing.get('source')!r}, extracted={block['source']!r}"
+                    )
+                if translation_key not in existing_page_block_ids:
+                    page_blocks.append(existing)
+                    existing_page_block_ids.add(translation_key)
+                continue
+
+            new_block = {
+                "id": translation_key,
+                "source": block["source"],
+                "translation": "",
+            }
+            page_blocks.append(new_block)
+            blocks_by_id[translation_key] = new_block
+            existing_page_block_ids.add(translation_key)
+            added += 1
+
+    document["pages"] = [pages_by_index[index] for index in sorted(pages_by_index)]
+    translations_json.write_text(
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    src.close()
+    print(f"Extracted {added} new blocks into {translations_json}")
+
+
 def add_text_redactions(page: fitz.Page, blocks: list[dict[str, Any]]) -> None:
     for block in blocks:
         rect = fitz.Rect(block["bbox"])
@@ -1004,6 +1087,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Create an A3-landscape side-by-side original/Japanese PDF."
     )
+    parser.add_argument("--mode", choices=("build", "extract"), default="build")
     parser.add_argument("--input", default=SOURCE_PDF)
     parser.add_argument("--translations", default=TRANSLATIONS_JSON)
     parser.add_argument("--output", default=OUTPUT_PDF)
@@ -1017,6 +1101,17 @@ def main() -> None:
     parser.add_argument("--page-to", type=int, default=None)
     parser.add_argument("--append-base", default=None)
     args = parser.parse_args()
+
+    if args.mode == "extract":
+        if args.append_base:
+            raise ValueError("--append-base is only supported with --mode build")
+        extract_translation_blocks(
+            Path(args.input),
+            Path(args.translations),
+            args.page_from,
+            args.page_to,
+        )
+        return
 
     font_assets = make_font_assets(Path(args.font), Path(args.generated_font_dir))
     build_pdf(
